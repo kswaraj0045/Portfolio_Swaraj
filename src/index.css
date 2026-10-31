@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #090D18;
+    --bg-secondary: #121A2B;
+    --bg-card: #151F33;
+    --border-subtle: #26344D;
+    --accent-primary: #38BDF8;
+    --accent-secondary: #8B5CF6;
+    --accent-achievement: #A3E635;
+  }
+
+  html {
+    color-scheme: dark;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #090D18;
+    color: #F1F5F9;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090D18;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #26344D;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38BDF8;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(21, 31, 51, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #26344D;
+    border-radius: 1rem;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card:hover {
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.15);
+  }
+
+  .deloitte-card {
+    background: rgba(21, 31, 51, 0.85);
+    border: 1px solid rgba(163, 230, 53, 0.35);
+    border-radius: 1rem;
+    box-shadow: 0 0 25px -5px rgba(163, 230, 53, 0.12);
+  }
+
+  .grid-pattern {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(38, 52, 77, 0.18) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(38, 52, 77, 0.18) 1px, transparent 1px);
+  }
+
+  .radial-glow-cyan {
+    background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.12) 0%, transparent 65%);
+  }
+
+  .radial-glow-violet {
+    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.12) 0%, transparent 65%);
+  }
+
+  .radial-glow-deloitte {
+    background: radial-gradient(circle at 50% 50%, rgba(163, 230, 53, 0.08) 0%, transparent 65%);
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+

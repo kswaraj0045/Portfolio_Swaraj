@@ -1,0 +1,127 @@
+import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { Briefcase, Award, CheckCircle2, Building2, Calendar, MapPin, Sparkles } from 'lucide-react';
+import { experienceData } from '../data/portfolioData';
+
+export const ExperienceSection: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
+
+  return (
+    <section id="experience" className="py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20 mb-3">
+            <Briefcase className="w-3.5 h-3.5" />
+            <span>CAREER TRAJECTORY & EXPERIENCE</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-text-primary tracking-tight">
+            Professional Experience & Milestones.
+          </h2>
+          <p className="mt-3 text-base text-text-secondary leading-relaxed">
+            Hands-on exposure combining software engineering internships, startup agile delivery, and competitive enterprise campus selection.
+          </p>
+        </div>
+
+        {/* Experience Timeline Container */}
+        <div className="space-y-8 relative">
+          
+          {/* Animated Timeline Spine (desktop & tablet) */}
+          <div className="hidden md:block absolute left-4 top-6 bottom-6 w-0.5 bg-gradient-to-b from-accent-achievement via-accent-primary to-border-subtle" />
+
+          {experienceData.map((exp, idx) => {
+            const isDeloitte = exp.type === 'milestone';
+
+            return (
+              <motion.div 
+                key={exp.id}
+                initial={{ opacity: 0, x: shouldReduceMotion ? 0 : 25 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.5, delay: idx * 0.15, ease: [0.21, 0.47, 0.32, 0.98] as const }}
+                className={`p-6 sm:p-8 rounded-3xl border transition-all duration-300 relative overflow-hidden md:ml-10 ${
+                  isDeloitte 
+                    ? 'deloitte-card border-accent-achievement/35 bg-bg-card/90 shadow-deloitte-glow' 
+                    : 'glass-card border-border-subtle bg-bg-card/75 hover:border-accent-primary/40'
+                }`}
+              >
+                {/* Timeline node icon on the spine for desktop */}
+                <div className={`hidden md:flex absolute -left-[49px] top-8 w-6 h-6 rounded-full border-2 items-center justify-center ${
+                  isDeloitte 
+                    ? 'bg-bg-main border-accent-achievement text-accent-achievement' 
+                    : 'bg-bg-main border-accent-primary text-accent-primary'
+                }`}>
+                  <span className={`w-2 h-2 rounded-full ${isDeloitte ? 'bg-accent-achievement animate-pulse' : 'bg-accent-primary'}`} />
+                </div>
+
+                <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                  <div>
+                    <div className="flex flex-wrap items-center gap-2.5 mb-2">
+                      <span className={`px-3 py-1 rounded-full text-xs font-mono font-semibold ${
+                        isDeloitte 
+                          ? 'text-accent-achievement bg-accent-achievement/15 border border-accent-achievement/30 shadow-deloitte-glow' 
+                          : 'text-accent-primary bg-accent-primary/10 border border-accent-primary/25'
+                      }`}>
+                        {exp.badge}
+                      </span>
+                      <span className="text-xs font-mono text-text-muted flex items-center gap-1">
+                        <MapPin className="w-3.5 h-3.5" />
+                        <span>{exp.location}</span>
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl font-bold font-heading text-text-primary">
+                      {exp.role} <span className="text-text-muted font-normal">at</span> <span className={isDeloitte ? 'text-accent-achievement' : 'text-accent-primary'}>{exp.company}</span>
+                    </h3>
+                  </div>
+
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-bg-main/60 border border-border-subtle text-xs font-mono text-text-secondary self-start">
+                    <Calendar className="w-3.5 h-3.5 text-accent-primary" />
+                    <span>{exp.period}</span>
+                  </div>
+                </div>
+
+                <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-6">
+                  {exp.description}
+                </p>
+
+                {/* Highlights */}
+                <div className="space-y-2.5 mb-6">
+                  {exp.highlights.map((h, i) => (
+                    <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-text-secondary">
+                      <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${isDeloitte ? 'text-accent-achievement' : 'text-accent-primary'}`} />
+                      <span>{h}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Note for Deloitte privacy/accuracy */}
+                {exp.note && (
+                  <div className="p-3 rounded-xl bg-accent-achievement/5 border border-accent-achievement/20 text-xs font-mono text-accent-achievement mb-4">
+                    ● {exp.note}
+                  </div>
+                )}
+
+                {/* Skill Tags */}
+                <div className="pt-4 border-t border-border-subtle/50 flex flex-wrap gap-2">
+                  {exp.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2.5 py-1 rounded-md text-xs font-mono bg-bg-main text-text-secondary border border-border-subtle"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+
+              </motion.div>
+            );
+          })}
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
