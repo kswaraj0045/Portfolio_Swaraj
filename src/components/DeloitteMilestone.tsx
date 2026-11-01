@@ -104,7 +104,7 @@ export const DeloitteMilestone: React.FC = () => {
                   <div className="flex justify-between py-1">
                     <span className="text-text-muted">Status:</span>
                     <span className="text-accent-achievement font-mono font-semibold flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent-achievement shadow-[0_0_6px_#a3e635]" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent-achievement shadow-sm" />
                       Selected
                     </span>
                   </div>

@@ -92,7 +92,7 @@ export const ProductThinkingFramework: React.FC = () => {
                       whileTap={{ scale: 0.95 }}
                       className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 shadow-md ${
                         isActive 
-                          ? 'bg-accent-primary text-bg-main shadow-card-glow ring-4 ring-accent-primary/20' 
+                          ? 'bg-accent-primary text-white shadow-card-glow ring-4 ring-accent-primary/20' 
                           : 'bg-bg-card border border-border-subtle text-text-secondary hover:border-accent-primary/60 hover:text-text-primary'
                       }`}
                     >
@@ -197,7 +197,7 @@ export const ProductThinkingFramework: React.FC = () => {
                     <span className="text-xs font-mono font-semibold text-accent-secondary uppercase">
                       Applied in Real Project
                     </span>
-                    <span className="w-2 h-2 rounded-full bg-accent-secondary shadow-[0_0_6px_#ff7139]" />
+                    <span className="w-2 h-2 rounded-full bg-accent-secondary shadow-sm" />
                   </div>
                   <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-mono">
                     "{selectedStage.exampleFromWork}"

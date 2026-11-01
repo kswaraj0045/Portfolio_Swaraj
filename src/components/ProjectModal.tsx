@@ -186,7 +186,7 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-bg-main bg-accent-primary hover:bg-[#33d6ff] transition-colors shadow-card-glow min-h-[44px]"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-white bg-accent-primary hover:bg-[#489e99] transition-colors shadow-card-glow min-h-[44px]"
               >
                 <span>Live Demo</span>
                 <ExternalLink className="w-3.5 h-3.5" />

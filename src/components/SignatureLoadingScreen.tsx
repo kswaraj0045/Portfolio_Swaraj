@@ -101,18 +101,18 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
         <motion.div
           animate={{
             scale: isExiting ? 1.4 : [1, 1.15, 1],
-            opacity: isExiting ? 0 : [0.12, 0.22, 0.12],
+            opacity: isExiting ? 0 : [0.08, 0.16, 0.08],
           }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-accent-primary/20 rounded-full blur-[140px]"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-accent-primary/15 rounded-full blur-[140px]"
         />
         <motion.div
           animate={{
             scale: isExiting ? 1.5 : [1, 1.2, 1],
-            opacity: isExiting ? 0 : [0.08, 0.16, 0.08],
+            opacity: isExiting ? 0 : [0.05, 0.12, 0.05],
           }}
           transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-accent-secondary/20 rounded-full blur-[150px]"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-accent-secondary/15 rounded-full blur-[150px]"
         />
       </div>
 
@@ -123,7 +123,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
             key={idx}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: isExiting ? 0 : [0.2, 0.8, 0.2],
+              opacity: isExiting ? 0 : [0.2, 0.6, 0.2],
               y: [0, -15, 0],
             }}
             transition={{
@@ -139,7 +139,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
               width: p.size,
               height: p.size,
             }}
-            className="rounded-full bg-accent-primary/60 shadow-[0_0_8px_#38BDF8]"
+            className="rounded-full bg-slate-400/40"
           />
         ))}
       </div>
@@ -159,7 +159,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
             scale: { duration: isExiting ? 0.6 : 1 },
             rotate: { duration: 40, repeat: Infinity, ease: 'linear' },
           }}
-          className="w-[280px] sm:w-[560px] md:w-[780px] lg:w-[920px] h-[160px] sm:h-[270px] md:h-[350px] lg:h-[400px] rounded-[100%] border border-dashed border-accent-primary/25"
+          className="w-[280px] sm:w-[560px] md:w-[780px] lg:w-[920px] h-[160px] sm:h-[270px] md:h-[350px] lg:h-[400px] rounded-[100%] border border-dashed border-slate-600/35"
         />
 
         {/* Inner Ellipse */}
@@ -175,7 +175,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
             scale: { duration: isExiting ? 0.6 : 1 },
             rotate: { duration: 32, repeat: Infinity, ease: 'linear' },
           }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[440px] md:w-[620px] lg:w-[740px] h-[120px] sm:h-[200px] md:h-[260px] lg:h-[300px] rounded-[100%] border border-accent-secondary/25"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[440px] md:w-[620px] lg:w-[740px] h-[120px] sm:h-[200px] md:h-[260px] lg:h-[300px] rounded-[100%] border border-slate-500/25"
         />
 
         {/* Orbiting Satellite Dot */}
@@ -190,7 +190,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
           }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[440px] md:w-[620px] lg:w-[740px] h-[120px] sm:h-[200px] md:h-[260px] lg:h-[300px]"
         >
-          <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-accent-primary shadow-[0_0_12px_#38bdf8]" />
+          <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-accent-primary shadow-sm" />
         </motion.div>
       </div>
 
@@ -220,7 +220,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
                     delay: 0.15 + index * 0.045,
                     ease: [0.21, 0.47, 0.32, 0.98],
                   }}
-                  className="inline-block bg-gradient-to-b from-white via-slate-100 to-white bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(255,255,255,0.2)]"
+                  className="inline-block bg-gradient-to-b from-[#F1F3F5] via-[#E2E8F0] to-[#CBD5E1] bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(241,243,245,0.08)]"
                 >
                   {char}
                 </motion.span>
@@ -239,7 +239,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
                     delay: 0.45 + index * 0.045,
                     ease: [0.21, 0.47, 0.32, 0.98],
                   }}
-                  className="inline-block bg-gradient-to-r from-accent-primary via-[#6ee7ff] to-accent-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,200,255,0.4)]"
+                  className="inline-block bg-gradient-to-r from-[#F1F3F5] via-[#E2E8F0] to-accent-primary bg-clip-text text-transparent drop-shadow-[0_2px_14px_rgba(61,140,135,0.22)]"
                 >
                   {char}
                 </motion.span>
@@ -274,7 +274,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
           <div className="w-full h-[2px] bg-border-subtle/80 rounded-full overflow-hidden relative shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]">
             <motion.div
               style={{ width: `${progress}%` }}
-              className="h-full bg-gradient-to-r from-accent-primary via-white to-accent-secondary rounded-full shadow-[0_0_10px_#00C8FF]"
+              className="h-full bg-gradient-to-r from-accent-primary via-slate-200 to-accent-secondary rounded-full shadow-sm"
             />
           </div>
 

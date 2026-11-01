@@ -81,15 +81,16 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                 <Layers className="w-5 h-5 text-accent-primary" />
                 Color Palette & Surface Tiers
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
                 {[
-                  { name: 'Canvas Main', hex: '#080B12', bg: 'bg-[#080B12]', border: 'border-slate-800' },
-                  { name: 'Secondary Canvas', hex: '#0D1420', bg: 'bg-[#0D1420]', border: 'border-slate-800' },
-                  { name: 'Card Surface', hex: '#202B3D', bg: 'bg-[#202B3D]', border: 'border-slate-700' },
-                  { name: 'Border Slate', hex: '#334155', bg: 'bg-[#334155]', border: 'border-slate-600' },
-                  { name: 'Electric Blue', hex: '#00C8FF', bg: 'bg-[#00C8FF]', text: 'text-slate-950' },
-                  { name: 'Vibrant Orange', hex: '#FF7139', bg: 'bg-[#FF7139]', text: 'text-white' },
-                  { name: 'Deloitte Green', hex: '#A3E635', bg: 'bg-[#A3E635]', text: 'text-slate-950' },
+                  { name: 'Canvas Main', hex: '#101B2D', bg: 'bg-[#101B2D]', border: 'border-slate-700' },
+                  { name: 'Secondary Canvas', hex: '#162337', bg: 'bg-[#162337]', border: 'border-slate-700' },
+                  { name: 'Card Surface', hex: '#1C2B40', bg: 'bg-[#1C2B40]', border: 'border-slate-700' },
+                  { name: 'Elevated Card', hex: '#25364A', bg: 'bg-[#25364A]', border: 'border-slate-600' },
+                  { name: 'Muted Teal', hex: '#3D8C87', bg: 'bg-[#3D8C87]', text: 'text-white' },
+                  { name: 'Champagne', hex: '#D6B77A', bg: 'bg-[#D6B77A]', text: 'text-slate-950' },
+                  { name: 'Border Slate', hex: '#34465B', bg: 'bg-[#34465B]', text: 'text-white' },
+                  { name: 'Separator', hex: '#293A50', bg: 'bg-[#293A50]', text: 'text-white' },
                 ].map((c) => (
                   <div key={c.hex} className="rounded-xl border border-border-subtle overflow-hidden bg-bg-card">
                     <div className={`h-16 w-full ${c.bg} ${c.border || ''} flex items-center justify-center`}>
@@ -183,7 +184,7 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                 Button System & Interactive Triggers
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl border border-border-subtle bg-bg-card/60">
-                <button className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-bg-main bg-accent-primary hover:bg-sky-400 transition-all shadow-card-glow cursor-pointer">
+                <button className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-accent-primary hover:bg-[#489e99] transition-all shadow-card-glow cursor-pointer">
                   <span>Explore My Work</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>

@@ -171,7 +171,7 @@ export const InteractiveTerminal: React.FC = () => {
           }`}
         >
           {/* Header Bar */}
-          <div className="px-4 py-3 bg-[#0D1420]/95 border-b border-border-subtle flex items-center justify-between select-none">
+          <div className="px-4 py-3 bg-bg-secondary/95 border-b border-border-subtle flex items-center justify-between select-none">
             {/* Window Controls */}
             <div className="flex items-center gap-2">
               <button 
@@ -202,7 +202,7 @@ export const InteractiveTerminal: React.FC = () => {
 
             {/* Status Indicator */}
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-accent-primary shadow-[0_0_8px_#00c8ff] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-accent-primary shadow-[0_0_8px_#3D8C87] animate-pulse" />
               <span className="text-[10px] font-mono font-bold tracking-wider text-accent-primary hidden sm:inline">
                 SYSTEM ONLINE
               </span>

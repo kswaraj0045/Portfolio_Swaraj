@@ -25,7 +25,7 @@ export const aboutPillars = [
     description: 'Transforming ambiguous user pain points into validated product requirements, feature roadmaps, and actionable PRDs.',
     skills: ['Problem Identification', 'Requirement Understanding', 'Feature Prioritization', 'User-Centric Thinking', 'Product Lifecycle Fundamentals'],
     color: 'accent-primary',
-    gradient: 'from-sky-500/20 to-blue-600/10'
+    gradient: 'from-accent-primary/20 to-accent-primary/5'
   },
   {
     id: 'business-data',
@@ -34,7 +34,7 @@ export const aboutPillars = [
     description: 'Structuring metrics frameworks, Star Schemas, and BI dashboards to track North Star KPIs and eliminate guesswork.',
     skills: ['Data Analysis', 'Business Intelligence', 'KPI Understanding', 'Data-Driven Decision Making', 'Analytical Thinking'],
     color: 'accent-secondary',
-    gradient: 'from-[#FF7139]/20 to-[#FF7139]/5'
+    gradient: 'from-accent-secondary/20 to-accent-secondary/5'
   },
   {
     id: 'technology',
@@ -42,8 +42,8 @@ export const aboutPillars = [
     subtitle: 'Understanding software systems and technical implementation.',
     description: 'Grounded in computer engineering fundamentals to bridge business requirements seamlessly with engineering teams.',
     skills: ['Software Architecture', 'Full-Stack Development', 'API Design', 'Cloud & Databases', 'Machine Learning Pipelines'],
-    color: 'accent-secondary',
-    gradient: 'from-purple-500/20 to-indigo-600/10'
+    color: 'accent-primary',
+    gradient: 'from-accent-primary/20 to-accent-primary/5'
   }
 ];
 

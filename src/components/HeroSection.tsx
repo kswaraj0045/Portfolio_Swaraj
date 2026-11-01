@@ -67,7 +67,7 @@ export const HeroSection: React.FC = () => {
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         className="absolute top-1/3 -right-48 w-[500px] h-[500px] bg-accent-secondary/10 rounded-full blur-[140px] pointer-events-none" 
       />
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-accent-achievement/5 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-accent-secondary/5 rounded-full blur-[160px] pointer-events-none" />
 
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 grid-pattern opacity-35 pointer-events-none" />
@@ -95,14 +95,14 @@ export const HeroSection: React.FC = () => {
                 href="#deloitte"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold text-accent-achievement bg-accent-achievement/10 border border-accent-achievement/35 shadow-deloitte-glow backdrop-blur-md hover:bg-accent-achievement/20 transition-all cursor-pointer group"
+                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold text-accent-secondary bg-bg-elevated/90 border border-accent-secondary/40 shadow-champagne-soft backdrop-blur-md hover:bg-bg-elevated transition-all cursor-pointer group"
                 title="View campus selection milestone details"
               >
-                <span className="w-2 h-2 rounded-full bg-accent-achievement shadow-[0_0_8px_#a3e635] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-accent-secondary animate-pulse" />
                 <span className="tracking-wide font-bold">SELECTED AT DELOITTE</span>
                 <span className="text-border-subtle hidden sm:inline">•</span>
                 <span className="text-text-primary hidden sm:inline font-medium">Incoming Analyst</span>
-                <ArrowRight className="w-3.5 h-3.5 text-accent-achievement group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 text-accent-secondary group-hover:translate-x-1 transition-transform" />
               </motion.a>
             </motion.div>
 
@@ -120,7 +120,7 @@ export const HeroSection: React.FC = () => {
                     <motion.span
                       key={`first-${index}`}
                       variants={letterVariants}
-                      className="inline-block text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-200 drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)]"
+                      className="inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#F1F3F5] via-[#E2E8F0] to-[#CBD5E1] drop-shadow-[0_2px_12px_rgba(241,243,245,0.08)]"
                     >
                       {char}
                     </motion.span>
@@ -133,7 +133,7 @@ export const HeroSection: React.FC = () => {
                     <motion.span
                       key={`last-${index}`}
                       variants={letterVariants}
-                      className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-accent-primary via-[#6ee7ff] to-accent-secondary drop-shadow-[0_4px_30px_rgba(0,200,255,0.35)]"
+                      className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#F1F3F5] via-[#E2E8F0] to-accent-primary drop-shadow-[0_2px_14px_rgba(61,140,135,0.22)]"
                     >
                       {char}
                     </motion.span>
@@ -154,17 +154,17 @@ export const HeroSection: React.FC = () => {
               </p>
 
               {/* Deloitte Prominent Sub-Card (Mobile & Desktop reinforcement) */}
-              <div className="p-3 sm:p-3.5 rounded-2xl bg-bg-card/90 border border-accent-achievement/30 shadow-deloitte-glow flex flex-col sm:flex-row sm:items-center justify-between gap-3 max-w-xl">
+              <div className="p-3 sm:p-3.5 rounded-2xl bg-bg-elevated border border-accent-secondary/35 shadow-champagne-soft flex flex-col sm:flex-row sm:items-center justify-between gap-3 max-w-xl">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-accent-achievement/10 border border-accent-achievement/30 flex items-center justify-center shrink-0">
-                    <Award className="w-5 h-5 text-accent-achievement" />
+                  <div className="w-9 h-9 rounded-xl bg-accent-secondary/10 border border-accent-secondary/30 flex items-center justify-center shrink-0">
+                    <Award className="w-5 h-5 text-accent-secondary" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-mono font-bold text-accent-achievement uppercase tracking-wide">
+                      <span className="text-xs font-mono font-bold text-accent-secondary uppercase tracking-wide">
                         SELECTED AT DELOITTE
                       </span>
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent-achievement animate-pulse" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent-secondary animate-pulse" />
                     </div>
                     <div className="text-xs text-text-secondary font-mono">
                       Incoming Analyst <span className="text-text-muted">• Campus Placement Selection</span>
@@ -174,7 +174,7 @@ export const HeroSection: React.FC = () => {
 
                 <a 
                   href="#deloitte" 
-                  className="text-xs font-mono font-semibold text-accent-achievement hover:text-lime-300 inline-flex items-center gap-1 self-start sm:self-center shrink-0"
+                  className="text-xs font-mono font-semibold text-accent-secondary hover:text-[#e8cf99] inline-flex items-center gap-1 self-start sm:self-center shrink-0"
                 >
                   <span>Milestone Details</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -198,7 +198,7 @@ export const HeroSection: React.FC = () => {
                 href="#projects"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-bg-main bg-accent-primary hover:bg-[#33d6ff] transition-all shadow-card-glow cursor-pointer group min-h-[44px]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-accent-primary hover:bg-[#489e99] transition-all shadow-card-glow cursor-pointer group min-h-[44px]"
               >
                 <span>Explore My Work</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

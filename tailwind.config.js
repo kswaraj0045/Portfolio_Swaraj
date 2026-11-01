@@ -11,28 +11,30 @@ export default {
       },
       colors: {
         bg: {
-          main: '#080B12',
-          secondary: '#0D1420',
-          card: '#202B3D',
-          'card-glass': 'rgba(32, 43, 61, 0.85)',
+          main: '#101B2D',
+          secondary: '#162337',
+          card: '#1C2B40',
+          elevated: '#25364A',
+          'card-glass': 'rgba(28, 43, 64, 0.88)',
         },
         border: {
-          subtle: '#334155',
-          hover: '#00C8FF',
-          deloitte: '#A3E635',
-          orange: '#FF7139',
+          subtle: '#34465B',
+          separator: '#293A50',
+          hover: '#3D8C87',
+          teal: '#3D8C87',
+          champagne: '#D6B77A',
         },
         accent: {
-          primary: '#00C8FF',     // Electric Blue
-          secondary: '#FF7139',   // Vibrant Orange
-          achievement: '#A3E635', // Deloitte Lime Green (Exclusively for Deloitte Milestone)
-          orange: '#FF7139',
-          blue: '#00C8FF',
+          primary: '#3D8C87',     // Muted Teal
+          secondary: '#D6B77A',   // Champagne
+          achievement: '#D6B77A', // Executive Milestone Champagne (Deloitte Milestone)
+          teal: '#3D8C87',
+          champagne: '#D6B77A',
         },
         text: {
-          primary: '#F8FAFC',     // Crisp White
-          secondary: '#A0AEC0',   // Clear Cool Gray
-          muted: '#64748B',
+          primary: '#F1F3F5',     // Platinum White
+          secondary: '#B5C0CD',   // Cool Slate Gray
+          muted: '#8493A5',       // Muted Slate
         }
       },
       fontFamily: {
@@ -41,9 +43,11 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'card-glow': '0 0 25px -5px rgba(0, 200, 255, 0.22)',
-        'deloitte-glow': '0 0 25px -5px rgba(163, 230, 53, 0.25)',
-        'orange-glow': '0 0 25px -5px rgba(255, 113, 57, 0.22)',
+        'card-glow': '0 4px 20px -2px rgba(61, 140, 135, 0.18)',
+        'teal-soft': '0 4px 20px -2px rgba(61, 140, 135, 0.20)',
+        'champagne-soft': '0 4px 20px -2px rgba(214, 183, 122, 0.18)',
+        'deloitte-glow': '0 4px 20px -2px rgba(214, 183, 122, 0.18)',
+        'elevated': '0 10px 25px -5px rgba(16, 27, 45, 0.5)',
       },
       animation: {
         'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

@@ -78,7 +78,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
             >
               <div className="absolute inset-0 bg-accent-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               <span className="font-heading font-black text-accent-primary text-base tracking-wider">SK</span>
-              <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-accent-achievement shadow-[0_0_6px_#a3e635]" />
+              <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-accent-secondary shadow-sm" />
             </motion.div>
             <div>
               <span className="font-heading font-bold text-text-primary text-base tracking-tight block group-hover:text-accent-primary transition-colors">
@@ -113,7 +113,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
 
                   <span>{link.name}</span>
                   {link.badge && (
-                    <span className="px-1.5 py-0.2 rounded text-[10px] font-mono font-bold bg-accent-achievement/15 text-accent-achievement border border-accent-achievement/30">
+                    <span className="px-1.5 py-0.2 rounded text-[10px] font-mono font-bold bg-accent-secondary/15 text-accent-secondary border border-accent-secondary/30">
                       {link.badge}
                     </span>
                   )}
@@ -152,7 +152,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               href="#contact"
-              className="inline-flex items-center gap-1 px-4 py-2 rounded-xl text-xs font-semibold text-bg-main bg-accent-primary hover:bg-sky-400 transition-all shadow-card-glow cursor-pointer"
+              className="inline-flex items-center gap-1 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-accent-primary hover:bg-[#489e99] transition-all shadow-card-glow cursor-pointer"
             >
               <span>Get in Touch</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -199,7 +199,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
                 >
                   <span>{link.name}</span>
                   {link.badge && (
-                    <span className="text-[10px] font-mono font-bold text-accent-achievement bg-accent-achievement/15 border border-accent-achievement/30 px-1.5 py-0.5 rounded">
+                    <span className="text-[10px] font-mono font-bold text-accent-secondary bg-accent-secondary/15 border border-accent-secondary/30 px-1.5 py-0.5 rounded">
                       {link.badge}
                     </span>
                   )}
@@ -220,7 +220,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-3 rounded-xl text-xs font-semibold text-center text-bg-main bg-accent-primary hover:bg-sky-400 flex items-center justify-center gap-1.5 min-h-[44px] shadow-card-glow"
+                className="w-full py-3 rounded-xl text-xs font-semibold text-center text-white bg-accent-primary hover:bg-[#489e99] flex items-center justify-center gap-1.5 min-h-[44px] shadow-card-glow"
               >
                 <span>Get in Touch</span>
                 <ArrowUpRight className="w-4 h-4" />
