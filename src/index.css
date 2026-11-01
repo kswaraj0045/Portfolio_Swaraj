@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    --bg-main: #090D18;
-    --bg-secondary: #121A2B;
-    --bg-card: #151F33;
-    --border-subtle: #26344D;
-    --accent-primary: #38BDF8;
-    --accent-secondary: #8B5CF6;
+    --bg-main: #080B12;
+    --bg-secondary: #0D1420;
+    --bg-card: #202B3D;
+    --border-subtle: #334155;
+    --accent-primary: #00C8FF;
+    --accent-secondary: #FF7139;
     --accent-achievement: #A3E635;
   }
 
@@ -20,8 +20,8 @@
   }
 
   body {
-    background-color: #090D18;
-    color: #F1F5F9;
+    background-color: #080B12;
+    color: #F8FAFC;
     overflow-x: hidden;
     width: 100%;
     -webkit-overflow-scrolling: touch;
@@ -33,56 +33,58 @@
     height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #090D18;
+    background: #080B12;
   }
   ::-webkit-scrollbar-thumb {
-    background: #26344D;
+    background: #334155;
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #38BDF8;
+    background: #00C8FF;
   }
 }
 
 @layer components {
   .glass-card {
-    background: rgba(21, 31, 51, 0.7);
+    background: rgba(32, 43, 61, 0.88);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid #26344D;
+    border: 1px solid #334155;
     border-radius: 1rem;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .glass-card:hover {
-    border-color: rgba(56, 189, 248, 0.5);
-    box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.15);
+    border-color: rgba(0, 200, 255, 0.6);
+    box-shadow: 0 10px 30px -10px rgba(0, 200, 255, 0.22);
   }
 
   .deloitte-card {
-    background: rgba(21, 31, 51, 0.85);
-    border: 1px solid rgba(163, 230, 53, 0.35);
+    background: rgba(32, 43, 61, 0.92);
+    border: 1px solid rgba(163, 230, 53, 0.4);
     border-radius: 1rem;
-    box-shadow: 0 0 25px -5px rgba(163, 230, 53, 0.12);
+    box-shadow: 0 0 25px -5px rgba(163, 230, 53, 0.2);
   }
 
   .grid-pattern {
     background-size: 32px 32px;
     background-image: 
-      linear-gradient(to right, rgba(38, 52, 77, 0.18) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(38, 52, 77, 0.18) 1px, transparent 1px);
+      linear-gradient(to right, rgba(51, 65, 85, 0.22) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(51, 65, 85, 0.22) 1px, transparent 1px);
   }
 
-  .radial-glow-cyan {
-    background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.12) 0%, transparent 65%);
+  .radial-glow-cyan,
+  .radial-glow-blue {
+    background: radial-gradient(circle at 50% 50%, rgba(0, 200, 255, 0.15) 0%, transparent 65%);
   }
 
-  .radial-glow-violet {
-    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.12) 0%, transparent 65%);
+  .radial-glow-violet,
+  .radial-glow-orange {
+    background: radial-gradient(circle at 50% 50%, rgba(255, 113, 57, 0.14) 0%, transparent 65%);
   }
 
   .radial-glow-deloitte {
-    background: radial-gradient(circle at 50% 50%, rgba(163, 230, 53, 0.08) 0%, transparent 65%);
+    background: radial-gradient(circle at 50% 50%, rgba(163, 230, 53, 0.12) 0%, transparent 65%);
   }
 
   .no-scrollbar {

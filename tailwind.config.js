@@ -11,24 +11,27 @@ export default {
       },
       colors: {
         bg: {
-          main: '#090D18',
-          secondary: '#121A2B',
-          card: '#151F33',
-          'card-glass': 'rgba(21, 31, 51, 0.75)',
+          main: '#080B12',
+          secondary: '#0D1420',
+          card: '#202B3D',
+          'card-glass': 'rgba(32, 43, 61, 0.85)',
         },
         border: {
-          subtle: '#26344D',
-          hover: '#38BDF8',
+          subtle: '#334155',
+          hover: '#00C8FF',
           deloitte: '#A3E635',
+          orange: '#FF7139',
         },
         accent: {
-          primary: '#38BDF8',     // Cyan / Sky
-          secondary: '#8B5CF6',   // Violet
-          achievement: '#A3E635', // Deloitte Lime Green
+          primary: '#00C8FF',     // Electric Blue
+          secondary: '#FF7139',   // Vibrant Orange
+          achievement: '#A3E635', // Deloitte Lime Green (Exclusively for Deloitte Milestone)
+          orange: '#FF7139',
+          blue: '#00C8FF',
         },
         text: {
-          primary: '#F1F5F9',
-          secondary: '#94A3B8',
+          primary: '#F8FAFC',     // Crisp White
+          secondary: '#A0AEC0',   // Clear Cool Gray
           muted: '#64748B',
         }
       },
@@ -38,9 +41,9 @@ export default {
         mono: ['JetBrains Mono', 'monospace'],
       },
       boxShadow: {
-        'card-glow': '0 0 25px -5px rgba(56, 189, 248, 0.15)',
+        'card-glow': '0 0 25px -5px rgba(0, 200, 255, 0.22)',
         'deloitte-glow': '0 0 25px -5px rgba(163, 230, 53, 0.25)',
-        'violet-glow': '0 0 25px -5px rgba(139, 92, 246, 0.2)',
+        'orange-glow': '0 0 25px -5px rgba(255, 113, 57, 0.22)',
       },
       animation: {
         'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',

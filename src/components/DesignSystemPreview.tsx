@@ -81,14 +81,15 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                 <Layers className="w-5 h-5 text-accent-primary" />
                 Color Palette & Surface Tiers
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-3">
                 {[
-                  { name: 'Canvas Main', hex: '#090D18', bg: 'bg-[#090D18]', border: 'border-slate-800' },
-                  { name: 'Secondary Canvas', hex: '#121A2B', bg: 'bg-[#121A2B]', border: 'border-slate-800' },
-                  { name: 'Card Surface', hex: '#151F33', bg: 'bg-[#151F33]', border: 'border-slate-700' },
-                  { name: 'Accent Primary', hex: '#38BDF8', bg: 'bg-[#38BDF8]', text: 'text-slate-950' },
-                  { name: 'Accent Secondary', hex: '#8B5CF6', bg: 'bg-[#8B5CF6]', text: 'text-white' },
-                  { name: 'Deloitte Lime', hex: '#A3E635', bg: 'bg-[#A3E635]', text: 'text-slate-950' },
+                  { name: 'Canvas Main', hex: '#080B12', bg: 'bg-[#080B12]', border: 'border-slate-800' },
+                  { name: 'Secondary Canvas', hex: '#0D1420', bg: 'bg-[#0D1420]', border: 'border-slate-800' },
+                  { name: 'Card Surface', hex: '#202B3D', bg: 'bg-[#202B3D]', border: 'border-slate-700' },
+                  { name: 'Border Slate', hex: '#334155', bg: 'bg-[#334155]', border: 'border-slate-600' },
+                  { name: 'Electric Blue', hex: '#00C8FF', bg: 'bg-[#00C8FF]', text: 'text-slate-950' },
+                  { name: 'Vibrant Orange', hex: '#FF7139', bg: 'bg-[#FF7139]', text: 'text-white' },
+                  { name: 'Deloitte Green', hex: '#A3E635', bg: 'bg-[#A3E635]', text: 'text-slate-950' },
                 ].map((c) => (
                   <div key={c.hex} className="rounded-xl border border-border-subtle overflow-hidden bg-bg-card">
                     <div className={`h-16 w-full ${c.bg} ${c.border || ''} flex items-center justify-center`}>
@@ -121,7 +122,7 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                   </p>
                 </div>
                 <div className="pt-4">
-                  <div className="text-xs font-mono text-accent-achievement mb-1">JetBrains Mono • Technical KPIs & Code Tags</div>
+                  <div className="text-xs font-mono text-accent-secondary mb-1">JetBrains Mono • Technical KPIs & Code Tags</div>
                   <div className="flex flex-wrap gap-2 text-xs font-mono text-text-primary">
                     <span className="px-2.5 py-1 rounded bg-bg-secondary border border-border-subtle">MAE &lt; 5.0°</span>
                     <span className="px-2.5 py-1 rounded bg-bg-secondary border border-border-subtle">35,000+ Transactions</span>
@@ -255,7 +256,7 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                 {[
                   { label: 'Transactions Curated', val: '35,000+', sub: 'Star Schema Data Model', icon: TrendingUp, color: 'text-accent-primary' },
                   { label: 'Cobb Angle Accuracy', val: 'MAE < 5.0°', sub: 'Deep Learning Keypoints', icon: Activity, color: 'text-accent-secondary' },
-                  { label: 'Tenant Isolation', val: '100% RLS', sub: 'Postgres Supabase Security', icon: ShieldCheck, color: 'text-accent-achievement' },
+                  { label: 'Tenant Isolation', val: '100% RLS', sub: 'Postgres Supabase Security', icon: ShieldCheck, color: 'text-accent-primary' },
                   { label: 'Sync Latency', val: '< 100ms', sub: 'Socket.IO Real-time Events', icon: Cpu, color: 'text-sky-400' },
                 ].map((stat, i) => {
                   const Icon = stat.icon;

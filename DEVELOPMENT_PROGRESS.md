@@ -208,6 +208,43 @@
 
 ---
 
+### Phase 16: WEBSITE-WIDE VISUAL UPGRADE – Electric Contrast Theme
+- **Phase Number**: Phase 16
+- **Tasks**:
+  1. Upgrade color palette to a bold, premium high-contrast design system:
+     - Main background: `#080B12` (deepest black/navy)
+     - Secondary background: `#0D1420`
+     - Card background: `#202B3D` (distinct, rich card surface)
+     - Primary text: `#F8FAFC` (crisp white)
+     - Secondary text: `#A0AEC0` (clean cool gray)
+     - Electric Blue: `#00C8FF` (primary accent, buttons, active nav, primary highlights)
+     - Vibrant Orange: `#FF7139` (secondary accent, subtle hover, decorative accents)
+     - Border: `#334155` (clearly visible slate border)
+     - Deloitte Green: `#A3E635` (**strictly exclusive** to Deloitte selection badge/milestone)
+  2. Update Hero section: Crisp white `SWARAJ` with electric-blue-to-orange gradient `KHADALKAR`, Electric Blue primary CTA button with blue card glow, and secondary actions with orange accents.
+  3. Update "The Swaraj Experience": Central core in `#202B3D` with Electric Blue border and pulsing glow, Electric Blue and Vibrant Orange interactive dimension nodes, and white typography.
+  4. Update Signature Loading Screen: Full name animation with crisp white and electric-blue-to-orange styling, vibrant orange tagline `THINK. BUILD. LEAD.`, and glowing dual-gradient progress indicator.
+  5. Audit and clean all other sections: Skills, Projects, Education, Terminal CLI, Framework, and Footer to ensure Deloitte Green is 100% exclusive to the Deloitte selection milestone.
+  6. Rebuild and verify: 0 compilation errors, 0 privacy violations.
+- **Current Status**: **COMPLETED**
+- **Completed Work**:
+  - Updated [`tailwind.config.js`](file:///d:/Portfolio_Swaraj/tailwind.config.js) and [`index.css`](file:///d:/Portfolio_Swaraj/src/index.css).
+  - Updated [`HeroSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/HeroSection.tsx).
+  - Updated [`SwarajExperience.tsx`](file:///d:/Portfolio_Swaraj/src/components/SwarajExperience.tsx).
+  - Updated [`SignatureLoadingScreen.tsx`](file:///d:/Portfolio_Swaraj/src/components/SignatureLoadingScreen.tsx).
+  - Updated [`InteractiveTerminal.tsx`](file:///d:/Portfolio_Swaraj/src/components/InteractiveTerminal.tsx) and [`terminalCommands.tsx`](file:///d:/Portfolio_Swaraj/src/data/terminalCommands.tsx).
+  - Updated [`ProjectCard.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectCard.tsx) and [`ProjectModal.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectModal.tsx).
+  - Updated [`AboutSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/AboutSection.tsx), [`SkillsSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/SkillsSection.tsx), [`EducationAndCertifications.tsx`](file:///d:/Portfolio_Swaraj/src/components/EducationAndCertifications.tsx), [`ProductThinkingFramework.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProductThinkingFramework.tsx), and [`Footer.tsx`](file:///d:/Portfolio_Swaraj/src/components/Footer.tsx).
+  - Updated [`DesignSystemPreview.tsx`](file:///d:/Portfolio_Swaraj/src/components/DesignSystemPreview.tsx) swatches and tokens.
+- **Testing Results**:
+  - TypeScript & Vite build: **Passed in 19.49s (0 errors, 0 warnings)**.
+  - Automated Privacy Scan: **0 Violations (Passed)**.
+  - Deloitte Green Exclusivity Check: **Verified 100% exclusive to Deloitte elements**.
+- **Known Issues**: None.
+
+
+---
+
 ### Phase 14: SIGNATURE LOADING EXPERIENCE – Full Name Cinematic Intro
 - **Phase Number**: Phase 14
 - **Tasks**:
@@ -256,3 +293,40 @@
   - Horizontal overflow: **0px (Clean)**.
   - Privacy scan: **0 Violations (Passed)**.
 - **Known Issues**: None.
+
+---
+
+### Phase 16: WEBSITE-WIDE VISUAL UPGRADE – Electric Contrast Theme
+- **Phase Number**: Phase 16
+- **Tasks**:
+  1. Upgrade color palette to a bold, premium high-contrast design system:
+     - Main background: `#080B12` (deepest black/navy)
+     - Secondary background: `#0D1420`
+     - Card background: `#202B3D` (distinct, rich card surface)
+     - Primary text: `#F8FAFC` (crisp white)
+     - Secondary text: `#A0AEC0` (clean cool gray)
+     - Electric Blue: `#00C8FF` (primary accent, buttons, active nav, primary highlights)
+     - Vibrant Orange: `#FF7139` (secondary accent, subtle hover, decorative accents)
+     - Border: `#334155` (clearly visible slate border)
+     - Deloitte Green: `#A3E635` (**strictly exclusive** to Deloitte selection badge/milestone)
+  2. Update Hero section: Crisp white `SWARAJ` with electric-blue-to-orange gradient `KHADALKAR`, Electric Blue primary CTA button with blue card glow, and secondary actions with orange accents.
+  3. Update "The Swaraj Experience": Central core in `#202B3D` with Electric Blue border and pulsing glow, Electric Blue and Vibrant Orange interactive dimension nodes, and white typography.
+  4. Update Signature Loading Screen: Full name animation with crisp white and electric-blue-to-orange styling, vibrant orange tagline `THINK. BUILD. LEAD.`, and glowing dual-gradient progress indicator.
+  5. Audit and clean all other sections: Skills, Projects, Education, Terminal CLI, Framework, and Footer to ensure Deloitte Green is 100% exclusive to the Deloitte selection milestone.
+  6. Rebuild and verify: 0 compilation errors, 0 privacy violations.
+- **Current Status**: **COMPLETED**
+- **Completed Work**:
+  - Updated [`tailwind.config.js`](file:///d:/Portfolio_Swaraj/tailwind.config.js) and [`index.css`](file:///d:/Portfolio_Swaraj/src/index.css).
+  - Updated [`HeroSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/HeroSection.tsx).
+  - Updated [`SwarajExperience.tsx`](file:///d:/Portfolio_Swaraj/src/components/SwarajExperience.tsx).
+  - Updated [`SignatureLoadingScreen.tsx`](file:///d:/Portfolio_Swaraj/src/components/SignatureLoadingScreen.tsx).
+  - Updated [`InteractiveTerminal.tsx`](file:///d:/Portfolio_Swaraj/src/components/InteractiveTerminal.tsx) and [`terminalCommands.tsx`](file:///d:/Portfolio_Swaraj/src/data/terminalCommands.tsx).
+  - Updated [`ProjectCard.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectCard.tsx) and [`ProjectModal.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectModal.tsx).
+  - Updated [`AboutSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/AboutSection.tsx), [`SkillsSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/SkillsSection.tsx), [`EducationAndCertifications.tsx`](file:///d:/Portfolio_Swaraj/src/components/EducationAndCertifications.tsx), [`ProductThinkingFramework.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProductThinkingFramework.tsx), and [`Footer.tsx`](file:///d:/Portfolio_Swaraj/src/components/Footer.tsx).
+  - Updated [`DesignSystemPreview.tsx`](file:///d:/Portfolio_Swaraj/src/components/DesignSystemPreview.tsx) swatches and tokens.
+- **Testing Results**:
+  - TypeScript & Vite build: **Passed in 19.49s (0 errors, 0 warnings)**.
+  - Automated Privacy Scan: **0 Violations (Passed)**.
+  - Deloitte Green Exclusivity Check: **Verified 100% exclusive to Deloitte elements**.
+- **Known Issues**: None.
+

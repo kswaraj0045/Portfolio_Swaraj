@@ -11,9 +11,9 @@ export const SkillsSection: React.FC = () => {
       case 'Product Thinking & Strategy':
         return <Lightbulb className="w-5 h-5 text-accent-primary" />;
       case 'Business & Analytics':
-        return <BarChart3 className="w-5 h-5 text-accent-achievement" />;
+        return <BarChart3 className="w-5 h-5 text-accent-secondary" />;
       case 'Collaboration & Leadership':
-        return <Users className="w-5 h-5 text-sky-400" />;
+        return <Users className="w-5 h-5 text-accent-primary" />;
       case 'Technical Foundation':
         return <Terminal className="w-5 h-5 text-accent-secondary" />;
       default:

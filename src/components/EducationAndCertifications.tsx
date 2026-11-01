@@ -49,7 +49,7 @@ export const EducationAndCertifications: React.FC = () => {
                     </span>
                   </div>
 
-                  <div className="text-sm font-mono text-accent-achievement font-medium">
+                  <div className="text-sm font-mono text-accent-primary font-medium">
                     {edu.degree}
                   </div>
 
@@ -76,7 +76,7 @@ export const EducationAndCertifications: React.FC = () => {
           {/* Right Column: Certifications */}
           <div className="lg:col-span-6 space-y-8">
             <MotionReveal delay={0.15}>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-achievement bg-accent-achievement/10 border border-accent-achievement/20 mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-secondary bg-accent-secondary/10 border border-accent-secondary/20 mb-3">
                 <Award className="w-3.5 h-3.5" />
                 <span>CONTINUOUS LEARNING & CREDENTIALS</span>
               </div>
@@ -96,15 +96,15 @@ export const EducationAndCertifications: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.45, delay: i * 0.1 }}
-                  whileHover={{ y: -3, borderColor: 'rgba(163, 230, 53, 0.4)' }}
-                  className="glass-card p-5 rounded-2xl border border-border-subtle bg-bg-card/80 flex items-center justify-between gap-4 group transition-all"
+                  whileHover={{ y: -3, borderColor: 'rgba(0, 200, 255, 0.5)' }}
+                  className="glass-card p-5 rounded-2xl border border-border-subtle bg-bg-card/90 flex items-center justify-between gap-4 group transition-all"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-bg-main border border-border-subtle flex items-center justify-center text-accent-achievement group-hover:scale-105 transition-transform">
-                      <Award className="w-5 h-5 text-accent-achievement" />
+                    <div className="w-11 h-11 rounded-xl bg-bg-main border border-border-subtle flex items-center justify-center text-accent-secondary group-hover:scale-105 transition-transform">
+                      <Award className="w-5 h-5 text-accent-secondary" />
                     </div>
                     <div>
-                      <h4 className="text-base font-bold font-heading text-text-primary group-hover:text-accent-achievement transition-colors">
+                      <h4 className="text-base font-bold font-heading text-text-primary group-hover:text-accent-primary transition-colors">
                         {cert.title}
                       </h4>
                       <div className="text-xs font-mono text-text-secondary mt-0.5">
@@ -114,7 +114,7 @@ export const EducationAndCertifications: React.FC = () => {
                   </div>
 
                   {cert.badge && (
-                    <span className="hidden sm:inline-flex px-3 py-1 rounded-full text-[11px] font-mono font-medium text-accent-achievement bg-accent-achievement/10 border border-accent-achievement/30">
+                    <span className="hidden sm:inline-flex px-3 py-1 rounded-full text-[11px] font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/30">
                       {cert.badge}
                     </span>
                   )}

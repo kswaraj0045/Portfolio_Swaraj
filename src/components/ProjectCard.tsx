@@ -57,13 +57,13 @@ export const ProjectCard: React.FC<Props> = ({ project, onOpenDetails }) => {
   const getCategoryColor = (cat: Project['category']) => {
     switch (cat) {
       case 'Product & Analytics':
-        return 'text-accent-primary bg-accent-primary/10 border-accent-primary/25';
+        return 'text-accent-primary bg-accent-primary/10 border-accent-primary/30';
       case 'Full-Stack SaaS':
-        return 'text-emerald-400 bg-emerald-500/10 border-emerald-500/25';
+        return 'text-accent-primary bg-accent-primary/10 border-accent-primary/30';
       case 'AI & Deep Learning':
-        return 'text-accent-secondary bg-accent-secondary/10 border-accent-secondary/25';
+        return 'text-accent-secondary bg-accent-secondary/10 border-accent-secondary/30';
       case 'Healthcare Systems':
-        return 'text-amber-400 bg-amber-500/10 border-amber-500/25';
+        return 'text-accent-secondary bg-accent-secondary/10 border-accent-secondary/30';
       default:
         return 'text-text-secondary bg-bg-card border-border-subtle';
     }
@@ -155,7 +155,7 @@ export const ProjectCard: React.FC<Props> = ({ project, onOpenDetails }) => {
               href={project.liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="p-1.5 text-text-muted hover:text-accent-achievement transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center"
+              className="p-1.5 text-text-muted hover:text-accent-secondary transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center"
               title="Open Live Application"
               aria-label="Open Live Application"
             >

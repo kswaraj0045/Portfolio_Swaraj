@@ -33,8 +33,8 @@ export const aboutPillars = [
     subtitle: 'Using analytics and business understanding to support decisions.',
     description: 'Structuring metrics frameworks, Star Schemas, and BI dashboards to track North Star KPIs and eliminate guesswork.',
     skills: ['Data Analysis', 'Business Intelligence', 'KPI Understanding', 'Data-Driven Decision Making', 'Analytical Thinking'],
-    color: 'accent-achievement',
-    gradient: 'from-lime-500/20 to-emerald-600/10'
+    color: 'accent-secondary',
+    gradient: 'from-[#FF7139]/20 to-[#FF7139]/5'
   },
   {
     id: 'technology',

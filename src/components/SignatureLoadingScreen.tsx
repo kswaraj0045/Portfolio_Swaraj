@@ -220,7 +220,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
                     delay: 0.15 + index * 0.045,
                     ease: [0.21, 0.47, 0.32, 0.98],
                   }}
-                  className="inline-block bg-gradient-to-r from-accent-primary via-white to-accent-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(56,189,248,0.35)]"
+                  className="inline-block bg-gradient-to-b from-white via-slate-100 to-white bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(255,255,255,0.2)]"
                 >
                   {char}
                 </motion.span>
@@ -239,7 +239,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
                     delay: 0.45 + index * 0.045,
                     ease: [0.21, 0.47, 0.32, 0.98],
                   }}
-                  className="inline-block bg-gradient-to-r from-accent-primary via-white to-accent-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(139,92,246,0.35)]"
+                  className="inline-block bg-gradient-to-r from-accent-primary via-[#6ee7ff] to-accent-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,200,255,0.4)]"
                 >
                   {char}
                 </motion.span>
@@ -255,7 +255,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
           transition={{ duration: 0.6, delay: 0.95, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="space-y-2 mb-8 sm:mb-10"
         >
-          <div className="font-mono font-bold text-xs sm:text-sm md:text-base tracking-[0.25em] text-accent-achievement uppercase">
+          <div className="font-mono font-bold text-xs sm:text-sm md:text-base tracking-[0.25em] text-accent-secondary uppercase">
             THINK. BUILD. LEAD.
           </div>
           <div className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-text-muted uppercase">
@@ -274,13 +274,13 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
           <div className="w-full h-[2px] bg-border-subtle/80 rounded-full overflow-hidden relative shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]">
             <motion.div
               style={{ width: `${progress}%` }}
-              className="h-full bg-gradient-to-r from-accent-primary via-accent-achievement to-accent-secondary rounded-full shadow-[0_0_10px_#38bdf8]"
+              className="h-full bg-gradient-to-r from-accent-primary via-white to-accent-secondary rounded-full shadow-[0_0_10px_#00C8FF]"
             />
           </div>
 
           {/* Status Label (No fake percentages) */}
           <div className="flex items-center justify-center gap-2 text-[9px] sm:text-[10px] font-mono tracking-widest text-text-muted">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent-achievement animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent-primary animate-pulse" />
             <span>
               {progress >= 100 ? 'SYSTEM READY' : 'INITIALIZING EXPERIENCE...'}
             </span>

@@ -71,7 +71,7 @@ export const ProductThinkingFramework: React.FC = () => {
             
             {/* Animated Dynamic Progress Line */}
             <motion.div 
-              className="absolute top-7 left-12 h-1 bg-gradient-to-r from-accent-primary via-sky-400 to-accent-achievement z-0 rounded-full"
+              className="absolute top-7 left-12 h-1 bg-gradient-to-r from-accent-primary via-white to-accent-secondary z-0 rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `calc(${progressPercent}% - 48px)` }}
               transition={{ duration: 0.4, ease: "easeOut" }}
@@ -194,10 +194,10 @@ export const ProductThinkingFramework: React.FC = () => {
                 {/* Concrete Application Box */}
                 <div className="p-5 rounded-2xl bg-bg-main/90 border border-border-subtle space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-border-subtle">
-                    <span className="text-xs font-mono font-semibold text-accent-achievement uppercase">
+                    <span className="text-xs font-mono font-semibold text-accent-secondary uppercase">
                       Applied in Real Project
                     </span>
-                    <span className="w-2 h-2 rounded-full bg-accent-achievement shadow-[0_0_6px_#a3e635]" />
+                    <span className="w-2 h-2 rounded-full bg-accent-secondary shadow-[0_0_6px_#ff7139]" />
                   </div>
                   <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-mono">
                     "{selectedStage.exampleFromWork}"

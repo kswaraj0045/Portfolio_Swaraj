@@ -171,7 +171,7 @@ export const InteractiveTerminal: React.FC = () => {
           }`}
         >
           {/* Header Bar */}
-          <div className="px-4 py-3 bg-[#121A2B]/90 border-b border-border-subtle flex items-center justify-between select-none">
+          <div className="px-4 py-3 bg-[#0D1420]/95 border-b border-border-subtle flex items-center justify-between select-none">
             {/* Window Controls */}
             <div className="flex items-center gap-2">
               <button 
@@ -202,8 +202,8 @@ export const InteractiveTerminal: React.FC = () => {
 
             {/* Status Indicator */}
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-accent-achievement shadow-[0_0_8px_#a3e635] animate-pulse" />
-              <span className="text-[10px] font-mono font-bold tracking-wider text-accent-achievement hidden sm:inline">
+              <span className="w-2 h-2 rounded-full bg-accent-primary shadow-[0_0_8px_#00c8ff] animate-pulse" />
+              <span className="text-[10px] font-mono font-bold tracking-wider text-accent-primary hidden sm:inline">
                 SYSTEM ONLINE
               </span>
             </div>
@@ -229,16 +229,16 @@ export const InteractiveTerminal: React.FC = () => {
                     Initializing Swaraj's Personal Terminal...
                   </div>
                   <div className="text-text-muted space-y-0.5 text-xs">
-                    <div><span className="text-accent-achievement font-bold">[OK]</span> Loading personal profile</div>
-                    <div><span className="text-accent-achievement font-bold">[OK]</span> Loading professional experience</div>
-                    <div><span className="text-accent-achievement font-bold">[OK]</span> Loading technical skills</div>
-                    <div><span className="text-accent-achievement font-bold">[OK]</span> Loading achievements</div>
+                    <div><span className="text-accent-primary font-bold">[OK]</span> Loading personal profile</div>
+                    <div><span className="text-accent-primary font-bold">[OK]</span> Loading professional experience</div>
+                    <div><span className="text-accent-primary font-bold">[OK]</span> Loading technical skills</div>
+                    <div><span className="text-accent-primary font-bold">[OK]</span> Loading achievements</div>
                   </div>
                   <div className="pt-2 text-text-primary font-bold">
                     Welcome to Swaraj's Interactive Portfolio!
                   </div>
-                  <div className="text-xs text-accent-primary">
-                    Type <span className="text-accent-achievement font-bold underline cursor-pointer" onClick={() => handleCommandExecution('help')}>'help'</span> to explore who I am.
+                  <div className="text-xs text-text-secondary">
+                    Type <span className="text-accent-secondary font-bold underline cursor-pointer" onClick={() => handleCommandExecution('help')}>'help'</span> to explore who I am.
                   </div>
                 </div>
 

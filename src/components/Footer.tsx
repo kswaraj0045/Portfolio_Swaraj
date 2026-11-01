@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
 
             <a 
               href={`mailto:${personalInfo.email}`} 
-              className="text-text-secondary hover:text-accent-achievement transition-colors flex items-center gap-1.5 text-xs font-mono"
+              className="text-text-secondary hover:text-accent-secondary transition-colors flex items-center gap-1.5 text-xs font-mono"
             >
               <Mail className="w-4 h-4" />
               <span>{personalInfo.email}</span>
@@ -85,7 +85,7 @@ export const Footer: React.FC = () => {
             © {currentYear} {personalInfo.name}. All rights reserved.
           </div>
           <div className="flex items-center gap-2 text-[11px]">
-            <ShieldCheck className="w-3.5 h-3.5 text-accent-achievement" />
+            <ShieldCheck className="w-3.5 h-3.5 text-accent-primary" />
             <span>Privacy Compliant • Verified Repositories & Placement Milestone</span>
           </div>
         </div>

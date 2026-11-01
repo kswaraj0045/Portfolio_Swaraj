@@ -35,25 +35,25 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
           <div className="space-y-3">
             <div className="text-accent-primary font-bold tracking-wider">AVAILABLE COMMANDS</div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-xs">
-              <div><span className="text-accent-achievement font-bold">whoami</span>       <span className="text-text-muted">-</span> Discover who I am</div>
-              <div><span className="text-accent-achievement font-bold">about</span>        <span className="text-text-muted">-</span> Know more about me</div>
-              <div><span className="text-accent-achievement font-bold">education</span>    <span className="text-text-muted">-</span> Explore my education</div>
-              <div><span className="text-accent-achievement font-bold">experience</span>   <span className="text-text-muted">-</span> View professional experience</div>
-              <div><span className="text-accent-achievement font-bold">skills</span>       <span className="text-text-muted">-</span> Explore my technical skills</div>
-              <div><span className="text-accent-achievement font-bold">leadership</span>   <span className="text-text-muted">-</span> Discover my leadership experience</div>
-              <div><span className="text-accent-achievement font-bold">projects</span>     <span className="text-text-muted">-</span> Explore my selected projects</div>
-              <div><span className="text-accent-achievement font-bold">certifications</span> <span className="text-text-muted">-</span> View my certifications</div>
-              <div><span className="text-accent-achievement font-bold">interests</span>    <span className="text-text-muted">-</span> Know what I enjoy exploring</div>
-              <div><span className="text-accent-achievement font-bold">career</span>       <span className="text-text-muted">-</span> Explore my career milestone</div>
-              <div><span className="text-accent-achievement font-bold">contact</span>      <span className="text-text-muted">-</span> Get in touch with me</div>
-              <div><span className="text-accent-achievement font-bold">github</span>       <span className="text-text-muted">-</span> Open my GitHub profile</div>
-              <div><span className="text-accent-achievement font-bold">linkedin</span>     <span className="text-text-muted">-</span> Open my LinkedIn profile</div>
-              <div><span className="text-accent-achievement font-bold">resume</span>       <span className="text-text-muted">-</span> Download my resume</div>
-              <div><span className="text-accent-achievement font-bold">clear</span>        <span className="text-text-muted">-</span> Clear the terminal</div>
-              <div><span className="text-accent-achievement font-bold">neofetch</span>     <span className="text-text-muted">-</span> Display my professional system profile</div>
+              <div><span className="text-accent-primary font-bold">whoami</span>       <span className="text-text-muted">-</span> Discover who I am</div>
+              <div><span className="text-accent-primary font-bold">about</span>        <span className="text-text-muted">-</span> Know more about me</div>
+              <div><span className="text-accent-primary font-bold">education</span>    <span className="text-text-muted">-</span> Explore my education</div>
+              <div><span className="text-accent-primary font-bold">experience</span>   <span className="text-text-muted">-</span> View professional experience</div>
+              <div><span className="text-accent-primary font-bold">skills</span>       <span className="text-text-muted">-</span> Explore my technical skills</div>
+              <div><span className="text-accent-primary font-bold">leadership</span>   <span className="text-text-muted">-</span> Discover my leadership experience</div>
+              <div><span className="text-accent-primary font-bold">projects</span>     <span className="text-text-muted">-</span> Explore my selected projects</div>
+              <div><span className="text-accent-primary font-bold">certifications</span> <span className="text-text-muted">-</span> View my certifications</div>
+              <div><span className="text-accent-primary font-bold">interests</span>    <span className="text-text-muted">-</span> Know what I enjoy exploring</div>
+              <div><span className="text-accent-secondary font-bold">career</span>       <span className="text-text-muted">-</span> Explore my career milestone</div>
+              <div><span className="text-accent-primary font-bold">contact</span>      <span className="text-text-muted">-</span> Get in touch with me</div>
+              <div><span className="text-accent-primary font-bold">github</span>       <span className="text-text-muted">-</span> Open my GitHub profile</div>
+              <div><span className="text-accent-primary font-bold">linkedin</span>     <span className="text-text-muted">-</span> Open my LinkedIn profile</div>
+              <div><span className="text-accent-secondary font-bold">resume</span>       <span className="text-text-muted">-</span> Download my resume</div>
+              <div><span className="text-accent-primary font-bold">clear</span>        <span className="text-text-muted">-</span> Clear the terminal</div>
+              <div><span className="text-accent-primary font-bold">neofetch</span>     <span className="text-text-muted">-</span> Display my professional system profile</div>
             </div>
             <div className="text-[11px] text-text-muted pt-1">
-              Tip: You can also try <span className="text-accent-primary">projects --explore</span> to jump directly to projects.
+              Tip: You can also try <span className="text-accent-secondary font-bold">projects --explore</span> to jump directly to projects.
             </div>
           </div>
         ),
@@ -89,7 +89,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
             <p>
               I enjoy understanding problems, exploring ideas, collaborating with teams, and developing practical digital solutions.
             </p>
-            <p className="text-accent-achievement">
+            <p className="text-accent-primary font-semibold">
               My goal is to combine technical understanding with product and business thinking.
             </p>
           </div>
@@ -102,7 +102,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
           <div className="space-y-2 leading-relaxed">
             <div className="text-accent-primary font-bold tracking-wider">EDUCATION</div>
             <div className="text-text-primary font-bold">MIT Academy of Engineering</div>
-            <div className="text-accent-achievement">B.Tech - Computer Engineering</div>
+            <div className="text-accent-primary font-semibold">B.Tech - Computer Engineering</div>
             <div className="text-text-muted">2023 - 2027</div>
             <div className="pt-1 text-text-secondary">
               Currently pursuing final-year undergraduate studies.
@@ -117,7 +117,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
           <div className="space-y-2 leading-relaxed">
             <div className="text-accent-primary font-bold tracking-wider">PROFESSIONAL EXPERIENCE</div>
             <div className="text-text-primary font-bold">STREET-UP</div>
-            <div>Role: <span className="text-accent-achievement">Software Developer Intern</span></div>
+            <div>Role: <span className="text-accent-primary font-semibold">Software Developer Intern</span></div>
             <div className="text-text-muted">Since: 29 June 2026</div>
             <p className="pt-1 text-text-secondary">
               Working on CRM software for optical store clients. Contributing to software development and collaborating with the team to build practical business solutions.
@@ -133,27 +133,27 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
             <div className="text-accent-primary font-bold tracking-wider">TECHNICAL SKILLS</div>
             
             <div>
-              <div className="text-accent-achievement font-semibold text-xs uppercase">PROGRAMMING</div>
+              <div className="text-accent-secondary font-semibold text-xs uppercase">PROGRAMMING</div>
               <div className="text-text-secondary">Java, Python, C++</div>
             </div>
 
             <div>
-              <div className="text-accent-achievement font-semibold text-xs uppercase">DATA &amp; ANALYTICS</div>
+              <div className="text-accent-secondary font-semibold text-xs uppercase">DATA &amp; ANALYTICS</div>
               <div className="text-text-secondary">Python, Pandas, NumPy, SQL, Data Analysis</div>
             </div>
 
             <div>
-              <div className="text-accent-achievement font-semibold text-xs uppercase">DEVELOPMENT</div>
+              <div className="text-accent-secondary font-semibold text-xs uppercase">DEVELOPMENT</div>
               <div className="text-text-secondary">React, Spring Boot, PostgreSQL</div>
             </div>
 
             <div>
-              <div className="text-accent-achievement font-semibold text-xs uppercase">CLOUD &amp; TOOLS</div>
+              <div className="text-accent-secondary font-semibold text-xs uppercase">CLOUD &amp; TOOLS</div>
               <div className="text-text-secondary">AWS, Docker, Linux, Git</div>
             </div>
 
             <div>
-              <div className="text-accent-achievement font-semibold text-xs uppercase">PRODUCT &amp; BUSINESS</div>
+              <div className="text-accent-secondary font-semibold text-xs uppercase">PRODUCT &amp; BUSINESS</div>
               <div className="text-text-secondary">Product Thinking, Problem Solving, Business Analysis, Team Collaboration</div>
             </div>
           </div>
@@ -167,11 +167,11 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
             <div className="text-accent-primary font-bold tracking-wider">LEADERSHIP &amp; ACTIVITIES</div>
             <div className="pt-1">
               <div className="text-text-primary font-bold">VIASET - MIT AOE E-CELL</div>
-              <div className="text-accent-achievement">Core Member - CMO</div>
+              <div className="text-accent-primary font-semibold">Core Member - CMO</div>
             </div>
             <div className="pt-2">
               <div className="text-text-primary font-bold">GeeksforGeeks Club - MIT AOE</div>
-              <div className="text-accent-achievement">Club Member</div>
+              <div className="text-accent-secondary font-semibold">Club Member</div>
             </div>
             <p className="pt-2 text-text-secondary">
               Interested in leadership, coordination, team collaboration, and organizational activities.
@@ -193,7 +193,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
               <div>05. <span className="text-text-primary font-medium">Demand Forecasting &amp; Stock Optimisation</span></div>
             </div>
             <div className="pt-2 text-xs text-text-muted">
-              Use <span className="text-accent-achievement font-bold cursor-pointer underline" onClick={() => {
+              Use <span className="text-accent-secondary font-bold cursor-pointer underline" onClick={() => {
                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
               }}>projects --explore</span> to open the projects section.
             </div>
@@ -269,7 +269,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
             <div className="space-y-1.5 text-xs">
               <div>
                 <span className="text-text-muted block">EMAIL:</span>
-                <a href={`mailto:${personalInfo.email}`} className="text-accent-achievement hover:underline inline-flex items-center gap-1 font-mono">
+                <a href={`mailto:${personalInfo.email}`} className="text-accent-secondary hover:underline inline-flex items-center gap-1 font-mono">
                   {personalInfo.email}
                   <ArrowUpRight className="w-3 h-3" />
                 </a>
@@ -283,7 +283,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
               </div>
               <div>
                 <span className="text-text-muted block">LINKEDIN:</span>
-                <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="text-sky-300 hover:underline inline-flex items-center gap-1 font-mono">
+                <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="text-accent-primary hover:underline inline-flex items-center gap-1 font-mono">
                   Open my LinkedIn profile
                   <ExternalLink className="w-3 h-3" />
                 </a>
@@ -301,7 +301,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
             <div className="text-accent-primary font-bold">GITHUB PROFILE</div>
             <div className="text-text-secondary">Username: <span className="text-text-primary font-mono">kswaraj0045</span></div>
             <div className="text-xs text-text-muted">Opening GitHub repository in new tab...</div>
-            <a href={personalInfo.github} target="_blank" rel="noreferrer" className="text-accent-achievement hover:underline inline-flex items-center gap-1 text-xs">
+            <a href={personalInfo.github} target="_blank" rel="noreferrer" className="text-accent-primary hover:underline inline-flex items-center gap-1 text-xs">
               <span>{personalInfo.github}</span>
               <ExternalLink className="w-3 h-3" />
             </a>
@@ -316,7 +316,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
           <div className="space-y-1">
             <div className="text-accent-primary font-bold">LINKEDIN PROFILE</div>
             <div className="text-xs text-text-muted">Opening LinkedIn profile in new tab...</div>
-            <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="text-accent-achievement hover:underline inline-flex items-center gap-1 text-xs">
+            <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" className="text-accent-primary hover:underline inline-flex items-center gap-1 text-xs">
               <span>{personalInfo.linkedin}</span>
               <ExternalLink className="w-3 h-3" />
             </a>
@@ -333,7 +333,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
             <a 
               href={personalInfo.resumeUrl} 
               download="Swaraj_Khadalkar_Resume.pdf"
-              className="text-accent-achievement hover:underline inline-flex items-center gap-1.5 text-xs font-semibold"
+              className="text-accent-primary hover:underline inline-flex items-center gap-1.5 text-xs font-semibold"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Click here if download does not start automatically</span>

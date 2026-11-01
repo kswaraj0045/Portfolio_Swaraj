@@ -12,9 +12,9 @@ export const AboutSection: React.FC = () => {
       case 'product-thinking':
         return <Lightbulb className="w-6 h-6 text-accent-primary" />;
       case 'business-data':
-        return <BarChart3 className="w-6 h-6 text-accent-achievement" />;
+        return <BarChart3 className="w-6 h-6 text-accent-secondary" />;
       case 'technology':
-        return <Terminal className="w-6 h-6 text-accent-secondary" />;
+        return <Terminal className="w-6 h-6 text-accent-primary" />;
       default:
         return <Lightbulb className="w-6 h-6 text-accent-primary" />;
     }
@@ -91,10 +91,10 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* Bottom Callout: Professional Philosophy */}
-        <MotionReveal delay={0.25} className="mt-12 p-6 rounded-2xl bg-bg-card/40 border border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
+        <MotionReveal delay={0.25} className="mt-12 p-6 rounded-2xl bg-bg-card border border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-accent-achievement/10 border border-accent-achievement/30 flex items-center justify-center shrink-0">
-              <CheckCircle2 className="w-5 h-5 text-accent-achievement" />
+            <div className="w-10 h-10 rounded-full bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center shrink-0">
+              <CheckCircle2 className="w-5 h-5 text-accent-primary" />
             </div>
             <div>
               <div className="text-xs font-mono text-text-muted">OPERATIONAL PHILOSOPHY</div>
@@ -105,7 +105,7 @@ export const AboutSection: React.FC = () => {
           </div>
           <a
             href="#framework"
-            className="text-xs font-semibold text-accent-primary hover:text-sky-300 inline-flex items-center gap-1.5 shrink-0 group"
+            className="text-xs font-semibold text-accent-primary hover:text-accent-secondary inline-flex items-center gap-1.5 shrink-0 group transition-colors"
           >
             <span>See how I turn problems into products</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

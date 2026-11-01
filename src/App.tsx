@@ -72,7 +72,7 @@ export function App() {
               ease: "easeInOut",
               delay: 4
             }}
-            className="absolute top-2/3 left-1/3 w-[500px] h-[500px] bg-accent-achievement/5 rounded-full blur-[160px]"
+            className="absolute top-2/3 left-1/3 w-[500px] h-[500px] bg-accent-primary/5 rounded-full blur-[160px]"
           />
         </div>
       )}

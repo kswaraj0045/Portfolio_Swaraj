@@ -58,14 +58,14 @@ export const HeroSection: React.FC = () => {
     <section className="relative pt-28 pb-20 md:pt-36 md:pb-32 overflow-hidden">
       {/* Background radial ambient lights with subtle motion */}
       <motion.div 
-        animate={shouldReduceMotion ? {} : { scale: [1, 1.08, 1], opacity: [0.12, 0.18, 0.12] }}
+        animate={shouldReduceMotion ? {} : { scale: [1, 1.08, 1], opacity: [0.1, 0.16, 0.1] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 -left-48 w-[500px] h-[500px] bg-accent-primary/15 rounded-full blur-[140px] pointer-events-none" 
+        className="absolute top-1/4 -left-48 w-[500px] h-[500px] bg-accent-primary/10 rounded-full blur-[140px] pointer-events-none" 
       />
       <motion.div 
-        animate={shouldReduceMotion ? {} : { scale: [1, 1.1, 1], opacity: [0.1, 0.16, 0.1] }}
+        animate={shouldReduceMotion ? {} : { scale: [1, 1.1, 1], opacity: [0.08, 0.14, 0.08] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute top-1/3 -right-48 w-[500px] h-[500px] bg-accent-secondary/15 rounded-full blur-[140px] pointer-events-none" 
+        className="absolute top-1/3 -right-48 w-[500px] h-[500px] bg-accent-secondary/10 rounded-full blur-[140px] pointer-events-none" 
       />
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-accent-achievement/5 rounded-full blur-[160px] pointer-events-none" />
 
@@ -120,7 +120,7 @@ export const HeroSection: React.FC = () => {
                     <motion.span
                       key={`first-${index}`}
                       variants={letterVariants}
-                      className="inline-block text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-300 drop-shadow-[0_4px_24px_rgba(255,255,255,0.1)]"
+                      className="inline-block text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-100 to-slate-200 drop-shadow-[0_4px_24px_rgba(255,255,255,0.12)]"
                     >
                       {char}
                     </motion.span>
@@ -133,7 +133,7 @@ export const HeroSection: React.FC = () => {
                     <motion.span
                       key={`last-${index}`}
                       variants={letterVariants}
-                      className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-accent-primary via-sky-300 to-accent-secondary drop-shadow-[0_4px_30px_rgba(56,189,248,0.25)]"
+                      className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-accent-primary via-[#6ee7ff] to-accent-secondary drop-shadow-[0_4px_30px_rgba(0,200,255,0.35)]"
                     >
                       {char}
                     </motion.span>
@@ -198,7 +198,7 @@ export const HeroSection: React.FC = () => {
                 href="#projects"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-bg-main bg-accent-primary hover:bg-sky-400 transition-all shadow-card-glow cursor-pointer group min-h-[44px]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-bg-main bg-accent-primary hover:bg-[#33d6ff] transition-all shadow-card-glow cursor-pointer group min-h-[44px]"
               >
                 <span>Explore My Work</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -208,7 +208,7 @@ export const HeroSection: React.FC = () => {
                 href="#framework"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-text-primary bg-bg-card border border-border-subtle hover:border-accent-primary hover:bg-bg-secondary transition-all cursor-pointer min-h-[44px]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-text-primary bg-bg-card border border-border-subtle hover:border-accent-primary hover:text-accent-primary hover:bg-bg-secondary transition-all cursor-pointer min-h-[44px]"
               >
                 <Compass className="w-4 h-4 text-accent-primary" />
                 <span>My Product Journey</span>
@@ -219,7 +219,7 @@ export const HeroSection: React.FC = () => {
                 download="Swaraj_Khadalkar_Resume.pdf"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-text-secondary hover:text-text-primary bg-bg-secondary/80 border border-border-subtle hover:border-text-secondary transition-all cursor-pointer min-h-[44px]"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-text-secondary hover:text-accent-secondary bg-bg-card border border-border-subtle hover:border-accent-secondary transition-all cursor-pointer min-h-[44px]"
               >
                 <FileText className="w-4 h-4" />
                 <span>Download Resume</span>

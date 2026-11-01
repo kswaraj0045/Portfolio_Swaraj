@@ -69,7 +69,7 @@ export const LeadershipSection: React.FC = () => {
                   </div>
                   {item.impactPoints.map((pt, i) => (
                     <div key={i} className="flex items-start gap-2.5 text-xs text-text-secondary">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-accent-achievement shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-accent-primary shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </div>
                   ))}
