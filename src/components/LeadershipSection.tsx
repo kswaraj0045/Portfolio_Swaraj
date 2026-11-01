@@ -53,7 +53,7 @@ export const LeadershipSection: React.FC = () => {
                   <h3 className="text-xl font-bold font-heading text-text-primary group-hover:text-accent-primary transition-colors">
                     {item.organization}
                   </h3>
-                  <div className="text-sm font-mono text-accent-primary font-medium mt-1">
+                  <div className="text-sm font-mono text-silver-metallic font-medium mt-1">
                     {item.role}
                   </div>
                 </div>

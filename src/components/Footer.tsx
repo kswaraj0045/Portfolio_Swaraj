@@ -18,13 +18,13 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="md:col-span-6 space-y-2">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-bg-card border border-border-subtle flex items-center justify-center font-heading font-black text-accent-primary text-xs">
+              <div className="w-8 h-8 rounded-lg bg-bg-card border border-border-silver/40 flex items-center justify-center font-heading font-black text-silver-metallic text-xs">
                 SK
               </div>
               <span className="font-heading font-bold text-text-primary text-lg">
                 {personalInfo.name}
               </span>
-              <span className="px-2.5 py-0.5 rounded text-[11px] font-mono text-accent-primary bg-accent-primary/10 border border-accent-primary/20">
+              <span className="px-2.5 py-0.5 rounded text-[11px] font-mono text-silver-metallic bg-bg-elevated border border-border-silver/30">
                 {personalInfo.role}
               </span>
             </div>

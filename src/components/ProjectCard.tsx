@@ -143,7 +143,7 @@ export const ProjectCard: React.FC<Props> = ({ project, onOpenDetails }) => {
       <div className="pt-4 border-t border-border-subtle/60 flex items-center justify-between relative z-10" style={{ transform: 'translateZ(25px)' }}>
         <button
           onClick={() => onOpenDetails(project)}
-          className="text-xs font-semibold text-accent-primary hover:text-sky-300 inline-flex items-center gap-1.5 cursor-pointer group/btn"
+          className="text-xs font-semibold text-accent-primary hover:text-accent-hover inline-flex items-center gap-1.5 cursor-pointer group/btn transition-colors"
         >
           <span>Detailed Case Study</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1.5 transition-transform" />
@@ -155,7 +155,7 @@ export const ProjectCard: React.FC<Props> = ({ project, onOpenDetails }) => {
               href={project.liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="p-1.5 text-text-muted hover:text-accent-secondary transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center"
+              className="p-1.5 text-text-muted hover:text-silver-metallic transition-colors min-w-[36px] min-h-[36px] flex items-center justify-center"
               title="Open Live Application"
               aria-label="Open Live Application"
             >

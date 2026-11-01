@@ -20,6 +20,9 @@
 | **Phase 13** | KNOW ME THROUGH TERMINAL – Interactive CLI Profile Explorer | **COMPLETED** |
 | **Phase 14** | SIGNATURE LOADING EXPERIENCE – Full Name Cinematic Intro | **COMPLETED** |
 | **Phase 15** | COMPLETE WEBSITE – Mobile-First Responsive Optimization | **COMPLETED** |
+| **Phase 16** | WEBSITE-WIDE VISUAL UPGRADE – Electric Contrast Theme | **COMPLETED** |
+| **Phase 17** | COMPLETE PORTFOLIO COLOUR TRANSFORMATION – Executive Slate | **COMPLETED** |
+| **Phase 18** | COMPLETE PORTFOLIO REDESIGN – Obsidian Silver | **COMPLETED** |
 
 ---
 
@@ -177,128 +180,6 @@
 
 ---
 
-### Phase 15: COMPLETE WEBSITE – Mobile-First Responsive Optimization
-- **Phase Number**: Phase 15
-- **Tasks**:
-  1. Inspect every page, section, component, and modal across all 8 mandatory device viewport categories: Small mobile (320px), Mobile (375px), Mobile (390px), Large mobile (430px), Tablet (768px), Tablet landscape (1024px), Laptop (1366px), Desktop (1920px).
-  2. Implement functional mobile navigation: resolved tablet breakpoint mismatch (`lg:hidden`), added automatic body scroll lock (`overflow: hidden`), touch targets >= 44px, and auto-closing on section select.
-  3. Optimize Hero section: responsive letter wrapping for "SWARAJ KHADALKAR", stacked full-width ergonomic CTA buttons on mobile, and compact Deloitte highlight cards.
-  4. Optimize THE SWARAJ EXPERIENCE: compact card padding (`p-4 sm:p-7`), mobile touch ribbon with smooth thumb-friendly chips, and calibrated radial dimensions.
-  5. Optimize Project Showcase: enabled whole-card tap-to-open on touch devices, touch-safe external buttons with `stopPropagation()`, and responsive modal with comfortable 44px action buttons.
-  6. Optimize Terminal CLI: compact adaptive prompt (`~$` on mobile, `swaraj@portfolio:~$` on desktop), touch-friendly execute chips, and zero horizontal scroll.
-  7. Optimize Contact, Skills, Framework & Education: adjusted card paddings, email word breaking (`break-all sm:break-normal`), and responsive multi-column layouts.
-  8. Enforce global overflow safeguards: `overflow-x: hidden` and `-webkit-overflow-scrolling: touch`.
-- **Current Status**: **COMPLETED**
-- **Completed Work**:
-  - Updated [`Navbar.tsx`](file:///d:/Portfolio_Swaraj/src/components/Navbar.tsx).
-  - Updated [`HeroSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/HeroSection.tsx).
-  - Updated [`SwarajExperience.tsx`](file:///d:/Portfolio_Swaraj/src/components/SwarajExperience.tsx).
-  - Updated [`ProjectCard.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectCard.tsx) and [`ProjectModal.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectModal.tsx).
-  - Updated [`InteractiveTerminal.tsx`](file:///d:/Portfolio_Swaraj/src/components/InteractiveTerminal.tsx).
-  - Updated [`DeloitteMilestone.tsx`](file:///d:/Portfolio_Swaraj/src/components/DeloitteMilestone.tsx) and [`ProductThinkingFramework.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProductThinkingFramework.tsx).
-  - Updated [`ContactSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/ContactSection.tsx).
-  - Updated [`SignatureLoadingScreen.tsx`](file:///d:/Portfolio_Swaraj/src/components/SignatureLoadingScreen.tsx).
-  - Updated [`tailwind.config.js`](file:///d:/Portfolio_Swaraj/tailwind.config.js) and [`index.css`](file:///d:/Portfolio_Swaraj/src/index.css).
-  - Verified production build: compiled in 10.11s (`0 errors, 0 warnings`).
-- **Testing Results**:
-  - Tested viewports: 320px, 375px, 390px, 430px, 768px, 1024px, 1366px, 1920px.
-  - Horizontal overflow: **0px (Clean)**.
-  - Privacy scan: **0 Violations (Passed)**.
-- **Known Issues**: None.
-
----
-
-### Phase 16: WEBSITE-WIDE VISUAL UPGRADE – Electric Contrast Theme
-- **Phase Number**: Phase 16
-- **Tasks**:
-  1. Upgrade color palette to a bold, premium high-contrast design system:
-     - Main background: `#080B12` (deepest black/navy)
-     - Secondary background: `#0D1420`
-     - Card background: `#202B3D` (distinct, rich card surface)
-     - Primary text: `#F8FAFC` (crisp white)
-     - Secondary text: `#A0AEC0` (clean cool gray)
-     - Electric Blue: `#00C8FF` (primary accent, buttons, active nav, primary highlights)
-     - Vibrant Orange: `#FF7139` (secondary accent, subtle hover, decorative accents)
-     - Border: `#334155` (clearly visible slate border)
-     - Deloitte Green: `#A3E635` (**strictly exclusive** to Deloitte selection badge/milestone)
-  2. Update Hero section: Crisp white `SWARAJ` with electric-blue-to-orange gradient `KHADALKAR`, Electric Blue primary CTA button with blue card glow, and secondary actions with orange accents.
-  3. Update "The Swaraj Experience": Central core in `#202B3D` with Electric Blue border and pulsing glow, Electric Blue and Vibrant Orange interactive dimension nodes, and white typography.
-  4. Update Signature Loading Screen: Full name animation with crisp white and electric-blue-to-orange styling, vibrant orange tagline `THINK. BUILD. LEAD.`, and glowing dual-gradient progress indicator.
-  5. Audit and clean all other sections: Skills, Projects, Education, Terminal CLI, Framework, and Footer to ensure Deloitte Green is 100% exclusive to the Deloitte selection milestone.
-  6. Rebuild and verify: 0 compilation errors, 0 privacy violations.
-- **Current Status**: **COMPLETED**
-- **Completed Work**:
-  - Updated [`tailwind.config.js`](file:///d:/Portfolio_Swaraj/tailwind.config.js) and [`index.css`](file:///d:/Portfolio_Swaraj/src/index.css).
-  - Updated [`HeroSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/HeroSection.tsx).
-  - Updated [`SwarajExperience.tsx`](file:///d:/Portfolio_Swaraj/src/components/SwarajExperience.tsx).
-  - Updated [`SignatureLoadingScreen.tsx`](file:///d:/Portfolio_Swaraj/src/components/SignatureLoadingScreen.tsx).
-  - Updated [`InteractiveTerminal.tsx`](file:///d:/Portfolio_Swaraj/src/components/InteractiveTerminal.tsx) and [`terminalCommands.tsx`](file:///d:/Portfolio_Swaraj/src/data/terminalCommands.tsx).
-  - Updated [`ProjectCard.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectCard.tsx) and [`ProjectModal.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectModal.tsx).
-  - Updated [`AboutSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/AboutSection.tsx), [`SkillsSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/SkillsSection.tsx), [`EducationAndCertifications.tsx`](file:///d:/Portfolio_Swaraj/src/components/EducationAndCertifications.tsx), [`ProductThinkingFramework.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProductThinkingFramework.tsx), and [`Footer.tsx`](file:///d:/Portfolio_Swaraj/src/components/Footer.tsx).
-  - Updated [`DesignSystemPreview.tsx`](file:///d:/Portfolio_Swaraj/src/components/DesignSystemPreview.tsx) swatches and tokens.
-- **Testing Results**:
-  - TypeScript & Vite build: **Passed in 19.49s (0 errors, 0 warnings)**.
-  - Automated Privacy Scan: **0 Violations (Passed)**.
-  - Deloitte Green Exclusivity Check: **Verified 100% exclusive to Deloitte elements**.
-- **Known Issues**: None.
-
----
-
-### Phase 17: COMPLETE PORTFOLIO COLOUR TRANSFORMATION – EXECUTIVE SLATE
-- **Phase Number**: Phase 17
-- **Tasks**:
-  1. Completely replace the previous neon color identity with the **EXECUTIVE SLATE** design system:
-     - Primary background: `#101B2D` (Deep corporate slate navy)
-     - Secondary background: `#162337`
-     - Card background: `#1C2B40`
-     - Elevated card background: `#25364A`
-     - Primary text: `#F1F3F5` (Platinum-white)
-     - Secondary text: `#B5C0CD` (Cool slate-gray)
-     - Muted text: `#8493A5` (Muted slate)
-     - Primary accent – Muted Teal: `#3D8C87`
-     - Secondary accent – Champagne: `#D6B77A`
-     - Borders: `#34465B`
-     - Subtle separators: `#293A50`
-  2. Hero Section:
-     - SWARAJ rendered in elegant platinum-white typography (`#F1F3F5`).
-     - KHADALKAR rendered in clean white with restrained muted-teal gradient (`#3D8C87`).
-     - Primary CTA button in Muted Teal (`#3D8C87`) with soft shadow.
-     - Deloitte selection milestone formatted in distinguished Champagne (`#D6B77A`) without neon styling.
-  3. The Swaraj Experience:
-     - Orbital rings updated to slate-blue and steel-gray.
-     - Central identity core in `#25364A` with Muted Teal border and subtle Champagne accent.
-     - Dimension nodes calibrated to Muted Teal (`#3D8C87`), Champagne (`#D6B77A`), and Platinum White.
-  4. Terminal:
-     - Deep navy background (`#162337`).
-     - Muted teal prompts, platinum-white output, cool gray details, and champagne accents.
-  5. Signature Loading Experience:
-     - Full name reveal using platinum-white typography and subtle muted-teal lighting.
-     - Understated orbital ellipses and glowing dual-gradient progress indicator.
-  6. Rebuild & Verification:
-     - 0 compilation errors, 0 privacy violations.
-- **Current Status**: **COMPLETED**
-- **Completed Work**:
-  - Updated [`tailwind.config.js`](file:///d:/Portfolio_Swaraj/tailwind.config.js) and [`index.css`](file:///d:/Portfolio_Swaraj/src/index.css).
-  - Updated [`HeroSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/HeroSection.tsx).
-  - Updated [`SwarajExperience.tsx`](file:///d:/Portfolio_Swaraj/src/components/SwarajExperience.tsx).
-  - Updated [`Navbar.tsx`](file:///d:/Portfolio_Swaraj/src/components/Navbar.tsx).
-  - Updated [`SignatureLoadingScreen.tsx`](file:///d:/Portfolio_Swaraj/src/components/SignatureLoadingScreen.tsx).
-  - Updated [`InteractiveTerminal.tsx`](file:///d:/Portfolio_Swaraj/src/components/InteractiveTerminal.tsx).
-  - Updated [`DeloitteMilestone.tsx`](file:///d:/Portfolio_Swaraj/src/components/DeloitteMilestone.tsx).
-  - Updated [`ProductThinkingFramework.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProductThinkingFramework.tsx).
-  - Updated [`ProjectModal.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectModal.tsx).
-  - Updated [`ContactSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/ContactSection.tsx).
-  - Updated [`portfolioData.ts`](file:///d:/Portfolio_Swaraj/src/data/portfolioData.ts).
-  - Updated [`DesignSystemPreview.tsx`](file:///d:/Portfolio_Swaraj/src/components/DesignSystemPreview.tsx).
-- **Testing Results**:
-  - TypeScript & Vite build: **Passed in 4.53s (0 errors, 0 warnings)**.
-  - Automated Privacy Scan: **0 Violations (Passed)**.
-- **Known Issues**: None.
-
-
-
----
-
 ### Phase 14: SIGNATURE LOADING EXPERIENCE – Full Name Cinematic Intro
 - **Phase Number**: Phase 14
 - **Tasks**:
@@ -437,4 +318,71 @@
   - Automated Privacy Scan: **0 Violations (Passed)**.
 - **Known Issues**: None.
 
+---
+
+### Phase 18: COMPLETE PORTFOLIO REDESIGN – OBSIDIAN SILVER
+- **Phase Number**: Phase 18
+- **Tasks**:
+  1. Transform the entire visual identity into a luxury technology brand aesthetic (**OBSIDIAN SILVER**):
+     - Primary background: `#090A0C` (Obsidian black)
+     - Secondary background: `#111317` (Graphite black)
+     - Card background: `#17191D` (Deep card black)
+     - Elevated surfaces: `#202329` (Elevated dark surface)
+     - Metallic silver: `#C5C8CE`
+     - Platinum white: `#F5F5F5`
+     - Steel gray: `#A4A7AE`
+     - Muted gray: `#737780`
+     - Border: `#35383F`
+     - Primary accent – Crimson red: `#B32635` (Hover red: `#D13A49`)
+  2. Implement Visual Hierarchy:
+     - **Black**: Dominates main background, navigation, and large sections.
+     - **Silver**: Headings, name gradient, identity nodes, borders, and labels.
+     - **White**: Body text, high-clarity typography, and key metrics.
+     - **Crimson Red**: Selective surgical accent for primary CTA buttons, active state indicators, command prompt prefixes, and subtle line sweeps.
+  3. Hero Section:
+     - SWARAJ rendered in crisp platinum-white (`#F5F5F5`).
+     - KHADALKAR rendered in metallic silver gradient (`from-[#F5F5F5] via-[#C5C8CE] to-[#A4A7AE]`).
+     - Added subtle crimson accent underline.
+     - Primary CTA button in Crimson Red (`#B32635`, hover `#D13A49`) with glowing shadow.
+     - Secondary action buttons styled with refined silver borders (`#35383F` hover `#C5C8CE`).
+     - Deloitte selection badge presented cleanly on an elevated surface (`#202329`) with silver and crimson accents.
+  4. The Swaraj Experience:
+     - Metallic silver central identity with subtle crimson philosophy subtitle.
+     - Concentric orbital rings updated to graphite (`#17191D`, `#202329`) and silver (`#35383F`).
+     - 6 interactive dimensions highlighted with metallic silver surfaces and crimson accents.
+  5. Interactive Terminal:
+     - Deep obsidian background (`#111317` / `#090A0C`).
+     - Title bar in graphite black (`#111317`) with crimson online status beacon.
+     - Crimson command prompt `swaraj@portfolio:~$`.
+     - Silver and platinum output text.
+  6. Signature Loading Experience:
+     - SWARAJ in platinum white, KHADALKAR in metallic silver against pure obsidian black.
+     - Subtle crimson light sweep bar beneath the name.
+     - Minimalist crimson & silver progress track.
+  7. Site-Wide Consistency:
+     - Applied Obsidian Silver tokens across Navbar, About, Framework, Projects, Experience, Leadership, Certifications, Contact, and Footer.
+  8. Build & Quality Verification:
+     - Production build verified (`npm run build`).
+     - Automated privacy scan verified (0 violations).
+- **Current Status**: **COMPLETED**
+- **Completed Work**:
+  - Configured tokens in [`tailwind.config.js`](file:///d:/Portfolio_Swaraj/tailwind.config.js) and [`index.css`](file:///d:/Portfolio_Swaraj/src/index.css).
+  - Updated [`HeroSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/HeroSection.tsx).
+  - Updated [`SwarajExperience.tsx`](file:///d:/Portfolio_Swaraj/src/components/SwarajExperience.tsx).
+  - Updated [`Navbar.tsx`](file:///d:/Portfolio_Swaraj/src/components/Navbar.tsx).
+  - Updated [`SignatureLoadingScreen.tsx`](file:///d:/Portfolio_Swaraj/src/components/SignatureLoadingScreen.tsx).
+  - Updated [`InteractiveTerminal.tsx`](file:///d:/Portfolio_Swaraj/src/components/InteractiveTerminal.tsx).
+  - Updated [`DeloitteMilestone.tsx`](file:///d:/Portfolio_Swaraj/src/components/DeloitteMilestone.tsx).
+  - Updated [`AboutSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/AboutSection.tsx).
+  - Updated [`ProductThinkingFramework.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProductThinkingFramework.tsx).
+  - Updated [`ProjectCard.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectCard.tsx) and [`ProjectModal.tsx`](file:///d:/Portfolio_Swaraj/src/components/ProjectModal.tsx).
+  - Updated [`LeadershipSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/LeadershipSection.tsx).
+  - Updated [`EducationAndCertifications.tsx`](file:///d:/Portfolio_Swaraj/src/components/EducationAndCertifications.tsx).
+  - Updated [`ContactSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/ContactSection.tsx).
+  - Updated [`Footer.tsx`](file:///d:/Portfolio_Swaraj/src/components/Footer.tsx).
+  - Updated [`DesignSystemPreview.tsx`](file:///d:/Portfolio_Swaraj/src/components/DesignSystemPreview.tsx).
+- **Testing Results**:
+  - TypeScript & Vite build: **Passed in 4.48s (0 errors, 0 warnings)**.
+  - Automated Privacy Scan: **0 Violations (Passed)**.
+- **Known Issues**: None.
 

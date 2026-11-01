@@ -77,11 +77,11 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
               className="w-10 h-10 rounded-xl bg-bg-card border border-border-subtle group-hover:border-accent-primary transition-colors flex items-center justify-center relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-accent-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <span className="font-heading font-black text-accent-primary text-base tracking-wider">SK</span>
-              <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-accent-secondary shadow-sm" />
+              <span className="font-heading font-black text-silver-metallic text-base tracking-wider">SK</span>
+              <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-accent-primary shadow-[0_0_6px_rgba(179,38,53,0.6)]" />
             </motion.div>
             <div>
-              <span className="font-heading font-bold text-text-primary text-base tracking-tight block group-hover:text-accent-primary transition-colors">
+              <span className="font-heading font-bold text-text-primary text-base tracking-tight block group-hover:text-silver-metallic transition-colors">
                 Swaraj Khadalkar
               </span>
               <span className="text-[11px] font-mono text-text-muted block -mt-0.5">
@@ -152,7 +152,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               href="#contact"
-              className="inline-flex items-center gap-1 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-accent-primary hover:bg-[#489e99] transition-all shadow-card-glow cursor-pointer"
+              className="inline-flex items-center gap-1 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-accent-primary hover:bg-accent-hover transition-all shadow-card-glow cursor-pointer"
             >
               <span>Get in Touch</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -220,7 +220,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-3 rounded-xl text-xs font-semibold text-center text-white bg-accent-primary hover:bg-[#489e99] flex items-center justify-center gap-1.5 min-h-[44px] shadow-card-glow"
+                className="w-full py-3 rounded-xl text-xs font-semibold text-center text-white bg-accent-primary hover:bg-accent-hover flex items-center justify-center gap-1.5 min-h-[44px] shadow-card-glow"
               >
                 <span>Get in Touch</span>
                 <ArrowUpRight className="w-4 h-4" />

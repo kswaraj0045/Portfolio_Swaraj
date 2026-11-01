@@ -10,13 +10,13 @@ export const AboutSection: React.FC = () => {
   const getIcon = (id: string) => {
     switch (id) {
       case 'product-thinking':
-        return <Lightbulb className="w-6 h-6 text-accent-primary" />;
+        return <Lightbulb className="w-6 h-6 text-silver-metallic" />;
       case 'business-data':
-        return <BarChart3 className="w-6 h-6 text-accent-secondary" />;
+        return <BarChart3 className="w-6 h-6 text-accent-primary" />;
       case 'technology':
-        return <Terminal className="w-6 h-6 text-accent-primary" />;
+        return <Terminal className="w-6 h-6 text-silver-metallic" />;
       default:
-        return <Lightbulb className="w-6 h-6 text-accent-primary" />;
+        return <Lightbulb className="w-6 h-6 text-silver-metallic" />;
     }
   };
 
@@ -26,7 +26,8 @@ export const AboutSection: React.FC = () => {
         
         {/* Section Header with Motion Reveal */}
         <MotionReveal className="max-w-3xl mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20 mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-silver-metallic bg-bg-elevated border border-border-silver/30 mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent-primary" />
             <span>ABOUT ME & STRATEGIC PILLARS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold font-heading text-text-primary tracking-tight">
@@ -105,10 +106,10 @@ export const AboutSection: React.FC = () => {
           </div>
           <a
             href="#framework"
-            className="text-xs font-semibold text-accent-primary hover:text-accent-secondary inline-flex items-center gap-1.5 shrink-0 group transition-colors"
+            className="text-xs font-semibold text-silver-metallic hover:text-white inline-flex items-center gap-1.5 shrink-0 group transition-colors"
           >
             <span>See how I turn problems into products</span>
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 text-accent-primary group-hover:translate-x-1 transition-transform" />
           </a>
         </MotionReveal>
 

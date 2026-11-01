@@ -202,7 +202,7 @@ export const InteractiveTerminal: React.FC = () => {
 
             {/* Status Indicator */}
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-accent-primary shadow-[0_0_8px_#3D8C87] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-accent-primary shadow-[0_0_8px_rgba(179,38,53,0.8)] animate-pulse" />
               <span className="text-[10px] font-mono font-bold tracking-wider text-accent-primary hidden sm:inline">
                 SYSTEM ONLINE
               </span>
@@ -225,7 +225,7 @@ export const InteractiveTerminal: React.FC = () => {
               >
                 {/* Initial Welcome Message */}
                 <div className="space-y-2 text-text-secondary pb-4 border-b border-border-subtle/50 mb-4 select-none">
-                  <div className="text-accent-primary font-bold">
+                  <div className="text-silver-metallic font-bold">
                     Initializing Swaraj's Personal Terminal...
                   </div>
                   <div className="text-text-muted space-y-0.5 text-xs">
@@ -238,7 +238,7 @@ export const InteractiveTerminal: React.FC = () => {
                     Welcome to Swaraj's Interactive Portfolio!
                   </div>
                   <div className="text-xs text-text-secondary">
-                    Type <span className="text-accent-secondary font-bold underline cursor-pointer" onClick={() => handleCommandExecution('help')}>'help'</span> to explore who I am.
+                    Type <span className="text-accent-primary font-bold underline cursor-pointer hover:text-accent-hover" onClick={() => handleCommandExecution('help')}>'help'</span> to explore who I am.
                   </div>
                 </div>
 

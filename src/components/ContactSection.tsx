@@ -174,7 +174,7 @@ export const ContactSection: React.FC = () => {
                   type="submit"
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-accent-primary hover:bg-[#489e99] transition-all shadow-card-glow cursor-pointer group"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-accent-primary hover:bg-accent-hover transition-all shadow-card-glow cursor-pointer group"
                 >
                   <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   <span>Send Message via Email</span>

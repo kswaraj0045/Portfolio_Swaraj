@@ -96,7 +96,7 @@ export const EducationAndCertifications: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.45, delay: i * 0.1 }}
-                  whileHover={{ y: -3, borderColor: 'rgba(61, 140, 135, 0.5)' }}
+                  whileHover={{ y: -3, borderColor: 'rgba(197, 200, 206, 0.45)' }}
                   className="glass-card p-5 rounded-2xl border border-border-subtle bg-bg-card/90 flex items-center justify-between gap-4 group transition-all"
                 >
                   <div className="flex items-center gap-4">

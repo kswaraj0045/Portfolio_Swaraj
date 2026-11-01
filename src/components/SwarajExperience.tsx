@@ -46,8 +46,8 @@ export const SwarajExperience: React.FC = () => {
       shortLabel: 'Product',
       icon: Lightbulb,
       description: 'I enjoy understanding user problems, identifying opportunities, and thinking about how technology can create meaningful solutions.',
-      color: 'text-accent-primary',
-      glowColor: '#3D8C87',
+      color: 'text-silver-metallic',
+      glowColor: '#C5C8CE',
       x: 50,
       y: 12,
     },
@@ -58,8 +58,8 @@ export const SwarajExperience: React.FC = () => {
       shortLabel: 'Technology',
       icon: Terminal,
       description: 'I enjoy exploring software development, emerging technologies, and building practical digital solutions.',
-      color: 'text-accent-primary',
-      glowColor: '#3D8C87',
+      color: 'text-silver-metallic',
+      glowColor: '#C5C8CE',
       x: 80,
       y: 28,
     },
@@ -70,8 +70,8 @@ export const SwarajExperience: React.FC = () => {
       shortLabel: 'Strategy',
       icon: TrendingUp,
       description: 'I am interested in connecting technology with business objectives and understanding how products create value.',
-      color: 'text-accent-secondary',
-      glowColor: '#D6B77A',
+      color: 'text-accent-primary',
+      glowColor: '#B32635',
       x: 80,
       y: 64,
     },
@@ -82,8 +82,8 @@ export const SwarajExperience: React.FC = () => {
       shortLabel: 'Data & Analytics',
       icon: BarChart3,
       description: 'I enjoy working with data, discovering insights, and using evidence to support better decisions.',
-      color: 'text-accent-primary',
-      glowColor: '#3D8C87',
+      color: 'text-silver-metallic',
+      glowColor: '#C5C8CE',
       x: 50,
       y: 80,
     },
@@ -95,7 +95,7 @@ export const SwarajExperience: React.FC = () => {
       icon: Users,
       description: 'I value collaboration, coordination, ownership, and working with teams toward shared goals.',
       color: 'text-text-primary',
-      glowColor: '#B5C0CD',
+      glowColor: '#F5F5F5',
       x: 20,
       y: 64,
     },
@@ -106,8 +106,8 @@ export const SwarajExperience: React.FC = () => {
       shortLabel: 'Problem Solving',
       icon: Sparkles,
       description: 'I approach challenges by understanding the problem, exploring alternatives, and developing practical solutions.',
-      color: 'text-accent-secondary',
-      glowColor: '#D6B77A',
+      color: 'text-accent-primary',
+      glowColor: '#B32635',
       x: 20,
       y: 28,
     },
@@ -183,27 +183,27 @@ export const SwarajExperience: React.FC = () => {
             <motion.div
               animate={shouldReduceMotion ? {} : { rotate: 360 }}
               transition={{ duration: 36, repeat: Infinity, ease: 'linear' }}
-              className="w-[280px] h-[280px] sm:w-[310px] sm:h-[310px] rounded-full border border-dashed border-slate-600/35 flex items-center justify-center relative"
+              className="w-[280px] h-[280px] sm:w-[310px] sm:h-[310px] rounded-full border border-dashed border-border-subtle flex items-center justify-center relative"
             >
               {/* Star point on outer orbit */}
-              <div className="w-1.5 h-1.5 rounded-full bg-slate-400 absolute -top-0.5 left-1/2 -translate-x-1/2" />
+              <div className="w-1.5 h-1.5 rounded-full bg-silver-metallic absolute -top-0.5 left-1/2 -translate-x-1/2" />
             </motion.div>
             
             {/* Middle Counter-Rotating Orbital Ring (26s linear) with Satellite Node */}
             <motion.div
               animate={shouldReduceMotion ? {} : { rotate: -360 }}
               transition={{ duration: 26, repeat: Infinity, ease: 'linear' }}
-              className="absolute inset-0 m-auto w-[210px] h-[210px] sm:w-[230px] sm:h-[230px] rounded-full border border-slate-500/30"
+              className="absolute inset-0 m-auto w-[210px] h-[210px] sm:w-[230px] sm:h-[230px] rounded-full border border-border-subtle/80"
             >
               {/* Satellite Node traversing orbit */}
-              <div className="w-2 h-2 rounded-full bg-accent-secondary shadow-sm absolute -top-1 left-1/2 -translate-x-1/2" />
+              <div className="w-2 h-2 rounded-full bg-silver-metallic shadow-sm absolute -top-1 left-1/2 -translate-x-1/2" />
             </motion.div>
 
             {/* Inner Organic Breathing Glow Ring */}
             <motion.div
               animate={shouldReduceMotion ? {} : { scale: [1, 1.08, 1], opacity: [0.35, 0.65, 0.35] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute inset-0 m-auto w-[145px] h-[145px] sm:w-[155px] sm:h-[155px] rounded-full border border-accent-primary/40 shadow-sm"
+              className="absolute inset-0 m-auto w-[145px] h-[145px] sm:w-[155px] sm:h-[155px] rounded-full border border-border-silver/30 shadow-sm"
             />
           </div>
 
@@ -231,7 +231,7 @@ export const SwarajExperience: React.FC = () => {
                   <path
                     d={pathD}
                     fill="none"
-                    stroke={isActive ? dim.glowColor : 'rgba(52, 70, 91, 0.45)'}
+                    stroke={isActive ? dim.glowColor : 'rgba(53, 56, 63, 0.6)'}
                     strokeWidth={isActive ? '1.8' : '0.8'}
                     strokeDasharray={isActive ? 'none' : '2 2'}
                     vectorEffect="non-scaling-stroke"
@@ -254,17 +254,17 @@ export const SwarajExperience: React.FC = () => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
               whileHover={{ scale: 1.05 }}
-              className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-b from-[#25364A] via-[#1C2B40] to-[#101B2D] border-2 border-accent-primary shadow-[0_4px_24px_-4px_rgba(61,140,135,0.35)] flex flex-col items-center justify-center cursor-pointer group relative"
+              className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-b from-[#202329] via-[#17191D] to-[#090A0C] border-2 border-border-silver shadow-[0_4px_24px_-4px_rgba(197,200,206,0.25)] flex flex-col items-center justify-center cursor-pointer group relative"
             >
               {/* Slow Breathing Radial Glow Pulse */}
               <motion.div
                 animate={shouldReduceMotion ? {} : { scale: [1, 1.18, 1], opacity: [0.15, 0.35, 0.15] }}
                 transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-primary/20 via-slate-500/10 to-accent-secondary/15 pointer-events-none"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-silver-metallic/15 via-white/5 to-accent-primary/20 pointer-events-none"
               />
 
               {/* Central SK Monogram */}
-              <span className="font-heading font-black text-2xl sm:text-3xl tracking-wider text-transparent bg-clip-text bg-gradient-to-b from-[#F1F3F5] via-[#E2E8F0] to-accent-primary drop-shadow-[0_2px_10px_rgba(61,140,135,0.25)]">
+              <span className="font-heading font-black text-2xl sm:text-3xl tracking-wider text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#C5C8CE] to-[#A4A7AE] drop-shadow-[0_2px_12px_rgba(197,200,206,0.3)]">
                 SK
               </span>
 
@@ -274,7 +274,7 @@ export const SwarajExperience: React.FC = () => {
               </span>
 
               {/* Core Philosophy Subtitle */}
-              <span className="text-[8px] sm:text-[8.5px] font-mono text-accent-secondary tracking-wider text-center font-bold mt-0.5">
+              <span className="text-[8px] sm:text-[8.5px] font-mono text-accent-primary tracking-wider text-center font-bold mt-0.5">
                 THINK • BUILD • LEAD
               </span>
             </motion.div>

@@ -83,14 +83,14 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
                 {[
-                  { name: 'Canvas Main', hex: '#101B2D', bg: 'bg-[#101B2D]', border: 'border-slate-700' },
-                  { name: 'Secondary Canvas', hex: '#162337', bg: 'bg-[#162337]', border: 'border-slate-700' },
-                  { name: 'Card Surface', hex: '#1C2B40', bg: 'bg-[#1C2B40]', border: 'border-slate-700' },
-                  { name: 'Elevated Card', hex: '#25364A', bg: 'bg-[#25364A]', border: 'border-slate-600' },
-                  { name: 'Muted Teal', hex: '#3D8C87', bg: 'bg-[#3D8C87]', text: 'text-white' },
-                  { name: 'Champagne', hex: '#D6B77A', bg: 'bg-[#D6B77A]', text: 'text-slate-950' },
-                  { name: 'Border Slate', hex: '#34465B', bg: 'bg-[#34465B]', text: 'text-white' },
-                  { name: 'Separator', hex: '#293A50', bg: 'bg-[#293A50]', text: 'text-white' },
+                  { name: 'Canvas Main', hex: '#090A0C', bg: 'bg-[#090A0C]', border: 'border-slate-800' },
+                  { name: 'Secondary Canvas', hex: '#111317', bg: 'bg-[#111317]', border: 'border-slate-800' },
+                  { name: 'Card Surface', hex: '#17191D', bg: 'bg-[#17191D]', border: 'border-slate-800' },
+                  { name: 'Elevated Surface', hex: '#202329', bg: 'bg-[#202329]', border: 'border-slate-700' },
+                  { name: 'Metallic Silver', hex: '#C5C8CE', bg: 'bg-[#C5C8CE]', text: 'text-slate-950' },
+                  { name: 'Platinum White', hex: '#F5F5F5', bg: 'bg-[#F5F5F5]', text: 'text-slate-950' },
+                  { name: 'Steel Gray', hex: '#A4A7AE', bg: 'bg-[#A4A7AE]', text: 'text-slate-950' },
+                  { name: 'Crimson Red', hex: '#B32635', bg: 'bg-[#B32635]', text: 'text-white' },
                 ].map((c) => (
                   <div key={c.hex} className="rounded-xl border border-border-subtle overflow-hidden bg-bg-card">
                     <div className={`h-16 w-full ${c.bg} ${c.border || ''} flex items-center justify-center`}>
@@ -184,7 +184,7 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                 Button System & Interactive Triggers
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-2xl border border-border-subtle bg-bg-card/60">
-                <button className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-accent-primary hover:bg-[#489e99] transition-all shadow-card-glow cursor-pointer">
+                <button className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-accent-primary hover:bg-accent-hover transition-all shadow-card-glow cursor-pointer">
                   <span>Explore My Work</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>

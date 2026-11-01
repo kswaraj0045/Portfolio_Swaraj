@@ -220,7 +220,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
                     delay: 0.15 + index * 0.045,
                     ease: [0.21, 0.47, 0.32, 0.98],
                   }}
-                  className="inline-block bg-gradient-to-b from-[#F1F3F5] via-[#E2E8F0] to-[#CBD5E1] bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(241,243,245,0.08)]"
+                  className="inline-block bg-gradient-to-b from-[#FFFFFF] via-[#F5F5F5] to-[#E5E5E5] bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(245,245,245,0.15)]"
                 >
                   {char}
                 </motion.span>
@@ -239,7 +239,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
                     delay: 0.45 + index * 0.045,
                     ease: [0.21, 0.47, 0.32, 0.98],
                   }}
-                  className="inline-block bg-gradient-to-r from-[#F1F3F5] via-[#E2E8F0] to-accent-primary bg-clip-text text-transparent drop-shadow-[0_2px_14px_rgba(61,140,135,0.22)]"
+                  className="inline-block bg-gradient-to-r from-[#F5F5F5] via-[#C5C8CE] to-[#A4A7AE] bg-clip-text text-transparent drop-shadow-[0_2px_16px_rgba(197,200,206,0.25)]"
                 >
                   {char}
                 </motion.span>
@@ -248,6 +248,14 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
           </div>
         </h1>
 
+        {/* Subtle Crimson Light Sweep Line */}
+        <motion.div
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.85, ease: 'easeOut' }}
+          className="h-0.5 w-24 sm:w-32 bg-gradient-to-r from-accent-primary via-accent-hover to-accent-primary rounded-full mb-6 shadow-[0_0_12px_rgba(179,38,53,0.7)]"
+        />
+
         {/* Phase 2: PERSONAL TAGLINE */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -255,7 +263,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
           transition={{ duration: 0.6, delay: 0.95, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="space-y-2 mb-8 sm:mb-10"
         >
-          <div className="font-mono font-bold text-xs sm:text-sm md:text-base tracking-[0.25em] text-accent-secondary uppercase">
+          <div className="font-mono font-bold text-xs sm:text-sm md:text-base tracking-[0.25em] text-silver-metallic uppercase">
             THINK. BUILD. LEAD.
           </div>
           <div className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-text-muted uppercase">
@@ -274,7 +282,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
           <div className="w-full h-[2px] bg-border-subtle/80 rounded-full overflow-hidden relative shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]">
             <motion.div
               style={{ width: `${progress}%` }}
-              className="h-full bg-gradient-to-r from-accent-primary via-slate-200 to-accent-secondary rounded-full shadow-sm"
+              className="h-full bg-gradient-to-r from-accent-primary via-silver-metallic to-accent-primary rounded-full shadow-[0_0_8px_rgba(179,38,53,0.4)]"
             />
           </div>
 

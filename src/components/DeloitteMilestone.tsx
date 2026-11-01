@@ -8,11 +8,11 @@ export const DeloitteMilestone: React.FC = () => {
 
   return (
     <section id="deloitte" className="py-16 md:py-24 relative overflow-hidden">
-      {/* Ambient lime glow with subtle pulse */}
+      {/* Ambient glow with subtle pulse */}
       <motion.div 
-        animate={shouldReduceMotion ? {} : { scale: [1, 1.12, 1], opacity: [0.08, 0.14, 0.08] }}
+        animate={shouldReduceMotion ? {} : { scale: [1, 1.12, 1], opacity: [0.06, 0.12, 0.06] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-accent-achievement/10 rounded-full blur-[140px] pointer-events-none" 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-accent-primary/10 rounded-full blur-[140px] pointer-events-none" 
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -30,8 +30,8 @@ export const DeloitteMilestone: React.FC = () => {
             
             {/* Left Content */}
             <div className="lg:col-span-8 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold text-accent-achievement bg-accent-achievement/10 border border-accent-achievement/30 shadow-deloitte-glow">
-                <span className="w-2 h-2 rounded-full bg-accent-achievement animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold text-silver-metallic bg-bg-elevated border border-border-silver/40 shadow-silver-soft">
+                <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
                 <span>CAREER SELECTION MILESTONE</span>
               </div>
 
@@ -103,8 +103,8 @@ export const DeloitteMilestone: React.FC = () => {
                   </div>
                   <div className="flex justify-between py-1">
                     <span className="text-text-muted">Status:</span>
-                    <span className="text-accent-achievement font-mono font-semibold flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent-achievement shadow-sm" />
+                    <span className="text-silver-metallic font-mono font-semibold flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent-primary" />
                       Selected
                     </span>
                   </div>
