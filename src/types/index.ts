@@ -33,7 +33,7 @@ export interface ExperienceItem {
   company: string;
   role: string;
   badge: string;
-  period: string;
+  period?: string;
   location: string;
   type: 'milestone' | 'internship';
   description: string;
@@ -46,7 +46,7 @@ export interface LeadershipItem {
   id: string;
   organization: string;
   role: string;
-  period: string;
+  period?: string;
   description: string;
   impactPoints: string[];
 }

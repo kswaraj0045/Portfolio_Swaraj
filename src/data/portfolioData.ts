@@ -163,7 +163,6 @@ export const experienceData: ExperienceItem[] = [
     company: 'Street-Up',
     role: 'Software Developer Intern',
     badge: 'Internship',
-    period: '29 June 2026 – Present',
     location: 'Pune, India',
     type: 'internship',
     description: 'Currently contributing to the development of CRM software designed to serve optical store clients.',
@@ -181,7 +180,6 @@ export const leadershipData: LeadershipItem[] = [
     id: 'viaset-ecell',
     organization: 'Viaset – MIT AOE E-Cell',
     role: 'Core Member (CMO)',
-    period: '2024 – 2025',
     description: 'Served on the core leadership team of the Entrepreneurship Cell during early startup ideation and incubation phases.',
     impactPoints: [
       'Worked in a cross-functional team during startup ideation and market research phases.',
@@ -193,7 +191,6 @@ export const leadershipData: LeadershipItem[] = [
     id: 'gfg-club',
     organization: 'GeeksforGeeks Club – MIT AOE',
     role: 'Active Club Member',
-    period: '2023 – 2024',
     description: 'Active contributor to student technical community initiatives and peer learning programs.',
     impactPoints: [
       'Coordinated technical events, coding bootcamps, and developer workshops.',

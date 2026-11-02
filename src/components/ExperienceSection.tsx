@@ -76,10 +76,12 @@ export const ExperienceSection: React.FC = () => {
                     </h3>
                   </div>
 
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-bg-main/60 border border-border-subtle text-xs font-mono text-text-secondary self-start">
-                    <Calendar className="w-3.5 h-3.5 text-accent-primary" />
-                    <span>{exp.period}</span>
-                  </div>
+                  {exp.period && (
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-bg-main/60 border border-border-subtle text-xs font-mono text-text-secondary self-start">
+                      <Calendar className="w-3.5 h-3.5 text-accent-primary" />
+                      <span>{exp.period}</span>
+                    </div>
+                  )}
                 </div>
 
                 <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-6">

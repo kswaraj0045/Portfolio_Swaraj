@@ -24,6 +24,7 @@
 | **Phase 17** | COMPLETE PORTFOLIO COLOUR TRANSFORMATION – Executive Slate | **COMPLETED** |
 | **Phase 18** | COMPLETE PORTFOLIO REDESIGN – Obsidian Silver | **COMPLETED** |
 | **Phase 19** | DELOITTE SELECTION SECTION VISUAL UPGRADE | **COMPLETED** |
+| **Phase 20** | DATE LABELS REMOVAL FROM LEADERSHIP & EXPERIENCE CARDS | **COMPLETED** |
 
 ---
 
@@ -429,5 +430,33 @@
   - Updated [`DeloitteMilestone.tsx`](file:///d:/Portfolio_Swaraj/src/components/DeloitteMilestone.tsx).
 - **Testing Results**:
   - TypeScript & Vite build: **Passed in 8.48s (0 errors, 0 warnings)**.
+  - Automated Privacy Scan: **0 Violations (Passed)**.
+- **Known Issues**: None.
+
+---
+
+### Phase 20: DATE LABELS REMOVAL FROM LEADERSHIP & EXPERIENCE CARDS
+- **Phase Number**: Phase 20
+- **Tasks**:
+  1. Remove year/date badges and calendar icons from targeted cards:
+     - `Viaset – MIT AOE E-Cell` (previously showing `2024 – 2025`)
+     - `GeeksforGeeks Club – MIT AOE` (previously showing `2023 – 2024`)
+     - `Software Developer Intern at Street-Up` (previously showing `29 June 2026 – Present`)
+  2. Maintain natural spacing without empty gaps or layout shifts:
+     - `ExperienceSection.tsx`: Period badge rendered conditionally (`{exp.period && ...}`); header flex block gracefully adjusts to full-width text hierarchy.
+     - `LeadershipSection.tsx`: Period badge rendered conditionally (`{item.period && ...}`); icon header neatly aligns to the top-left with natural vertical flow.
+  3. Strict isolation:
+     - Preserved all card descriptions, highlights, titles, badges, skill tags, borders, and animations.
+     - Kept Deloitte placement selection milestone badge untouched.
+     - Preserved Education section dates.
+     - Zero modifications to other sections or components.
+- **Current Status**: **COMPLETED**
+- **Completed Work**:
+  - Updated [`types/index.ts`](file:///d:/Portfolio_Swaraj/src/types/index.ts).
+  - Updated [`portfolioData.ts`](file:///d:/Portfolio_Swaraj/src/data/portfolioData.ts).
+  - Updated [`ExperienceSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/ExperienceSection.tsx).
+  - Updated [`LeadershipSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/LeadershipSection.tsx).
+- **Testing Results**:
+  - TypeScript & Vite build: **Passed in 7.77s (0 errors, 0 warnings)**.
   - Automated Privacy Scan: **0 Violations (Passed)**.
 - **Known Issues**: None.

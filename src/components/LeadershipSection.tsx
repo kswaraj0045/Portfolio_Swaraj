@@ -43,10 +43,12 @@ export const LeadershipSection: React.FC = () => {
                     {item.id === 'viaset-ecell' ? <Rocket className="w-6 h-6 text-accent-primary" /> : <Code className="w-6 h-6 text-accent-secondary" />}
                   </div>
 
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-bg-main/60 border border-border-subtle text-xs font-mono text-text-muted">
-                    <Calendar className="w-3 h-3 text-accent-primary" />
-                    <span>{item.period}</span>
-                  </span>
+                  {item.period && (
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-bg-main/60 border border-border-subtle text-xs font-mono text-text-muted">
+                      <Calendar className="w-3 h-3 text-accent-primary" />
+                      <span>{item.period}</span>
+                    </span>
+                  )}
                 </div>
 
                 <div className="mb-4">
