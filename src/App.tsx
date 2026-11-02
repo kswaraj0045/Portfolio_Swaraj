@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { SignatureLoadingScreen } from './components/SignatureLoadingScreen';
 import { Navbar } from './components/Navbar';
@@ -15,11 +15,43 @@ import { EducationAndCertifications } from './components/EducationAndCertificati
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { DesignSystemPreview } from './components/DesignSystemPreview';
+import { DeloitteUSIPage } from './components/DeloitteUSIPage';
 
 export function App() {
   const [showDesignSystem, setShowDesignSystem] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const shouldReduceMotion = useReducedMotion();
+
+  const [currentPath, setCurrentPath] = useState<string>(() => {
+    return window.location.pathname;
+  });
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const navigateTo = (path: string) => {
+    window.history.pushState({}, '', path);
+    setCurrentPath(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const isDeloittePage = currentPath === '/deloitte' || currentPath === '/deloitte/' || window.location.hash === '#/deloitte';
+
+  // If directly landing on /deloitte, dismiss the signature loading screen immediately
+  useEffect(() => {
+    if (isDeloittePage) {
+      setIsLoading(false);
+    }
+  }, [isDeloittePage]);
+
+  if (isDeloittePage) {
+    return <DeloitteUSIPage onNavigateHome={() => navigateTo('/')} />;
+  }
 
   return (
     <div className="min-h-screen bg-bg-main text-text-primary selection:bg-accent-primary/25 selection:text-accent-primary relative overflow-x-hidden">
@@ -93,7 +125,7 @@ export function App() {
           <HeroSection />
           <AboutSection />
           <InteractiveTerminal />
-          <DeloitteMilestone />
+          <DeloitteMilestone onNavigate={navigateTo} />
           <ProductThinkingFramework />
           <ProjectSection />
           <ExperienceSection />

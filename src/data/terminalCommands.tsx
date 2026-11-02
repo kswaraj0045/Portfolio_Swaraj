@@ -245,10 +245,10 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
             <div className="p-3 rounded-xl bg-accent-achievement/10 border border-accent-achievement/30 space-y-1">
               <div className="text-accent-achievement font-bold flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-accent-achievement animate-pulse" />
-                <span>[UNLOCKED] DELOITTE ANALYST SELECTION</span>
+                <span>[UNLOCKED] DELOITTE USI ANALYST SELECTION</span>
               </div>
               <p className="text-text-primary text-xs">
-                Selected for the Analyst role through campus placement.
+                Selected for the Incoming Analyst role at Deloitte USI through campus placement.
               </p>
               <div className="text-xs font-mono font-medium text-accent-achievement">
                 STATUS: Incoming Analyst
@@ -362,7 +362,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
               <div><span className="text-accent-primary font-semibold">OS        :</span> Product-Oriented Mindset</div>
               <div><span className="text-accent-primary font-semibold">ROLE      :</span> Computer Engineering Student</div>
               <div><span className="text-accent-primary font-semibold">EXPERIENCE:</span> Software Developer Intern</div>
-              <div><span className="text-accent-achievement font-semibold">MILESTONE :</span> Deloitte Analyst Selection</div>
+              <div><span className="text-accent-achievement font-semibold">MILESTONE :</span> Deloitte USI Analyst Selection</div>
               <div><span className="text-accent-primary font-semibold">FOCUS     :</span> Product, Technology &amp; Analytics</div>
               <div><span className="text-accent-primary font-semibold">LOCATION  :</span> Pune, India</div>
               <div><span className="text-accent-primary font-semibold">STATUS    :</span> Always Learning</div>

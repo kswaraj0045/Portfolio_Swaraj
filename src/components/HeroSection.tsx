@@ -308,7 +308,7 @@ export const HeroSection: React.FC = () => {
                   <span>03 — CAREER</span>
                 </div>
                 <div className="text-sm sm:text-base font-heading font-bold text-text-primary mt-1 flex items-center justify-between">
-                  <span>Incoming Analyst at Deloitte</span>
+                  <span>Incoming Analyst at Deloitte USI</span>
                   <a 
                     href="#deloitte" 
                     className="text-xs font-mono text-silver-steel hover:text-accent-primary transition-colors flex items-center gap-1"

@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { CheckCircle2, ShieldCheck, Building2 } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Building2, ArrowUpRight } from 'lucide-react';
 
-export const DeloitteMilestone: React.FC = () => {
+interface Props {
+  onNavigate?: (path: string) => void;
+}
+
+export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -47,16 +51,16 @@ export const DeloitteMilestone: React.FC = () => {
               {/* Main Heading & Subtitle */}
               <div className="space-y-1.5">
                 <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-heading text-[#F5F5F5] tracking-tight">
-                  SELECTED AT DELOITTE
+                  SELECTED AT DELOITTE USI
                 </h2>
                 <div className="text-base sm:text-xl font-mono text-[#C5C8CE] font-semibold tracking-wide">
-                  Incoming Analyst | Campus Placement
+                  Incoming Analyst | College Campus Placement
                 </div>
               </div>
 
               {/* Description */}
               <p className="text-sm sm:text-base md:text-lg text-[#C5C8CE] leading-relaxed max-w-2xl">
-                Selected for the Analyst role at Deloitte through college campus placement.
+                Selected for the Incoming Analyst role at Deloitte USI through college campus placement.
               </p>
 
               {/* Achievement Cards */}
@@ -84,6 +88,25 @@ export const DeloitteMilestone: React.FC = () => {
                 </div>
               </div>
 
+              {/* KNOW ABOUT DELOITTE USI Button */}
+              <div className="pt-2">
+                <motion.a
+                  href="/deloitte"
+                  onClick={(e) => {
+                    if (onNavigate) {
+                      e.preventDefault();
+                      onNavigate('/deloitte');
+                    }
+                  }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold font-mono text-[#0D0F11] bg-[#86BC25] hover:bg-[#97D72B] shadow-[0_0_20px_rgba(134,188,37,0.3)] hover:shadow-[0_0_28px_rgba(134,188,37,0.45)] transition-all cursor-pointer group/btn"
+                >
+                  <span>KNOW ABOUT DELOITTE USI</span>
+                  <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                </motion.a>
+              </div>
+
               {/* Footer Verification Note */}
               <div className="text-[11px] sm:text-xs font-mono text-[#858A93] flex items-start sm:items-center gap-2 pt-2 border-t border-[#343A42]/50">
                 <ShieldCheck className="w-4 h-4 text-[#86BC25] shrink-0 mt-0.5 sm:mt-0" />
@@ -108,33 +131,33 @@ export const DeloitteMilestone: React.FC = () => {
                       <Building2 className="w-4 h-4 text-[#86BC25]" />
                     </div>
                     <span className="font-heading font-bold text-xl text-[#F5F5F5] tracking-tight">
-                      Deloitte<span className="text-[#86BC25] font-black">.</span>
+                      Deloitte USI<span className="text-[#86BC25] font-black">.</span>
                     </span>
                   </div>
                   <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-[#86BC25]/10 text-[#86BC25] border border-[#86BC25]/35 hover:bg-[#86BC25]/20 hover:border-[#86BC25] hover:text-[#A3D94B] transition-all cursor-default">
-                    ANALYST
+                    INCOMING ANALYST
                   </span>
                 </div>
 
                 {/* Information Rows */}
                 <div className="space-y-2.5 text-xs">
                   <div className="flex justify-between items-center py-1.5 border-b border-[#343A42]/50">
-                    <span className="text-[#858A93]">Target Profile:</span>
+                    <span className="text-[#858A93]">Role:</span>
                     <span className="text-[#F5F5F5] font-mono font-medium text-xs sm:text-sm">Incoming Analyst</span>
                   </div>
                   <div className="flex justify-between items-center py-1.5 border-b border-[#343A42]/50">
                     <span className="text-[#858A93]">Selection Track:</span>
-                    <span className="text-[#F5F5F5] font-mono font-medium text-xs sm:text-sm">Campus Placement</span>
+                    <span className="text-[#F5F5F5] font-mono font-medium text-xs sm:text-sm">College Campus Placement</span>
                   </div>
                   <div className="flex justify-between items-center py-1.5 border-b border-[#343A42]/50">
                     <span className="text-[#858A93]">Institution:</span>
-                    <span className="text-[#F5F5F5] font-mono font-medium text-xs sm:text-sm">MIT AOE Pune</span>
+                    <span className="text-[#F5F5F5] font-mono font-medium text-xs sm:text-sm">MIT Academy of Engineering, Pune</span>
                   </div>
                   <div className="flex justify-between items-center py-1.5">
                     <span className="text-[#858A93]">Status:</span>
                     <span className="text-[#F5F5F5] font-mono font-semibold text-xs sm:text-sm flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-[#86BC25] shadow-[0_0_8px_#86BC25] animate-pulse" />
-                      Selected
+                      Selected — Incoming Analyst
                     </span>
                   </div>
                 </div>
