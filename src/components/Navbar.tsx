@@ -70,7 +70,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
         <div className="flex items-center justify-between h-18">
           
           {/* Brand Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="#hero" className="flex items-center gap-3 group">
             <motion.div 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

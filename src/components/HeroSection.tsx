@@ -49,7 +49,7 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative pt-24 pb-12 sm:pt-28 md:pt-32 md:pb-16 overflow-hidden">
+    <section id="hero" className="relative pt-24 pb-12 sm:pt-28 md:pt-32 md:pb-16 overflow-hidden">
       {/* Background ambient radial glow lights */}
       <motion.div 
         animate={shouldReduceMotion ? {} : { scale: [1, 1.08, 1], opacity: [0.1, 0.16, 0.1] }}
@@ -81,12 +81,12 @@ export const HeroSection: React.FC = () => {
           <div className="absolute inset-0 rounded-3xl lg:rounded-[2.5rem] pointer-events-none border border-white/5" />
 
           {/* Split Screen Container: 48% Left / 52% Right */}
-          <div className="flex flex-col lg:flex-row items-stretch">
+          <div className="flex flex-col md:flex-row items-stretch">
             
             {/* =================================================== */}
             {/* LEFT SIDE — PERSONAL IDENTITY (~48% width) */}
             {/* =================================================== */}
-            <div className="w-full lg:w-[48%] flex flex-col justify-between p-6 sm:p-10 lg:p-12 xl:p-14 z-10 relative space-y-8">
+            <div className="w-full md:w-[48%] flex flex-col justify-between p-6 sm:p-8 md:p-8 lg:p-12 xl:p-14 z-10 relative space-y-8">
               
               <div className="space-y-6">
                 {/* Small upper label with crimson decorative accent line */}
@@ -111,7 +111,7 @@ export const HeroSection: React.FC = () => {
                     className="font-heading font-black tracking-tight leading-[0.94] select-none"
                   >
                     {/* First Name */}
-                    <div className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl flex flex-wrap overflow-hidden">
+                    <div className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl flex flex-wrap overflow-hidden">
                       {firstName.split("").map((char, index) => (
                         <motion.span
                           key={`first-${index}`}
@@ -124,7 +124,7 @@ export const HeroSection: React.FC = () => {
                     </div>
 
                     {/* Last Name */}
-                    <div className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl flex flex-wrap overflow-hidden mt-1 sm:mt-2">
+                    <div className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl flex flex-wrap overflow-hidden mt-1 sm:mt-2">
                       {lastName.split("").map((char, index) => (
                         <motion.span
                           key={`last-${index}`}
@@ -233,12 +233,15 @@ export const HeroSection: React.FC = () => {
             {/* =================================================== */}
             {/* RIGHT SIDE — PERSONAL PORTRAIT (~52% width) */}
             {/* =================================================== */}
-            <div className="w-full lg:w-[52%] relative min-h-[420px] sm:min-h-[500px] lg:min-h-[600px] xl:min-h-[640px] overflow-hidden group">
+            <div className="w-full md:w-[52%] relative h-[420px] sm:h-[500px] md:h-auto min-h-[420px] sm:min-h-[500px] md:min-h-[560px] lg:min-h-[620px] xl:min-h-[660px] overflow-hidden group">
               
               {/* Actual Personal Photograph */}
               <div className="absolute inset-0 w-full h-full overflow-hidden bg-[#0D0F12]">
                 <img
                   src={swarajPhoto}
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = "/swaraj-portrait.jpg";
+                  }}
                   alt="Swaraj Sanjay Khadalkar"
                   className="w-full h-full object-cover object-[center_15%] brightness-[0.98] contrast-[1.05] transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   loading="eager"
@@ -246,7 +249,7 @@ export const HeroSection: React.FC = () => {
               </div>
 
               {/* Seamless Left Edge Blend Gradient (into the dark left column) */}
-              <div className="hidden lg:block absolute inset-y-0 left-0 w-32 xl:w-44 bg-gradient-to-r from-[#0D0F12] via-[#0D0F12]/60 to-transparent z-10 pointer-events-none" />
+              <div className="hidden md:block absolute inset-y-0 left-0 w-24 lg:w-36 xl:w-44 bg-gradient-to-r from-[#0D0F12] via-[#0D0F12]/60 to-transparent z-10 pointer-events-none" />
 
               {/* Bottom Edge Blend Gradient */}
               <div className="absolute inset-x-0 bottom-0 h-32 sm:h-40 bg-gradient-to-t from-[#090A0C] via-[#090A0C]/70 to-transparent z-10 pointer-events-none" />
