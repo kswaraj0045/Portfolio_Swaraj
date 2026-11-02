@@ -40,7 +40,10 @@ export function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const isDeloittePage = currentPath === '/deloitte' || currentPath === '/deloitte/' || window.location.hash === '#/deloitte';
+  const isDeloittePage = currentPath.toLowerCase().includes('deloitte') || 
+    window.location.pathname.toLowerCase().includes('deloitte') || 
+    window.location.hash.toLowerCase() === '#/deloitte' ||
+    window.location.hash.toLowerCase() === '#deloitte-usi';
 
   // If directly landing on /deloitte, dismiss the signature loading screen immediately
   useEffect(() => {
@@ -113,6 +116,7 @@ export function App() {
       <Navbar 
         onToggleDesignSystem={() => setShowDesignSystem(!showDesignSystem)} 
         showDesignSystem={showDesignSystem} 
+        onNavigate={navigateTo}
       />
 
       {/* Main Content Area */}
@@ -122,7 +126,7 @@ export function App() {
         </main>
       ) : (
         <main>
-          <HeroSection />
+          <HeroSection onNavigate={navigateTo} />
           <AboutSection />
           <InteractiveTerminal />
           <DeloitteMilestone onNavigate={navigateTo} />

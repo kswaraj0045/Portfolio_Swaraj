@@ -13,7 +13,11 @@ import {
 import { personalInfo } from '../data/portfolioData';
 import swarajPhoto from '../assets/swaraj-portrait.jpg';
 
-export const HeroSection: React.FC = () => {
+interface Props {
+  onNavigate?: (path: string) => void;
+}
+
+export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
   const shouldReduceMotion = useReducedMotion();
 
   const firstName = "SWARAJ";
@@ -304,16 +308,23 @@ export const HeroSection: React.FC = () => {
 
               {/* Block 03 — CAREER */}
               <div className="p-3 sm:p-4 flex flex-col justify-center">
-                <div className="text-[11px] sm:text-xs font-mono font-semibold tracking-wider text-accent-primary uppercase flex items-center gap-2">
+                <div className="text-[11px] sm:text-xs font-mono font-semibold tracking-wider text-[#86BC25] uppercase flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#86BC25] animate-pulse" />
                   <span>03 — CAREER</span>
                 </div>
                 <div className="text-sm sm:text-base font-heading font-bold text-text-primary mt-1 flex items-center justify-between">
                   <span>Incoming Analyst at Deloitte USI</span>
                   <a 
-                    href="#deloitte" 
-                    className="text-xs font-mono text-silver-steel hover:text-accent-primary transition-colors flex items-center gap-1"
+                    href="/deloitte" 
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        onNavigate('/deloitte');
+                      }
+                    }}
+                    className="text-xs font-mono font-semibold text-[#86BC25] hover:text-[#97D72B] transition-colors flex items-center gap-1 bg-[#86BC25]/10 px-2 py-1 rounded border border-[#86BC25]/30 hover:border-[#86BC25]"
                   >
-                    <span>View</span>
+                    <span>Discover USI</span>
                     <ArrowRight className="w-3 h-3" />
                   </a>
                 </div>

@@ -6,9 +6,10 @@ import { personalInfo } from '../data/portfolioData';
 interface Props {
   onToggleDesignSystem?: () => void;
   showDesignSystem?: boolean;
+  onNavigate?: (path: string) => void;
 }
 
-export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem }) => {
+export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem, onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('about');
@@ -16,7 +17,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
   const navLinks = [
     { name: 'About', href: '#about', id: 'about' },
     { name: 'Terminal', href: '#terminal', id: 'terminal', badge: 'CLI' },
-    { name: 'Deloitte', href: '#deloitte', id: 'deloitte', badge: 'Selected' },
+    { name: 'Deloitte USI', href: '/deloitte', id: 'deloitte', badge: 'USI', isPage: true },
     { name: 'Framework', href: '#framework', id: 'framework' },
     { name: 'Projects', href: '#projects', id: 'projects' },
     { name: 'Experience', href: '#experience', id: 'experience' },
@@ -98,6 +99,12 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
                 <a
                   key={link.name}
                   href={link.href}
+                  onClick={(e) => {
+                    if (link.isPage && onNavigate) {
+                      e.preventDefault();
+                      onNavigate(link.href);
+                    }
+                  }}
                   className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors relative flex items-center gap-1.5 ${
                     isActive ? 'text-text-primary font-semibold' : 'text-text-secondary hover:text-text-primary'
                   }`}
@@ -113,7 +120,11 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
 
                   <span>{link.name}</span>
                   {link.badge && (
-                    <span className="px-1.5 py-0.2 rounded text-[10px] font-mono font-bold bg-accent-secondary/15 text-accent-secondary border border-accent-secondary/30">
+                    <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono font-bold ${
+                      link.badge === 'USI' 
+                        ? 'bg-[#86BC25]/15 text-[#86BC25] border border-[#86BC25]/40' 
+                        : 'bg-accent-secondary/15 text-accent-secondary border border-accent-secondary/30'
+                    }`}>
                       {link.badge}
                     </span>
                   )}
@@ -123,7 +134,26 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-2.5">
+            {/* Deloitte USI Direct Button */}
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href="/deloitte"
+              onClick={(e) => {
+                if (onNavigate) {
+                  e.preventDefault();
+                  onNavigate('/deloitte');
+                }
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold text-[#86BC25] bg-[#86BC25]/10 border border-[#86BC25]/40 hover:bg-[#86BC25]/20 hover:border-[#86BC25] hover:text-[#A3D94B] transition-all cursor-pointer shadow-[0_0_12px_rgba(134,188,37,0.12)]"
+              title="Discover Deloitte USI (Dedicated Page)"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#86BC25] animate-pulse" />
+              <span>Deloitte USI</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </motion.a>
+
             {onToggleDesignSystem && (
               <motion.button
                 whileHover={{ scale: 1.02 }}
@@ -185,12 +215,37 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className="lg:hidden bg-bg-card/98 backdrop-blur-2xl border-b border-border-subtle px-4 pt-3 pb-6 space-y-3 overflow-hidden shadow-2xl max-h-[calc(100vh-4.5rem)] overflow-y-auto"
           >
+            {/* Dedicated Deloitte USI banner in mobile drawer */}
+            <a
+              href="/deloitte"
+              onClick={(e) => {
+                setMobileMenuOpen(false);
+                if (onNavigate) {
+                  e.preventDefault();
+                  onNavigate('/deloitte');
+                }
+              }}
+              className="w-full p-3 rounded-xl bg-[#86BC25]/10 border border-[#86BC25]/40 flex items-center justify-between text-xs font-mono font-semibold text-[#86BC25] hover:bg-[#86BC25]/20 transition-all cursor-pointer"
+            >
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#86BC25] animate-pulse" />
+                <span>DISCOVER DELOITTE USI PAGE</span>
+              </div>
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    setMobileMenuOpen(false);
+                    if (link.isPage && onNavigate) {
+                      e.preventDefault();
+                      onNavigate(link.href);
+                    }
+                  }}
                   className={`px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center justify-between min-h-[44px] ${
                     activeSection === link.id
                       ? 'bg-accent-primary/15 text-accent-primary border border-accent-primary/30 font-semibold'
@@ -199,7 +254,11 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
                 >
                   <span>{link.name}</span>
                   {link.badge && (
-                    <span className="text-[10px] font-mono font-bold text-accent-secondary bg-accent-secondary/15 border border-accent-secondary/30 px-1.5 py-0.5 rounded">
+                    <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                      link.badge === 'USI'
+                        ? 'text-[#86BC25] bg-[#86BC25]/15 border border-[#86BC25]/40'
+                        : 'text-accent-secondary bg-accent-secondary/15 border border-accent-secondary/30'
+                    }`}>
                       {link.badge}
                     </span>
                   )}
