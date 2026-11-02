@@ -28,6 +28,7 @@
 | **Phase 21** | PREMIUM HOVER ANIMATIONS FOR EXPERIENCE & LEADERSHIP CARDS | **COMPLETED** |
 | **Phase 22** | RED SCANNER REVEAL SIGNATURE HOVER INTERACTION | **COMPLETED** |
 | **Phase 23** | PERSONAL PORTRAIT INTEGRATION IN HERO SECTION | **COMPLETED** |
+| **Phase 24** | CINEMATIC SPLIT-SCREEN HERO SECTION REDESIGN | **COMPLETED** |
 
 ---
 
@@ -559,5 +560,38 @@
   - Updated [`HeroSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/HeroSection.tsx).
 - **Testing Results**:
   - TypeScript & Vite build: **Passed in 8.38s (0 errors, 0 warnings)**.
+  - Automated Privacy Scan: **0 Violations (Passed)**.
+- **Known Issues**: None.
+
+---
+
+### Phase 24: CINEMATIC SPLIT-SCREEN HERO SECTION REDESIGN
+- **Phase Number**: Phase 24
+- **Tasks**:
+  1. Image File Resolution:
+     - Located exact working folder image: `Swaraj Sanjay Khadalkar.jpg` (Extension: `.jpg`, 864×1109 px).
+     - Mirrored to `public/swaraj-portrait.jpg`, `public/Swaraj Sanjay Khadalkar.jpg`, and `src/assets/swaraj-portrait.jpg`.
+     - Zero AI facial alteration or stock substitution.
+  2. Hero Split-Screen Layout:
+     - Designed large rounded-3xl container (`rounded-3xl lg:rounded-[2.5rem]`) with subtle silver border (`border border-border-silver/30`) on dark graphite/black background (`bg-gradient-to-b from-[#111317] via-[#0D0F12] to-[#090A0C]`).
+     - Left side (~48% width): Personal identity, small upper label `PORTFOLIO / THE DIGITAL SPACE` with crimson accent line, dominant bold `SWARAJ KHADALKAR` typography, subtitle `Technology Enthusiast. Product Thinker. Data-Driven Problem Solver.`, supporting description, CTA buttons, and social connect links.
+     - Right side (~52% width): Prominent full-height portrait (`min-h-[420px] lg:min-h-[600px] xl:min-h-[640px]`), calibrated `object-fit: cover` with `object-position: center 15%` keeping face clearly visible.
+     - Overlays: Seamless gradient edge blends into dark background, subtle cinematic ambient crimson/silver glows, and soft crimson light reflection on hover (`group-hover:opacity-100`).
+  3. Bottom Information Strip:
+     - Added 3 compact information blocks in a responsive grid (`grid-cols-1 md:grid-cols-3`):
+       - `01 — EXPERIENCE`: `Software Developer Intern`
+       - `02 — FOCUS`: `Technology & Product Thinking`
+       - `03 — CAREER`: `Incoming Analyst at Deloitte` (with direct link to `#deloitte`)
+  4. Responsive Design & Preservation:
+     - Desktop: Elegant split-screen presentation.
+     - Tablet: Fluid proportional scaling.
+     - Mobile: Stacked presentation with zero horizontal scroll or content overlap.
+     - Preserved all other portfolio sections, navigation, and functionality.
+- **Current Status**: **COMPLETED**
+- **Completed Work**:
+  - Mirrored portrait assets.
+  - Redesigned [`HeroSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/HeroSection.tsx).
+- **Testing Results**:
+  - TypeScript & Vite build: **Passed in 12.38s (0 errors, 0 warnings)**.
   - Automated Privacy Scan: **0 Violations (Passed)**.
 - **Known Issues**: None.
