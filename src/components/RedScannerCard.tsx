@@ -154,3 +154,4 @@ export const RedScannerCard: React.FC<RedScannerCardProps> = ({
     </div>
   );
 };
+

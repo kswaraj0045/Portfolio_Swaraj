@@ -27,6 +27,7 @@
 | **Phase 20** | DATE LABELS REMOVAL FROM LEADERSHIP & EXPERIENCE CARDS | **COMPLETED** |
 | **Phase 21** | PREMIUM HOVER ANIMATIONS FOR EXPERIENCE & LEADERSHIP CARDS | **COMPLETED** |
 | **Phase 22** | RED SCANNER REVEAL SIGNATURE HOVER INTERACTION | **COMPLETED** |
+| **Phase 23** | PERSONAL PORTRAIT INTEGRATION IN HERO SECTION | **COMPLETED** |
 
 ---
 
@@ -521,5 +522,42 @@
   - Updated [`LeadershipSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/LeadershipSection.tsx).
 - **Testing Results**:
   - TypeScript & Vite build: **Passed in 8.17s (0 errors, 0 warnings)**.
+  - Automated Privacy Scan: **0 Violations (Passed)**.
+- **Known Issues**: None.
+
+---
+
+### Phase 23: PERSONAL PORTRAIT INTEGRATION IN HERO SECTION
+- **Phase Number**: Phase 23
+- **Tasks**:
+  1. Image Processing & Asset Pipeline:
+     - Verified exact user photograph `swaraj.jpeg` (852×1395 px) from project root.
+     - Preserved original root file untouched; mirrored to `public/swaraj.jpeg` and `src/assets/swaraj.jpeg` for optimal Vite asset bundling and guaranteed path resolution on Vercel deployments.
+     - Zero facial alteration, feature filtering, or generative stock replacements.
+  2. Design Direction & Framing:
+     - Built an executive portrait card integrated into the Hero section introduction.
+     - Outer frame: multi-tier dark glassmorphism card (`#202329` to `#090A0C`) with subtle silver border (`border-2 border-border-silver/50`).
+     - Crimson accent: corner ambient light sweep (`from-accent-primary/40 to-transparent`) + pulsing crimson status beacon (`ONLINE`).
+     - Cropping & Focus: `object-fit: cover` with `object-position: center 15%` perfectly centering face, eyes, and shoulders without distortion.
+     - Depth effect: smooth shadow depth (`shadow-[0_12px_32px_-8px_rgba(0,0,0,0.8),0_0_20px_-2px_rgba(179,38,53,0.18)]`).
+  3. Interactive Micro-Interactions:
+     - Smooth 500ms ease-out zoom on hover (`group-hover:scale-105`).
+     - Border and outer shadow illumination on hover (`group-hover:border-accent-primary/70`).
+     - Restrained and professional; zero jarring neon or spinning effects.
+  4. Responsive Adaptation:
+     - Desktop: Naturally positioned alongside the introduction badges and campus placement highlight.
+     - Tablet: Proportionally scaled (`w-32 h-32` / `w-36 h-36`) with balanced flex gap.
+     - Mobile: Centered gracefully above introduction badges (`flex-col items-center text-center`) with zero overlap and ample breathing room.
+  5. Strict Isolation:
+     - Maintained full `SWARAJ KHADALKAR` typography, staggered letter animation, and crimson underline.
+     - Preserved `<SwarajExperience />` interactive digital identity visual in the right column.
+     - Zero modifications to other sections or components.
+- **Current Status**: **COMPLETED**
+- **Completed Work**:
+  - Mirrored [`public/swaraj.jpeg`](file:///d:/Portfolio_Swaraj/public/swaraj.jpeg) and [`src/assets/swaraj.jpeg`](file:///d:/Portfolio_Swaraj/src/assets/swaraj.jpeg).
+  - Created [`src/vite-env.d.ts`](file:///d:/Portfolio_Swaraj/src/vite-env.d.ts).
+  - Updated [`HeroSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/HeroSection.tsx).
+- **Testing Results**:
+  - TypeScript & Vite build: **Passed in 8.38s (0 errors, 0 warnings)**.
   - Automated Privacy Scan: **0 Violations (Passed)**.
 - **Known Issues**: None.

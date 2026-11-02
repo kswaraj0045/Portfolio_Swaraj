@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import { SwarajExperience } from './SwarajExperience';
+import swarajPhoto from '../assets/swaraj.jpeg';
 
 export const HeroSection: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
@@ -78,32 +79,74 @@ export const HeroSection: React.FC = () => {
           {/* Left Column: Personal Brand & Hero Name */}
           <div className="lg:col-span-7 space-y-6">
             
-            {/* Top Badges: Product Thinker & Deloitte Incoming Analyst Recognition */}
+            {/* Executive Profile Introduction Card: Portrait & Badges */}
             <motion.div 
-              initial={{ opacity: 0, y: -15 }}
+              initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="flex flex-wrap items-center gap-3"
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-6 pb-1"
             >
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/25 backdrop-blur-md">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>PRODUCT THINKER | TECHNOLOGY ENTHUSIAST</span>
+              {/* Premium Framed Portrait */}
+              <div className="relative group shrink-0">
+                {/* Ambient Soft Glow Behind Frame */}
+                <div className="absolute -inset-1 rounded-2xl sm:rounded-3xl bg-gradient-to-tr from-accent-primary/25 via-border-silver/20 to-transparent blur-md opacity-40 group-hover:opacity-85 transition-opacity duration-500 pointer-events-none" />
+
+                {/* Outer Glass Card Frame with Silver Border and Crimson Corner Accent */}
+                <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-2xl sm:rounded-3xl p-1 sm:p-1.5 bg-gradient-to-b from-[#202329] via-[#17191D] to-[#090A0C] border-2 border-border-silver/50 group-hover:border-accent-primary/70 transition-all duration-300 shadow-[0_12px_32px_-8px_rgba(0,0,0,0.8),0_0_20px_-2px_rgba(179,38,53,0.18)] group-hover:shadow-[0_16px_40px_-8px_rgba(0,0,0,0.9),0_0_28px_-2px_rgba(179,38,53,0.3)]">
+                  
+                  {/* Photo Container */}
+                  <div className="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden relative bg-[#090A0C]">
+                    <img 
+                      src={swarajPhoto} 
+                      alt="Swaraj Khadalkar" 
+                      className="w-full h-full object-cover object-[center_15%] transition-transform duration-500 ease-out group-hover:scale-105"
+                      loading="eager"
+                    />
+                    
+                    {/* Subtle Crimson Corner Light Sweep Accent */}
+                    <div className="absolute top-0 right-0 w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-bl from-accent-primary/40 to-transparent pointer-events-none rounded-tr-xl sm:rounded-tr-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+                    
+                    {/* Subtle Bottom Ambient Gradient for Depth */}
+                    <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#090A0C]/60 to-transparent pointer-events-none" />
+                  </div>
+
+                  {/* Restrained Crimson Status Beacon */}
+                  <div className="absolute -bottom-1 -right-1 px-2 py-0.5 rounded-full bg-[#17191D] border border-border-silver/50 shadow-md flex items-center gap-1.5 group-hover:border-accent-primary/60 transition-colors">
+                    <span className="w-2 h-2 rounded-full bg-accent-primary shadow-[0_0_8px_#B32635] animate-pulse" />
+                    <span className="text-[10px] font-mono font-bold text-silver-metallic uppercase tracking-wider">Online</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Deloitte Highlight Element */}
-              <motion.a 
-                href="#deloitte"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold text-silver-metallic bg-bg-elevated border border-border-silver/40 shadow-silver-soft backdrop-blur-md hover:bg-bg-card transition-all cursor-pointer group"
-                title="View campus selection milestone details"
-              >
-                <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
-                <span className="tracking-wide font-bold">SELECTED AT DELOITTE</span>
-                <span className="text-border-subtle hidden sm:inline">•</span>
-                <span className="text-text-primary hidden sm:inline font-medium">Incoming Analyst</span>
-                <ArrowRight className="w-3.5 h-3.5 text-accent-primary group-hover:translate-x-1 transition-transform" />
-              </motion.a>
+              {/* Badges & Identity Tagline alongside Portrait */}
+              <div className="flex-1 space-y-3 text-center sm:text-left">
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/25 backdrop-blur-md">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>PRODUCT THINKER | TECHNOLOGY ENTHUSIAST</span>
+                  </div>
+
+                  {/* Deloitte Highlight Element */}
+                  <motion.a 
+                    href="#deloitte"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold text-silver-metallic bg-bg-elevated border border-border-silver/40 shadow-silver-soft backdrop-blur-md hover:bg-bg-card transition-all cursor-pointer group"
+                    title="View campus selection milestone details"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse" />
+                    <span className="tracking-wide font-bold">SELECTED AT DELOITTE</span>
+                    <span className="text-border-subtle hidden sm:inline">•</span>
+                    <span className="text-text-primary hidden sm:inline font-medium">Incoming Analyst</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-accent-primary group-hover:translate-x-1 transition-transform" />
+                  </motion.a>
+                </div>
+
+                <div className="text-xs font-mono text-text-muted flex items-center justify-center sm:justify-start gap-2">
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-silver-metallic/60" />
+                  <span>Computer Engineering Senior • MIT AOE Pune</span>
+                </div>
+              </div>
             </motion.div>
 
             {/* The Most Prominent Landing Element: THE NAME */}
