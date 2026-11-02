@@ -25,6 +25,7 @@
 | **Phase 18** | COMPLETE PORTFOLIO REDESIGN – Obsidian Silver | **COMPLETED** |
 | **Phase 19** | DELOITTE SELECTION SECTION VISUAL UPGRADE | **COMPLETED** |
 | **Phase 20** | DATE LABELS REMOVAL FROM LEADERSHIP & EXPERIENCE CARDS | **COMPLETED** |
+| **Phase 21** | PREMIUM HOVER ANIMATIONS FOR EXPERIENCE & LEADERSHIP CARDS | **COMPLETED** |
 
 ---
 
@@ -458,5 +459,38 @@
   - Updated [`LeadershipSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/LeadershipSection.tsx).
 - **Testing Results**:
   - TypeScript & Vite build: **Passed in 7.77s (0 errors, 0 warnings)**.
+  - Automated Privacy Scan: **0 Violations (Passed)**.
+- **Known Issues**: None.
+
+---
+
+### Phase 21: PREMIUM HOVER ANIMATIONS FOR EXPERIENCE & LEADERSHIP CARDS
+- **Phase Number**: Phase 21
+- **Tasks**:
+  1. Card Lift & Shadow Depth:
+     - Implemented 6px card lift (`whileHover={{ y: -6 }}`) with smooth 300ms easing.
+     - Added deep subtle dark shadow with crimson aura on hover/focus (`shadow-[0_16px_36px_-8px_rgba(0,0,0,0.8),0_0_24px_-4px_rgba(179,38,53,0.18)]`).
+  2. Border Glow:
+     - Increased border brightness on hover (`hover:border-accent-primary/60` and `focus-within:border-accent-primary/60`).
+     - Subtle crimson outer glow without excessive neon saturation.
+  3. Icon Animation:
+     - Scaled card icons to ~1.08x (`group-hover:scale-[1.08]`) with ~4° gentle rotation (`group-hover:rotate-[4deg]`) on hover and focus.
+     - Applied to `Rocket` (Viaset), `Code` (GeeksforGeeks), and `Briefcase` (Street-Up).
+  4. Content Interaction:
+     - Smooth color transition on title to crisp white (`group-hover:text-white`) and company to hover accent (`group-hover:text-accent-hover`).
+     - Subtle content slide (`group-hover:translate-x-0.5 group-focus-within:translate-x-0.5`).
+  5. Background Radial Glow:
+     - Low-opacity crimson radial glow (`bg-[radial-gradient(circle_at_top_right,rgba(179,38,53,0.09),transparent_65%)]`) smoothly fading in on hover/focus.
+  6. Accessibility & Compatibility:
+     - Enabled keyboard navigation via `tabIndex={0}` and `focus-visible` rings.
+     - Disabled motion when `prefers-reduced-motion` is active (`motion-reduce:...`).
+     - Stable presentation on touch devices.
+     - Strict isolation: zero modifications outside `ExperienceSection.tsx` and `LeadershipSection.tsx`.
+- **Current Status**: **COMPLETED**
+- **Completed Work**:
+  - Updated [`ExperienceSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/ExperienceSection.tsx).
+  - Updated [`LeadershipSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/LeadershipSection.tsx).
+- **Testing Results**:
+  - TypeScript & Vite build: **Passed in 8.29s (0 errors, 0 warnings)**.
   - Automated Privacy Scan: **0 Violations (Passed)**.
 - **Known Issues**: None.
