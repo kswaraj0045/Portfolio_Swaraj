@@ -111,7 +111,7 @@ export const HeroSection: React.FC = () => {
                     className="font-heading font-black tracking-tight leading-[0.94] select-none"
                   >
                     {/* First Name */}
-                    <div className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl flex flex-wrap overflow-hidden">
+                    <div className="text-5xl sm:text-6xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl flex flex-nowrap whitespace-nowrap overflow-hidden">
                       {firstName.split("").map((char, index) => (
                         <motion.span
                           key={`first-${index}`}
@@ -124,7 +124,7 @@ export const HeroSection: React.FC = () => {
                     </div>
 
                     {/* Last Name */}
-                    <div className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl flex flex-wrap overflow-hidden mt-1 sm:mt-2">
+                    <div className="text-5xl sm:text-6xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl flex flex-nowrap whitespace-nowrap overflow-hidden mt-1 sm:mt-2">
                       {lastName.split("").map((char, index) => (
                         <motion.span
                           key={`last-${index}`}
