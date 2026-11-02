@@ -26,6 +26,7 @@
 | **Phase 19** | DELOITTE SELECTION SECTION VISUAL UPGRADE | **COMPLETED** |
 | **Phase 20** | DATE LABELS REMOVAL FROM LEADERSHIP & EXPERIENCE CARDS | **COMPLETED** |
 | **Phase 21** | PREMIUM HOVER ANIMATIONS FOR EXPERIENCE & LEADERSHIP CARDS | **COMPLETED** |
+| **Phase 22** | RED SCANNER REVEAL SIGNATURE HOVER INTERACTION | **COMPLETED** |
 
 ---
 
@@ -492,5 +493,33 @@
   - Updated [`LeadershipSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/LeadershipSection.tsx).
 - **Testing Results**:
   - TypeScript & Vite build: **Passed in 8.29s (0 errors, 0 warnings)**.
+  - Automated Privacy Scan: **0 Violations (Passed)**.
+- **Known Issues**: None.
+
+---
+
+### Phase 22: RED SCANNER REVEAL SIGNATURE HOVER INTERACTION
+- **Phase Number**: Phase 22
+- **Tasks**:
+  1. Built dedicated [`RedScannerCard.tsx`](file:///d:/Portfolio_Swaraj/src/components/RedScannerCard.tsx) component:
+     - **Cinematic Red Scanner Line**: High-precision 1.5px crimson laser line with soft glow and trailing gradient sheen travelling smoothly from left to right across the card on hover. Executes once per hover without continuous looping.
+     - **Reactive Surface**: Subtle technical micro-grid pattern (18px) revealed on hover; cursor-following dynamic radial reflection with natural fade.
+     - **Controlled 3D Perspective Tilt**: Interactive tilt up to ±3.5° based on normalized cursor position via physics-based springs (`stiffness: 280, damping: 26`); returns smoothly to 0° on pointer leave.
+     - **Typography & Icons**: Smooth transition for titles to crisp white, icons smoothly scale to 1.08× with 4° rotation, and zero text scrambling.
+     - **Exit Animation**: Immediate fade of scanning effects, smooth reset of tilt and lift on exit.
+  2. Integration:
+     - Consistently applied to **Street-Up** ([`ExperienceSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/ExperienceSection.tsx)), **Viaset**, and **GeeksforGeeks** ([`LeadershipSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/LeadershipSection.tsx)).
+     - Preserved Deloitte milestone card styling in its established format.
+  3. Accessibility & Performance:
+     - Disables tilt and scanning lines on touch devices (`(pointer: coarse)`) and for users preferring reduced motion (`useReducedMotion()`).
+     - Fully accessible keyboard navigation (`tabIndex={0}`, `onFocus`, `onBlur`, `focus-visible`).
+     - Zero layout shifts; strict preservation of card dimensions and layout.
+- **Current Status**: **COMPLETED**
+- **Completed Work**:
+  - Created [`RedScannerCard.tsx`](file:///d:/Portfolio_Swaraj/src/components/RedScannerCard.tsx).
+  - Updated [`ExperienceSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/ExperienceSection.tsx).
+  - Updated [`LeadershipSection.tsx`](file:///d:/Portfolio_Swaraj/src/components/LeadershipSection.tsx).
+- **Testing Results**:
+  - TypeScript & Vite build: **Passed in 8.17s (0 errors, 0 warnings)**.
   - Automated Privacy Scan: **0 Violations (Passed)**.
 - **Known Issues**: None.
