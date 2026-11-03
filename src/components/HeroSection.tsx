@@ -90,7 +90,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
             {/* =================================================== */}
             {/* LEFT SIDE — PERSONAL IDENTITY (~48% width) */}
             {/* =================================================== */}
-            <div className="w-full md:w-[48%] flex flex-col justify-between p-6 sm:p-8 md:p-8 lg:p-12 xl:p-14 z-10 relative space-y-8">
+            <div className="w-full md:w-[48%] flex flex-col justify-between p-6 sm:p-8 md:p-8 lg:p-10 xl:p-12 z-10 relative space-y-8">
               
               <div className="space-y-6">
                 {/* Small upper label with crimson decorative accent line */}
@@ -115,25 +115,25 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                     className="font-heading font-bold tracking-tight leading-[0.96] select-none"
                   >
                     {/* First Name */}
-                    <div className="text-5xl sm:text-6xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl flex flex-nowrap whitespace-nowrap overflow-hidden">
+                    <div className="text-4xl sm:text-5xl md:text-[2.2rem] lg:text-[2.75rem] xl:text-[3.25rem] 2xl:text-[3.6rem] flex flex-nowrap whitespace-nowrap shrink-0">
                       {firstName.split("").map((char, index) => (
                         <motion.span
                           key={`first-${index}`}
                           variants={letterVariants}
-                          className="inline-block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#EAEAEA] to-[#D4D4D8] drop-shadow-[0_2px_12px_rgba(255,255,255,0.08)]"
+                          className="inline-block shrink-0 text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#EAEAEA] to-[#D4D4D8] drop-shadow-[0_2px_12px_rgba(255,255,255,0.08)]"
                         >
                           {char}
                         </motion.span>
                       ))}
                     </div>
 
-                    {/* Last Name */}
-                    <div className="text-5xl sm:text-6xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl flex flex-nowrap whitespace-nowrap overflow-hidden mt-1 sm:mt-2">
+                    {/* Last Name — Always a single unbroken word on laptop, PC, tablet, and mobile */}
+                    <div className="text-4xl sm:text-5xl md:text-[2.2rem] lg:text-[2.75rem] xl:text-[3.25rem] 2xl:text-[3.6rem] flex flex-nowrap whitespace-nowrap shrink-0 mt-1 sm:mt-2">
                       {lastName.split("").map((char, index) => (
                         <motion.span
                           key={`last-${index}`}
                           variants={letterVariants}
-                          className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#F5F5F5] via-[#C5C8CE] to-[#A4A7AE] drop-shadow-[0_2px_16px_rgba(197,200,206,0.18)]"
+                          className="inline-block shrink-0 text-transparent bg-clip-text bg-gradient-to-r from-[#F5F5F5] via-[#C5C8CE] to-[#A4A7AE] drop-shadow-[0_2px_16px_rgba(197,200,206,0.18)]"
                         >
                           {char}
                         </motion.span>
