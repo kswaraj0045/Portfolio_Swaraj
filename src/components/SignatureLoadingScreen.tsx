@@ -206,7 +206,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
         className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl mx-auto"
       >
         {/* Phase 1: FULL NAME WITH STAGGERED LETTER ANIMATION */}
-        <h1 className="font-heading font-extrabold tracking-tight sm:tracking-normal text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 sm:mb-6">
+        <h1 className="font-heading font-bold tracking-tight text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 sm:mb-6">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-x-3 sm:gap-x-5 gap-y-1">
             {/* FIRST NAME: SWARAJ */}
             <div className="flex items-center">
@@ -263,10 +263,10 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
           transition={{ duration: 0.6, delay: 0.95, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="space-y-2 mb-8 sm:mb-10"
         >
-          <div className="font-mono font-bold text-xs sm:text-sm md:text-base tracking-[0.25em] text-silver-metallic uppercase">
+          <div className="font-sans font-medium text-xs sm:text-sm md:text-base tracking-wider text-silver-metallic uppercase">
             THINK. BUILD. LEAD.
           </div>
-          <div className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-text-muted uppercase">
+          <div className="font-mono text-[10px] sm:text-xs tracking-wider text-text-muted uppercase">
             WELCOME TO MY DIGITAL WORLD
           </div>
         </motion.div>

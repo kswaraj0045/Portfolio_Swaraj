@@ -78,14 +78,14 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
               className="w-10 h-10 rounded-xl bg-bg-card border border-border-subtle group-hover:border-accent-primary transition-colors flex items-center justify-center relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-accent-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <span className="font-heading font-black text-silver-metallic text-base tracking-wider">SK</span>
+              <span className="font-heading font-bold text-silver-metallic text-base tracking-normal">SK</span>
               <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-accent-primary shadow-[0_0_6px_rgba(179,38,53,0.6)]" />
             </motion.div>
             <div>
-              <span className="font-heading font-bold text-text-primary text-base tracking-tight block group-hover:text-silver-metallic transition-colors">
+              <span className="font-heading font-semibold text-text-primary text-base tracking-tight block group-hover:text-silver-metallic transition-colors">
                 Swaraj Khadalkar
               </span>
-              <span className="text-[11px] font-mono text-text-muted block -mt-0.5">
+              <span className="text-[11px] font-sans font-normal text-text-muted block -mt-0.5">
                 Aspiring Product Manager
               </span>
             </div>
@@ -120,7 +120,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
 
                   <span>{link.name}</span>
                   {link.badge && (
-                    <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono font-bold ${
+                    <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono font-medium ${
                       link.badge === 'USI' 
                         ? 'bg-[#86BC25]/15 text-[#86BC25] border border-[#86BC25]/40' 
                         : 'bg-accent-secondary/15 text-accent-secondary border border-accent-secondary/30'
@@ -146,7 +146,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
                   onNavigate('/deloitte');
                 }
               }}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold text-[#86BC25] bg-[#86BC25]/10 border border-[#86BC25]/40 hover:bg-[#86BC25]/20 hover:border-[#86BC25] hover:text-[#A3D94B] transition-all cursor-pointer shadow-[0_0_12px_rgba(134,188,37,0.12)]"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-sans font-medium text-[#86BC25] bg-[#86BC25]/10 border border-[#86BC25]/40 hover:bg-[#86BC25]/20 hover:border-[#86BC25] hover:text-[#A3D94B] transition-all cursor-pointer shadow-[0_0_12px_rgba(134,188,37,0.12)]"
               title="Discover Deloitte USI (Dedicated Page)"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#86BC25] animate-pulse" />
@@ -159,7 +159,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={onToggleDesignSystem}
-                className="px-3 py-1.5 rounded-lg text-xs font-mono font-medium text-text-secondary border border-border-subtle hover:border-accent-primary hover:text-accent-primary transition-colors flex items-center gap-1.5 cursor-pointer"
+                className="px-3 py-1.5 rounded-lg text-xs font-sans font-medium text-text-secondary border border-border-subtle hover:border-accent-primary hover:text-accent-primary transition-colors flex items-center gap-1.5 cursor-pointer"
                 title="Toggle Design System Specification Preview"
               >
                 <Sparkles className="w-3.5 h-3.5 text-accent-primary" />

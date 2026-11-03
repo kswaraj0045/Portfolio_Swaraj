@@ -103,11 +103,11 @@ export const ProjectCard: React.FC<Props> = ({ project, onOpenDetails }) => {
         </div>
 
         {/* Title & Tagline */}
-        <h3 className="text-xl font-bold font-heading text-text-primary group-hover:text-accent-primary transition-colors">
+        <h3 className="text-xl font-semibold font-heading text-text-primary group-hover:text-accent-primary transition-colors tracking-tight">
           {project.title}
         </h3>
         
-        <p className="text-sm text-text-secondary leading-relaxed mt-2.5 mb-5">
+        <p className="text-sm text-text-secondary leading-relaxed mt-2.5 mb-5 font-normal">
           {project.tagline}
         </p>
 
@@ -115,8 +115,8 @@ export const ProjectCard: React.FC<Props> = ({ project, onOpenDetails }) => {
         <div className="grid grid-cols-2 gap-2.5 mb-5 p-3 rounded-xl bg-bg-main/60 border border-border-subtle group-hover:border-border-subtle/80 transition-colors">
           {project.metrics.slice(0, 2).map((m, i) => (
             <div key={i} className="text-left">
-              <div className="text-[10px] font-mono text-text-muted uppercase truncate">{m.label}</div>
-              <div className="text-sm font-bold font-mono text-text-primary truncate">{m.value}</div>
+              <div className="text-[10px] font-mono text-text-muted uppercase tracking-wider truncate">{m.label}</div>
+              <div className="text-sm font-semibold font-mono text-text-primary truncate">{m.value}</div>
             </div>
           ))}
         </div>
@@ -126,13 +126,13 @@ export const ProjectCard: React.FC<Props> = ({ project, onOpenDetails }) => {
           {project.techStack.slice(0, 4).map((tech) => (
             <span 
               key={tech}
-              className="px-2 py-0.5 rounded text-[11px] font-mono bg-bg-secondary text-text-secondary border border-border-subtle group-hover:border-accent-primary/20 transition-colors"
+              className="px-2 py-0.5 rounded text-[11px] font-mono font-normal bg-bg-secondary text-text-secondary border border-border-subtle group-hover:border-accent-primary/20 transition-colors"
             >
               {tech}
             </span>
           ))}
           {project.techStack.length > 4 && (
-            <span className="px-1.5 py-0.5 rounded text-[11px] font-mono text-text-muted bg-bg-secondary">
+            <span className="px-1.5 py-0.5 rounded text-[11px] font-mono font-normal text-text-muted bg-bg-secondary">
               +{project.techStack.length - 4}
             </span>
           )}
@@ -143,7 +143,7 @@ export const ProjectCard: React.FC<Props> = ({ project, onOpenDetails }) => {
       <div className="pt-4 border-t border-border-subtle/60 flex items-center justify-between relative z-10" style={{ transform: 'translateZ(25px)' }}>
         <button
           onClick={() => onOpenDetails(project)}
-          className="text-xs font-semibold text-accent-primary hover:text-accent-hover inline-flex items-center gap-1.5 cursor-pointer group/btn transition-colors"
+          className="text-xs font-sans font-semibold text-accent-primary hover:text-accent-hover inline-flex items-center gap-1.5 cursor-pointer group/btn transition-colors"
         >
           <span>Detailed Case Study</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1.5 transition-transform" />

@@ -28,10 +28,10 @@ export const ProjectSection: React.FC = () => {
               <Layers className="w-3.5 h-3.5" />
               <span>VERIFIED PROJECT PORTFOLIO</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold font-heading text-text-primary tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
               Featured Case Studies & Systems.
             </h2>
-            <p className="mt-2 text-base text-text-secondary max-w-2xl">
+            <p className="mt-2 text-base text-text-secondary max-w-2xl font-normal leading-relaxed">
               Authentic systems inspected directly from GitHub repositories and technical specifications. Every project showcases problem definition, technical feasibility, and business value.
             </p>
           </div>

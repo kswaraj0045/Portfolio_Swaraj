@@ -20,10 +20,10 @@ export const EducationAndCertifications: React.FC = () => {
                 <GraduationCap className="w-3.5 h-3.5" />
                 <span>ACADEMIC BACKGROUND</span>
               </div>
-              <h2 className="text-3xl font-bold font-heading text-text-primary tracking-tight">
+              <h2 className="text-3xl font-semibold font-heading text-text-primary tracking-tight">
                 Education.
               </h2>
-              <p className="mt-2 text-sm text-text-secondary">
+              <p className="mt-2 text-sm text-text-secondary font-normal leading-relaxed">
                 Technical foundation in computer engineering and continuous academic learning.
               </p>
             </MotionReveal>
@@ -40,20 +40,20 @@ export const EducationAndCertifications: React.FC = () => {
                   className="glass-card p-6 rounded-2xl border border-border-subtle bg-bg-card/80 space-y-3 hover:border-accent-primary/40 transition-colors"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <h3 className="text-lg font-bold font-heading text-text-primary">
+                    <h3 className="text-lg font-semibold font-heading text-text-primary">
                       {edu.institution}
                     </h3>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-bg-main text-xs font-mono text-accent-primary border border-border-subtle self-start">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-bg-main text-xs font-mono font-normal text-accent-primary border border-border-subtle self-start">
                       <Calendar className="w-3 h-3" />
                       <span>{edu.period}</span>
                     </span>
                   </div>
 
-                  <div className="text-sm font-mono text-accent-primary font-medium">
+                  <div className="text-sm font-sans text-accent-primary font-medium">
                     {edu.degree}
                   </div>
 
-                  <div className="text-xs font-mono text-text-muted flex items-center gap-1">
+                  <div className="text-xs font-mono text-text-muted flex items-center gap-1 font-normal">
                     <MapPin className="w-3 h-3" />
                     <span>{edu.location}</span>
                   </div>
@@ -80,10 +80,10 @@ export const EducationAndCertifications: React.FC = () => {
                 <Award className="w-3.5 h-3.5" />
                 <span>CONTINUOUS LEARNING & CREDENTIALS</span>
               </div>
-              <h2 className="text-3xl font-bold font-heading text-text-primary tracking-tight">
+              <h2 className="text-3xl font-semibold font-heading text-text-primary tracking-tight">
                 Certifications.
               </h2>
-              <p className="mt-2 text-sm text-text-secondary">
+              <p className="mt-2 text-sm text-text-secondary font-normal leading-relaxed">
                 Verified industry badges across cloud architecture, AI fluency, and professional readiness.
               </p>
             </MotionReveal>
@@ -104,11 +104,11 @@ export const EducationAndCertifications: React.FC = () => {
                       <Award className="w-5 h-5 text-accent-secondary" />
                     </div>
                     <div>
-                      <h4 className="text-base font-bold font-heading text-text-primary group-hover:text-accent-primary transition-colors">
+                      <h4 className="text-base font-semibold font-heading text-text-primary group-hover:text-accent-primary transition-colors">
                         {cert.title}
                       </h4>
-                      <div className="text-xs font-mono text-text-secondary mt-0.5">
-                        Issued by: <strong className="text-text-primary">{cert.issuer}</strong>
+                      <div className="text-xs font-mono font-normal text-text-secondary mt-0.5">
+                        Issued by: <strong className="text-text-primary font-medium">{cert.issuer}</strong>
                       </div>
                     </div>
                   </div>

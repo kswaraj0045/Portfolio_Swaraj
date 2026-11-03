@@ -37,11 +37,11 @@ export const ContactSection: React.FC = () => {
               <span>LET'S CONNECT</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-text-primary tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold font-heading text-text-primary tracking-tight">
               Let's Build Something Meaningful.
             </h2>
 
-            <p className="text-base text-text-secondary leading-relaxed">
+            <p className="text-base text-text-secondary leading-relaxed font-normal">
               I'm interested in product management, technology, business strategy and connecting with people who enjoy solving meaningful problems.
             </p>
 
@@ -116,10 +116,10 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-7">
             <MotionReveal delay={0.2} className="glass-card p-6 sm:p-10 rounded-3xl border border-border-subtle bg-bg-card/85 space-y-6">
               <div>
-                <h3 className="text-2xl font-bold font-heading text-text-primary">
+                <h3 className="text-2xl font-semibold font-heading text-text-primary">
                   Send a Message
                 </h3>
-                <p className="text-xs font-mono text-text-muted mt-1">
+                <p className="text-xs font-mono font-normal text-text-muted mt-1">
                   Triggers an email directly to {personalInfo.email} with pre-filled details.
                 </p>
               </div>

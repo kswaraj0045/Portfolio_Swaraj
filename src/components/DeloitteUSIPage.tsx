@@ -79,16 +79,16 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
             transition={{ duration: 0.6 }}
             className="space-y-4 max-w-4xl"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold text-[#86BC25] bg-[#202329] border border-[#86BC25]/35 shadow-[0_0_12px_rgba(134,188,37,0.15)]">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium text-[#86BC25] bg-[#202329] border border-[#86BC25]/35 shadow-[0_0_12px_rgba(134,188,37,0.15)]">
               <span className="w-2 h-2 rounded-full bg-[#86BC25] shadow-[0_0_8px_#86BC25] animate-pulse" />
               <span>GLOBAL PROFESSIONAL SERVICES &amp; CAPABILITY HUB</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black font-heading tracking-tight text-[#F5F5F5]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading tracking-tight text-[#F5F5F5]">
               DISCOVER DELOITTE USI
             </h1>
 
-            <p className="text-lg sm:text-xl text-[#C5C8CE] leading-relaxed font-light">
+            <p className="text-lg sm:text-xl text-[#C5C8CE] leading-relaxed font-normal font-sans">
               Deloitte US-India Offices (Deloitte USI) operates as an integral global delivery and capability arm of Deloitte US, providing advanced technology, consulting, analytics, and business transformation solutions to Fortune 500 enterprises and global institutions.
             </p>
           </motion.div>
@@ -116,11 +116,11 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
                   <span>CAREER MILESTONE</span>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl font-bold font-heading text-[#F5F5F5] tracking-tight">
+                <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-[#F5F5F5] tracking-tight">
                   MY NEXT CHAPTER
                 </h2>
 
-                <p className="text-base sm:text-lg text-[#C5C8CE] leading-relaxed max-w-3xl">
+                <p className="text-base sm:text-lg text-[#C5C8CE] leading-relaxed max-w-3xl font-normal font-sans">
                   &ldquo;Selected for the Incoming Analyst role at Deloitte USI through college campus placement. This milestone marks an important step in my professional journey, and I look forward to learning, growing and contributing.&rdquo;
                 </p>
               </div>
@@ -130,46 +130,46 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
                 
                 {/* Organization */}
                 <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/40 transition-colors">
-                  <span className="text-[11px] font-mono text-[#858A93] uppercase tracking-wider block">Organization</span>
-                  <span className="text-base font-heading font-bold text-[#F5F5F5] mt-1 block">Deloitte USI</span>
-                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block">Deloitte US-India Offices</span>
+                  <span className="text-[11px] font-mono font-medium text-[#858A93] uppercase tracking-wider block">Organization</span>
+                  <span className="text-base font-semibold font-sans text-[#F5F5F5] mt-1 block">Deloitte USI</span>
+                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block font-normal font-sans">Deloitte US-India Offices</span>
                 </div>
 
                 {/* Position */}
                 <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/40 transition-colors">
-                  <span className="text-[11px] font-mono text-[#858A93] uppercase tracking-wider block">Position</span>
-                  <span className="text-base font-heading font-bold text-[#F5F5F5] mt-1 block">Incoming Analyst</span>
-                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block">Early Career Track</span>
+                  <span className="text-[11px] font-mono font-medium text-[#858A93] uppercase tracking-wider block">Position</span>
+                  <span className="text-base font-semibold font-sans text-[#F5F5F5] mt-1 block">Incoming Analyst</span>
+                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block font-normal font-sans">Early Career Track</span>
                 </div>
 
                 {/* Selection Track */}
                 <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/40 transition-colors">
-                  <span className="text-[11px] font-mono text-[#858A93] uppercase tracking-wider block">Selection</span>
-                  <span className="text-base font-heading font-bold text-[#F5F5F5] mt-1 block">Campus Placement</span>
-                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block">On-Campus Evaluation</span>
+                  <span className="text-[11px] font-mono font-medium text-[#858A93] uppercase tracking-wider block">Selection</span>
+                  <span className="text-base font-semibold font-sans text-[#F5F5F5] mt-1 block">Campus Placement</span>
+                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block font-normal font-sans">On-Campus Evaluation</span>
                 </div>
 
                 {/* Institution */}
                 <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/40 transition-colors sm:col-span-2 lg:col-span-1">
-                  <span className="text-[11px] font-mono text-[#858A93] uppercase tracking-wider block">Institution</span>
-                  <span className="text-base font-heading font-bold text-[#F5F5F5] mt-1 block">MIT Academy of Engineering</span>
-                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block">Pune, India</span>
+                  <span className="text-[11px] font-mono font-medium text-[#858A93] uppercase tracking-wider block">Institution</span>
+                  <span className="text-base font-semibold font-sans text-[#F5F5F5] mt-1 block">MIT Academy of Engineering</span>
+                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block font-normal font-sans">Pune, India</span>
                 </div>
 
                 {/* Status */}
                 <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#86BC25]/40 shadow-[0_0_15px_rgba(134,188,37,0.1)] sm:col-span-2 lg:col-span-1">
-                  <span className="text-[11px] font-mono text-[#86BC25] uppercase tracking-wider block">Status</span>
-                  <span className="text-base font-heading font-bold text-[#F5F5F5] mt-1 flex items-center gap-2">
+                  <span className="text-[11px] font-mono font-medium text-[#86BC25] uppercase tracking-wider block">Status</span>
+                  <span className="text-base font-semibold font-sans text-[#F5F5F5] mt-1 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#86BC25] shadow-[0_0_8px_#86BC25] animate-pulse" />
                     Selected / Incoming
                   </span>
-                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block">Pre-joining milestone</span>
+                  <span className="text-[11px] text-[#A4A7AE] mt-0.5 block font-normal font-sans">Pre-joining milestone</span>
                 </div>
 
               </div>
 
               {/* Verification & Compliance Note */}
-              <div className="pt-4 border-t border-[#343A42]/50 flex items-start sm:items-center gap-2 text-xs font-mono text-[#858A93]">
+              <div className="pt-4 border-t border-[#343A42]/50 flex items-start sm:items-center gap-2 text-xs font-mono font-normal text-[#858A93]">
                 <ShieldCheck className="w-4 h-4 text-[#86BC25] shrink-0 mt-0.5 sm:mt-0" />
                 <span>Selection milestone verified via university campus placement. No employment commencement or unauthorized agency claimed.</span>
               </div>
@@ -183,13 +183,13 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
         {/* ========================================================= */}
         <section className="space-y-6">
           <div className="space-y-2">
-            <div className="text-xs font-mono font-semibold text-[#86BC25] uppercase tracking-wider">
+            <div className="text-xs font-mono font-medium text-[#86BC25] uppercase tracking-wider">
               ORGANIZATIONAL STRUCTURE &amp; GOVERNANCE
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#F5F5F5]">
+            <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-[#F5F5F5] tracking-tight">
               Understanding Deloitte USI in the Global Network
             </h2>
-            <p className="text-sm sm:text-base text-[#C5C8CE] max-w-3xl leading-relaxed">
+            <p className="text-sm sm:text-base text-[#C5C8CE] max-w-3xl leading-relaxed font-normal font-sans">
               To ensure complete professional accuracy, Deloitte USI, Deloitte India, and Deloitte Global operate with distinct governance models, client mandates, and geographic scopes within the global Deloitte network:
             </p>
           </div>
@@ -200,22 +200,22 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
             <div className="p-6 rounded-2xl bg-[#17191D] border-2 border-[#86BC25]/50 shadow-[0_4px_25px_-5px_rgba(134,188,37,0.15)] flex flex-col justify-between space-y-4 relative">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-[#86BC25]/20 text-[#86BC25] border border-[#86BC25]/50">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-[#86BC25]/20 text-[#86BC25] border border-[#86BC25]/50">
                     SELECTED ENTITY
                   </span>
                   <Globe2 className="w-5 h-5 text-[#86BC25]" />
                 </div>
-                <h3 className="text-xl font-bold font-heading text-[#F5F5F5]">
+                <h3 className="text-xl font-semibold font-heading text-[#F5F5F5] tracking-tight">
                   Deloitte USI (US-India Offices)
                 </h3>
-                <p className="text-xs text-[#86BC25] font-mono">
+                <p className="text-xs text-[#86BC25] font-mono font-medium">
                   Offshore Delivery Arm of Deloitte US
                 </p>
-                <p className="text-sm text-[#C5C8CE] leading-relaxed">
+                <p className="text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                   Operates as part of Deloitte LLP (the US member firm). Located across major Indian tech hubs (Hyderabad, Bengaluru, Mumbai, Gurugram), Deloitte USI teams collaborate directly with US practitioners to deliver complex technology, consulting, analytics, and operational solutions for US and global multinational clients.
                 </p>
               </div>
-              <div className="pt-3 border-t border-[#343A42] text-xs font-mono text-[#858A93]">
+              <div className="pt-3 border-t border-[#343A42] text-xs font-mono font-normal text-[#858A93]">
                 Mandate: Global &amp; US client engagement delivery
               </div>
             </div>
@@ -224,22 +224,22 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
             <div className="p-6 rounded-2xl bg-[#17191D] border border-[#343A42] flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-[#202329] text-[#C5C8CE] border border-[#343A42]">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-[#202329] text-[#C5C8CE] border border-[#343A42]">
                     DOMESTIC FIRM
                   </span>
                   <Building2 className="w-5 h-5 text-[#A4A7AE]" />
                 </div>
-                <h3 className="text-xl font-bold font-heading text-[#F5F5F5]">
+                <h3 className="text-xl font-semibold font-heading text-[#F5F5F5] tracking-tight">
                   Deloitte India
                 </h3>
-                <p className="text-xs text-[#A4A7AE] font-mono">
+                <p className="text-xs text-[#A4A7AE] font-mono font-medium">
                   Independent Indian Member Firm
                 </p>
-                <p className="text-sm text-[#C5C8CE] leading-relaxed">
+                <p className="text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                   An independent licensed member firm within the Deloitte Touche Tohmatsu Limited (DTTL) network dedicated primarily to providing audit, consulting, tax, and risk advisory services to corporate and public-sector clients within the domestic Indian market.
                 </p>
               </div>
-              <div className="pt-3 border-t border-[#343A42] text-xs font-mono text-[#858A93]">
+              <div className="pt-3 border-t border-[#343A42] text-xs font-mono font-normal text-[#858A93]">
                 Mandate: Domestic Indian market client services
               </div>
             </div>
@@ -248,22 +248,22 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
             <div className="p-6 rounded-2xl bg-[#17191D] border border-[#343A42] flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-[#202329] text-[#C5C8CE] border border-[#343A42]">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-[#202329] text-[#C5C8CE] border border-[#343A42]">
                     GLOBAL UMBRELLA
                   </span>
                   <ShieldCheck className="w-5 h-5 text-[#A4A7AE]" />
                 </div>
-                <h3 className="text-xl font-bold font-heading text-[#F5F5F5]">
+                <h3 className="text-xl font-semibold font-heading text-[#F5F5F5] tracking-tight">
                   Deloitte Global (DTTL)
                 </h3>
-                <p className="text-xs text-[#A4A7AE] font-mono">
+                <p className="text-xs text-[#A4A7AE] font-mono font-medium">
                   Coordinating Network Entity
                 </p>
-                <p className="text-sm text-[#C5C8CE] leading-relaxed">
+                <p className="text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                   Deloitte Touche Tohmatsu Limited is a UK private company limited by guarantee that acts as the coordinating umbrella across independent member firms worldwide. DTTL establishes global quality standards, brand governance, and strategic policies, but does not provide services to clients directly.
                 </p>
               </div>
-              <div className="pt-3 border-t border-[#343A42] text-xs font-mono text-[#858A93]">
+              <div className="pt-3 border-t border-[#343A42] text-xs font-mono font-normal text-[#858A93]">
                 Mandate: Brand governance &amp; global standards
               </div>
             </div>
@@ -294,10 +294,10 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
               <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#343A42] flex items-center justify-center text-[#86BC25]">
                 <Laptop className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold font-heading text-[#F5F5F5]">
+              <h3 className="text-lg font-semibold font-heading text-[#F5F5F5] tracking-tight">
                 Technology &amp; Engineering
               </h3>
-              <p className="text-sm text-[#C5C8CE] leading-relaxed">
+              <p className="text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                 Modern enterprise cloud architecture (AWS, Azure, GCP), microservices, full-stack application development, ERP modernization (SAP, Oracle, Salesforce), DevOps, and agile software delivery.
               </p>
             </div>
@@ -307,10 +307,10 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
               <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#343A42] flex items-center justify-center text-[#86BC25]">
                 <Brain className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold font-heading text-[#F5F5F5]">
+              <h3 className="text-lg font-semibold font-heading text-[#F5F5F5] tracking-tight">
                 Analytics, Data &amp; AI
               </h3>
-              <p className="text-sm text-[#C5C8CE] leading-relaxed">
+              <p className="text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                 Large-scale data engineering, advanced business intelligence, predictive modeling, machine learning pipelines, and enterprise generative AI solutions enabling data-driven executive decision-making.
               </p>
             </div>
@@ -320,10 +320,10 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
               <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#343A42] flex items-center justify-center text-[#86BC25]">
                 <Workflow className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold font-heading text-[#F5F5F5]">
+              <h3 className="text-lg font-semibold font-heading text-[#F5F5F5] tracking-tight">
                 Consulting &amp; Enterprise Transformation
               </h3>
-              <p className="text-sm text-[#C5C8CE] leading-relaxed">
+              <p className="text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                 Streamlining business operations, digital customer experience design, supply chain optimization, and enterprise technology strategy for global organizations navigating digital disruption.
               </p>
             </div>
@@ -333,10 +333,10 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
               <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#343A42] flex items-center justify-center text-[#86BC25]">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <h3 className="text-lg font-bold font-heading text-[#F5F5F5]">
+              <h3 className="text-lg font-semibold font-heading text-[#F5F5F5] tracking-tight">
                 Risk, Cyber &amp; Regulatory Advisory
               </h3>
-              <p className="text-sm text-[#C5C8CE] leading-relaxed">
+              <p className="text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                 Cybersecurity posture assessment, data privacy compliance, cloud governance, internal controls, and enterprise regulatory risk frameworks across global financial, healthcare, and commercial sectors.
               </p>
             </div>
@@ -349,13 +349,13 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
         {/* ========================================================= */}
         <section className="p-6 sm:p-10 rounded-3xl bg-[#17191D] border border-[#343A42] space-y-6">
           <div className="space-y-2">
-            <div className="text-xs font-mono font-semibold text-[#86BC25] uppercase tracking-wider">
+            <div className="text-xs font-mono font-medium text-[#86BC25] uppercase tracking-wider">
               CAREER TRACK
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#F5F5F5]">
+            <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-[#F5F5F5] tracking-tight">
               The Analyst Role at Deloitte USI
             </h2>
-            <p className="text-sm sm:text-base text-[#C5C8CE] max-w-3xl leading-relaxed">
+            <p className="text-sm sm:text-base text-[#C5C8CE] max-w-3xl leading-relaxed font-normal font-sans">
               The Analyst position represents Deloitte USI&apos;s premier foundational role for graduates entering professional consulting and technology services:
             </p>
           </div>
@@ -363,31 +363,31 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-2">
             
             <div className="p-5 rounded-xl bg-[#0D0F11] border border-[#343A42]/60 space-y-2.5">
-              <div className="flex items-center gap-2 text-[#86BC25] font-mono text-xs font-semibold">
+              <div className="flex items-center gap-2 text-[#86BC25] font-mono text-xs font-medium">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>CLIENT DELIVERY</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#C5C8CE] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                 Collaborating within multidisciplinary teams on technical implementation, system requirements analysis, data synthesis, and testing.
               </p>
             </div>
 
             <div className="p-5 rounded-xl bg-[#0D0F11] border border-[#343A42]/60 space-y-2.5">
-              <div className="flex items-center gap-2 text-[#86BC25] font-mono text-xs font-semibold">
+              <div className="flex items-center gap-2 text-[#86BC25] font-mono text-xs font-medium">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>STRUCTURED LEARNING</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#C5C8CE] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                 Intensive continuous training programs, industry certifications in modern cloud and data architectures, and leadership mentorship.
               </p>
             </div>
 
             <div className="p-5 rounded-xl bg-[#0D0F11] border border-[#343A42]/60 space-y-2.5">
-              <div className="flex items-center gap-2 text-[#86BC25] font-mono text-xs font-semibold">
+              <div className="flex items-center gap-2 text-[#86BC25] font-mono text-xs font-medium">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>GLOBAL COLLABORATION</span>
               </div>
-              <p className="text-xs sm:text-sm text-[#C5C8CE] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#C5C8CE] leading-relaxed font-normal font-sans">
                 Direct partnership with US engagement managers and global domain leaders on transformative Fortune 500 client initiatives.
               </p>
             </div>

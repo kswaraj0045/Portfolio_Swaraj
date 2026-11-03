@@ -18,10 +18,10 @@ export const LeadershipSection: React.FC = () => {
             <Users2 className="w-3.5 h-3.5" />
             <span>CROSS-FUNCTIONAL LEADERSHIP & INITIATIVES</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-text-primary tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
             Leadership & Community Impact.
           </h2>
-          <p className="mt-3 text-base text-text-secondary leading-relaxed">
+          <p className="mt-3 text-base text-text-secondary leading-relaxed font-normal">
             Leading within startup incubators and campus technical clubs to align teams, organize developer events, and execute milestone deliveries.
           </p>
         </MotionReveal>
@@ -46,7 +46,7 @@ export const LeadershipSection: React.FC = () => {
                 </div>
 
                 {item.period && (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-bg-main/60 border border-border-subtle text-xs font-mono text-text-muted">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-bg-main/60 border border-border-subtle text-xs font-mono font-normal text-text-muted">
                     <Calendar className="w-3 h-3 text-accent-primary" />
                     <span>{item.period}</span>
                   </span>
@@ -54,15 +54,15 @@ export const LeadershipSection: React.FC = () => {
               </div>
 
               <div className="mb-4">
-                <h3 className="text-xl font-bold font-heading text-text-primary group-hover:text-white transition-colors duration-300">
+                <h3 className="text-xl font-semibold font-heading text-text-primary group-hover:text-white transition-colors duration-300 tracking-tight">
                   {item.organization}
                 </h3>
-                <div className="text-sm font-mono text-silver-metallic font-medium mt-1 group-hover:text-accent-secondary transition-colors duration-300">
+                <div className="text-sm font-sans text-silver-metallic font-medium mt-1 group-hover:text-accent-secondary transition-colors duration-300">
                   {item.role}
                 </div>
               </div>
 
-              <p className="text-sm text-text-secondary leading-relaxed mb-6">
+              <p className="text-sm text-text-secondary leading-relaxed mb-6 font-normal">
                 {item.description}
               </p>
 

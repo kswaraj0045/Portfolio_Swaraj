@@ -18,21 +18,21 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="md:col-span-6 space-y-2">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-bg-card border border-border-silver/40 flex items-center justify-center font-heading font-black text-silver-metallic text-xs">
+              <div className="w-8 h-8 rounded-lg bg-bg-card border border-border-silver/40 flex items-center justify-center font-heading font-bold text-silver-metallic text-xs">
                 SK
               </div>
-              <span className="font-heading font-bold text-text-primary text-lg">
+              <span className="font-heading font-semibold text-text-primary text-base">
                 {personalInfo.name}
               </span>
-              <span className="px-2.5 py-0.5 rounded text-[11px] font-mono text-silver-metallic bg-bg-elevated border border-border-silver/30">
+              <span className="px-2.5 py-0.5 rounded text-[11px] font-sans font-medium text-silver-metallic bg-bg-elevated border border-border-silver/30">
                 {personalInfo.role}
               </span>
             </div>
 
-            <p className="text-sm font-mono text-text-muted italic pt-1">
+            <p className="text-sm font-sans font-normal text-text-muted italic pt-1 leading-relaxed">
               "{personalInfo.tagline}"
             </p>
-            <p className="text-xs text-text-secondary">
+            <p className="text-xs font-sans font-normal text-text-secondary leading-relaxed">
               "Curious by nature. Analytical by mindset. Product-driven by ambition."
             </p>
           </div>

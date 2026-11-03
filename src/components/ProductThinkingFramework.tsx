@@ -47,10 +47,10 @@ export const ProductThinkingFramework: React.FC = () => {
             <Compass className="w-3.5 h-3.5" />
             <span>PRODUCT METHODOLOGY & EXECUTION MINDSET</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-text-primary tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
             From Problems to Products.
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-text-secondary leading-relaxed">
+          <p className="mt-3 text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
             A structured, iterative 6-stage framework connecting user discovery, analytical scoping, and technical execution.
           </p>
         </MotionReveal>
@@ -128,10 +128,10 @@ export const ProductThinkingFramework: React.FC = () => {
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold">STAGE {stage.step}</span>
+                  <span className="text-[10px] font-mono font-medium">STAGE {stage.step}</span>
                   {getStageIcon(stage.id, isActive)}
                 </div>
-                <div className="text-xs font-bold font-heading text-text-primary mt-1">
+                <div className="text-xs font-semibold font-heading text-text-primary mt-1">
                   {stage.title}
                 </div>
               </button>
@@ -154,22 +154,22 @@ export const ProductThinkingFramework: React.FC = () => {
               {/* Left Column: Stage Objective & Activities */}
               <div className="lg:col-span-7 space-y-6">
                 <div className="flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-lg bg-accent-primary/15 text-accent-primary font-mono font-bold text-xs flex items-center justify-center border border-accent-primary/30">
+                  <span className="w-8 h-8 rounded-lg bg-accent-primary/15 text-accent-primary font-mono font-medium text-xs flex items-center justify-center border border-accent-primary/30">
                     {selectedStage.step}
                   </span>
                   <div>
-                    <h3 className="text-2xl font-bold font-heading text-text-primary">
+                    <h3 className="text-2xl font-semibold font-heading text-text-primary tracking-tight">
                       {selectedStage.title}
                     </h3>
-                    <div className="text-xs font-mono text-accent-primary">
+                    <div className="text-xs font-mono font-medium text-accent-primary">
                       {selectedStage.summary}
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="text-xs font-mono uppercase tracking-wider text-text-muted mb-2">Stage Objective</h4>
-                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+                  <h4 className="text-xs font-mono font-medium uppercase tracking-wider text-text-muted mb-2">Stage Objective</h4>
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
                     {selectedStage.objective}
                   </p>
                 </div>

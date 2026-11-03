@@ -50,16 +50,16 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
 
               {/* Main Heading & Subtitle */}
               <div className="space-y-1.5">
-                <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-heading text-[#F5F5F5] tracking-tight">
+                <h2 className="text-2xl sm:text-4xl lg:text-5xl font-semibold font-heading text-[#F5F5F5] tracking-tight">
                   SELECTED AT DELOITTE USI
                 </h2>
-                <div className="text-base sm:text-xl font-mono text-[#C5C8CE] font-semibold tracking-wide">
+                <div className="text-base sm:text-lg font-sans font-medium text-[#C5C8CE]">
                   Incoming Analyst | College Campus Placement
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-sm sm:text-base md:text-lg text-[#C5C8CE] leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg text-[#C5C8CE] leading-relaxed max-w-2xl font-normal font-sans">
                 Selected for the Incoming Analyst role at Deloitte USI through college campus placement.
               </p>
 
@@ -69,8 +69,8 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
                 <div className="group flex items-start gap-3 p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/45 hover:shadow-[0_4px_20px_-2px_rgba(134,188,37,0.14)] transition-all duration-300">
                   <CheckCircle2 className="w-4 h-4 text-[#86BC25] group-hover:text-[#A3D94B] shrink-0 mt-0.5 transition-all duration-200 group-hover:scale-110" />
                   <div>
-                    <span className="font-semibold text-[#F5F5F5] block text-xs font-mono tracking-wider">ANALYTICAL RIGOR</span>
-                    <span className="text-xs text-[#858A93] leading-relaxed mt-1 block">
+                    <span className="font-medium text-[#F5F5F5] block text-xs font-mono tracking-wider">ANALYTICAL RIGOR</span>
+                    <span className="text-xs text-[#858A93] leading-relaxed mt-1 block font-normal font-sans">
                       Demonstrated structured problem decomposition and quantitative analysis.
                     </span>
                   </div>
@@ -80,8 +80,8 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
                 <div className="group flex items-start gap-3 p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/45 hover:shadow-[0_4px_20px_-2px_rgba(134,188,37,0.14)] transition-all duration-300">
                   <CheckCircle2 className="w-4 h-4 text-[#86BC25] group-hover:text-[#A3D94B] shrink-0 mt-0.5 transition-all duration-200 group-hover:scale-110" />
                   <div>
-                    <span className="font-semibold text-[#F5F5F5] block text-xs font-mono tracking-wider">BUSINESS ALIGNMENT</span>
-                    <span className="text-xs text-[#858A93] leading-relaxed mt-1 block">
+                    <span className="font-medium text-[#F5F5F5] block text-xs font-mono tracking-wider">BUSINESS ALIGNMENT</span>
+                    <span className="text-xs text-[#858A93] leading-relaxed mt-1 block font-normal font-sans">
                       Connecting technical systems with enterprise objectives and client value.
                     </span>
                   </div>
@@ -100,7 +100,7 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
                   }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold font-mono text-[#0D0F11] bg-[#86BC25] hover:bg-[#97D72B] shadow-[0_0_20px_rgba(134,188,37,0.3)] hover:shadow-[0_0_28px_rgba(134,188,37,0.45)] transition-all cursor-pointer group/btn"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold font-sans text-[#0D0F11] bg-[#86BC25] hover:bg-[#97D72B] shadow-[0_0_20px_rgba(134,188,37,0.3)] hover:shadow-[0_0_28px_rgba(134,188,37,0.45)] transition-all cursor-pointer group/btn"
                 >
                   <span>KNOW ABOUT DELOITTE USI</span>
                   <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -130,11 +130,11 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
                     <div className="p-2 rounded-lg bg-[#202329] border border-[#343A42] group-hover:border-[#86BC25]/40 transition-colors">
                       <Building2 className="w-4 h-4 text-[#86BC25]" />
                     </div>
-                    <span className="font-heading font-bold text-xl text-[#F5F5F5] tracking-tight">
+                    <span className="font-heading font-semibold text-xl text-[#F5F5F5] tracking-tight">
                       Deloitte USI<span className="text-[#86BC25] font-black">.</span>
                     </span>
                   </div>
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-bold bg-[#86BC25]/10 text-[#86BC25] border border-[#86BC25]/35 hover:bg-[#86BC25]/20 hover:border-[#86BC25] hover:text-[#A3D94B] transition-all cursor-default">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-[#86BC25]/10 text-[#86BC25] border border-[#86BC25]/35 hover:bg-[#86BC25]/20 hover:border-[#86BC25] hover:text-[#A3D94B] transition-all cursor-default">
                     INCOMING ANALYST
                   </span>
                 </div>

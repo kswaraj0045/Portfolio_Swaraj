@@ -106,30 +106,30 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
 
             {/* Typography Specimen */}
             <div className="p-6 rounded-2xl border border-border-subtle bg-bg-card/60 backdrop-blur-md space-y-6">
-              <h2 className="text-xl font-heading font-semibold text-text-primary">
-                Typography Scale & Font Families
+              <h2 className="text-xl font-heading font-semibold text-text-primary tracking-tight">
+                Typography Scale &amp; Font Families
               </h2>
               <div className="space-y-4 divide-y divide-border-subtle/50">
                 <div className="pt-2">
-                  <div className="text-xs font-mono text-accent-primary mb-1">Space Grotesk • Display Heading (Bold 700)</div>
-                  <div className="text-3xl md:text-4xl font-heading font-bold text-text-primary">
+                  <div className="text-xs font-mono text-accent-primary mb-1">Sora • Headings &amp; Section Titles (SemiBold 600 &amp; Bold 700)</div>
+                  <div className="text-3xl md:text-4xl font-heading font-semibold text-text-primary tracking-tight">
                     Building Products That Solve Real Problems.
                   </div>
                 </div>
                 <div className="pt-4">
-                  <div className="text-xs font-mono text-accent-secondary mb-1">Inter • Body & UI (Regular 400 & Medium 500)</div>
-                  <p className="text-text-secondary text-base leading-relaxed">
-                    An engineer by education, an Analyst selected at Deloitte, a technology and business enthusiast, and an aspiring Product Manager. Connecting technology with business needs and user problems.
+                  <div className="text-xs font-mono text-accent-secondary mb-1">Inter • Body, Descriptions &amp; Navigation (Regular 400 &amp; Medium 500)</div>
+                  <p className="text-text-secondary text-base leading-relaxed font-normal font-sans">
+                    An engineer by education, an Incoming Analyst selected at Deloitte USI, a technology and business enthusiast, and an aspiring Product Manager. Connecting technology with business needs and user problems.
                   </p>
                 </div>
                 <div className="pt-4">
-                  <div className="text-xs font-mono text-accent-secondary mb-1">JetBrains Mono • Technical KPIs & Code Tags</div>
+                  <div className="text-xs font-mono text-accent-secondary mb-1">IBM Plex Mono • Technical Labels &amp; Metadata (Medium 500)</div>
                   <div className="flex flex-wrap gap-2 text-xs font-mono text-text-primary">
-                    <span className="px-2.5 py-1 rounded bg-bg-secondary border border-border-subtle">MAE &lt; 5.0°</span>
-                    <span className="px-2.5 py-1 rounded bg-bg-secondary border border-border-subtle">35,000+ Transactions</span>
-                    <span className="px-2.5 py-1 rounded bg-bg-secondary border border-border-subtle">PostgreSQL RLS</span>
-                    <span className="px-2.5 py-1 rounded bg-accent-achievement/10 border border-accent-achievement/30 text-accent-achievement">
-                      SELECTED AT DELOITTE
+                    <span className="px-2.5 py-1 rounded bg-bg-secondary border border-border-subtle font-normal">MAE &lt; 5.0°</span>
+                    <span className="px-2.5 py-1 rounded bg-bg-secondary border border-border-subtle font-normal">35,000+ Transactions</span>
+                    <span className="px-2.5 py-1 rounded bg-bg-secondary border border-border-subtle font-normal">PostgreSQL RLS</span>
+                    <span className="px-2.5 py-1 rounded bg-accent-achievement/10 border border-accent-achievement/30 text-accent-achievement font-medium">
+                      SELECTED AT DELOITTE USI
                     </span>
                   </div>
                 </div>

@@ -30,10 +30,10 @@ export const AboutSection: React.FC = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-accent-primary" />
             <span>ABOUT ME & STRATEGIC PILLARS</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-text-primary tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
             {personalInfo.aboutHeadline}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-text-secondary leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
             {personalInfo.aboutDescription}
           </p>
         </MotionReveal>
@@ -58,29 +58,29 @@ export const AboutSection: React.FC = () => {
                   {getIcon(pillar.id)}
                 </div>
 
-                <h3 className="text-xl font-bold font-heading text-text-primary mb-2">
+                <h3 className="text-xl font-semibold font-heading text-text-primary mb-2 tracking-tight">
                   {pillar.title}
                 </h3>
 
-                <p className="text-xs font-mono text-accent-primary mb-4">
+                <p className="text-xs font-mono font-medium text-accent-primary mb-4">
                   {pillar.subtitle}
                 </p>
 
-                <p className="text-sm text-text-secondary leading-relaxed mb-6">
+                <p className="text-sm text-text-secondary leading-relaxed mb-6 font-normal">
                   {pillar.description}
                 </p>
               </div>
 
               {/* Skills / Competency Chips */}
               <div className="pt-4 border-t border-border-subtle/60">
-                <div className="text-[11px] font-mono uppercase tracking-wider text-text-muted mb-2.5">
+                <div className="text-[11px] font-mono font-medium tracking-wider text-text-muted mb-2.5">
                   Core Competencies
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {pillar.skills.map((skill) => (
                     <span 
                       key={skill}
-                      className="px-2.5 py-1 rounded-md text-xs font-medium bg-bg-main/80 text-text-secondary border border-border-subtle group-hover:border-border-subtle/80"
+                      className="px-2.5 py-1 rounded-md text-xs font-mono font-normal bg-bg-main/80 text-text-secondary border border-border-subtle group-hover:border-border-subtle/80"
                     >
                       {skill}
                     </span>
@@ -98,8 +98,8 @@ export const AboutSection: React.FC = () => {
               <CheckCircle2 className="w-5 h-5 text-accent-primary" />
             </div>
             <div>
-              <div className="text-xs font-mono text-text-muted">OPERATIONAL PHILOSOPHY</div>
-              <div className="text-base font-bold font-heading text-text-primary">
+              <div className="text-xs font-mono font-medium text-text-muted">OPERATIONAL PHILOSOPHY</div>
+              <div className="text-base font-semibold font-heading text-text-primary">
                 "{personalInfo.tagline}"
               </div>
             </div>

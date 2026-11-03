@@ -17,10 +17,10 @@ export const ExperienceSection: React.FC = () => {
             <Briefcase className="w-3.5 h-3.5" />
             <span>CAREER TRAJECTORY & EXPERIENCE</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-text-primary tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
             Professional Experience & Milestones.
           </h2>
-          <p className="mt-3 text-base text-text-secondary leading-relaxed">
+          <p className="mt-3 text-base text-text-secondary leading-relaxed font-normal">
             Hands-on exposure combining software engineering internships, startup agile delivery, and competitive enterprise campus selection.
           </p>
         </div>
@@ -61,7 +61,7 @@ export const ExperienceSection: React.FC = () => {
                           </span>
                         </div>
 
-                        <h3 className="text-2xl font-bold font-heading text-text-primary group-hover:text-white transition-colors duration-300">
+                        <h3 className="text-2xl font-semibold font-heading text-text-primary group-hover:text-white transition-colors duration-300">
                           {exp.role} <span className="text-text-muted font-normal">at</span>{' '}
                           <span className="text-accent-primary group-hover:text-accent-hover transition-colors duration-300">
                             {exp.company}
@@ -77,14 +77,14 @@ export const ExperienceSection: React.FC = () => {
                       )}
                     </div>
 
-                    <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-6">
+                    <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-6 font-normal">
                       {exp.description}
                     </p>
 
                     {/* Highlights */}
                     <div className="space-y-2.5 mb-6">
                       {exp.highlights.map((h, i) => (
-                        <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-text-secondary">
+                        <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-text-secondary font-normal">
                           <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-accent-primary group-hover:text-accent-hover transition-colors duration-300" />
                           <span>{h}</span>
                         </div>
@@ -96,7 +96,7 @@ export const ExperienceSection: React.FC = () => {
                       {exp.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-2.5 py-1 rounded-md text-xs font-mono bg-bg-main text-text-secondary border border-border-subtle group-hover:border-border-hover/30 transition-colors duration-300"
+                          className="px-2.5 py-1 rounded-md text-xs font-mono font-normal bg-bg-main text-text-secondary border border-border-subtle group-hover:border-border-hover/30 transition-colors duration-300"
                         >
                           {skill}
                         </span>
@@ -130,7 +130,7 @@ export const ExperienceSection: React.FC = () => {
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
                     <div>
                       <div className="flex flex-wrap items-center gap-2.5 mb-2">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold transition-colors duration-300 text-accent-achievement bg-accent-achievement/15 border border-accent-achievement/30 shadow-deloitte-glow">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium transition-colors duration-300 text-accent-achievement bg-accent-achievement/15 border border-accent-achievement/30 shadow-deloitte-glow">
                           <span>{exp.badge}</span>
                         </span>
                         <span className="text-xs font-mono text-text-muted flex items-center gap-1">
@@ -139,7 +139,7 @@ export const ExperienceSection: React.FC = () => {
                         </span>
                       </div>
 
-                      <h3 className="text-2xl font-bold font-heading text-text-primary group-hover:text-white transition-colors duration-300">
+                      <h3 className="text-2xl font-semibold font-heading text-text-primary group-hover:text-white transition-colors duration-300">
                         {exp.role} <span className="text-text-muted font-normal">at</span>{' '}
                         <span className="text-accent-achievement">
                           {exp.company}
@@ -155,14 +155,14 @@ export const ExperienceSection: React.FC = () => {
                     )}
                   </div>
 
-                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-6">
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-6 font-normal">
                     {exp.description}
                   </p>
 
                   {/* Highlights */}
                   <div className="space-y-2.5 mb-6">
                     {exp.highlights.map((h, i) => (
-                      <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-text-secondary">
+                      <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-text-secondary font-normal">
                         <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 transition-colors duration-300 text-accent-achievement" />
                         <span>{h}</span>
                       </div>

@@ -101,7 +101,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                   className="flex items-center gap-3"
                 >
                   <span className="h-[2px] w-8 sm:w-10 bg-gradient-to-r from-accent-primary to-accent-hover rounded-full shadow-[0_0_8px_#B32635]" />
-                  <span className="text-xs font-mono font-semibold tracking-[0.2em] text-silver-steel uppercase">
+                  <span className="text-xs font-mono font-medium tracking-wider text-silver-steel uppercase">
                     PORTFOLIO / THE DIGITAL SPACE
                   </span>
                 </motion.div>
@@ -112,7 +112,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    className="font-heading font-black tracking-tight leading-[0.94] select-none"
+                    className="font-heading font-bold tracking-tight leading-[0.96] select-none"
                   >
                     {/* First Name */}
                     <div className="text-5xl sm:text-6xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl flex flex-nowrap whitespace-nowrap overflow-hidden">
@@ -157,12 +157,12 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                   transition={{ duration: 0.6, delay: 0.65, ease: "easeOut" }}
                   className="space-y-3"
                 >
-                  <p className="text-base sm:text-lg md:text-xl font-mono text-silver-metallic font-medium tracking-tight">
+                  <p className="text-base sm:text-lg md:text-xl font-heading font-medium text-silver-metallic tracking-normal">
                     Technology Enthusiast. Product Thinker. Data-Driven Problem Solver.
                   </p>
 
                   {/* Supporting description */}
-                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed max-w-xl font-normal">
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed max-w-xl font-normal font-sans">
                     Building meaningful digital experiences by connecting technology, data and business thinking.
                   </p>
                 </motion.div>
@@ -271,7 +271,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
               {/* Subtle Verified Indicator Badge in Bottom Right of Portrait */}
               <div className="absolute bottom-5 right-5 sm:bottom-7 sm:right-7 z-20 px-3 py-1.5 rounded-full bg-bg-main/80 backdrop-blur-md border border-border-silver/40 shadow-lg flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent-primary shadow-[0_0_8px_#B32635] animate-pulse" />
-                <span className="text-[11px] font-mono font-bold text-silver-metallic uppercase tracking-wider">
+                <span className="text-[11px] font-mono font-medium text-silver-metallic uppercase tracking-wider">
                   Swaraj Khadalkar
                 </span>
               </div>
@@ -288,31 +288,31 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
               
               {/* Block 01 — EXPERIENCE */}
               <div className="p-3 sm:p-4 flex flex-col justify-center">
-                <div className="text-[11px] sm:text-xs font-mono font-semibold tracking-wider text-accent-primary uppercase flex items-center gap-2">
+                <div className="text-[11px] sm:text-xs font-mono font-medium tracking-wider text-accent-primary uppercase flex items-center gap-2">
                   <span>01 — EXPERIENCE</span>
                 </div>
-                <div className="text-sm sm:text-base font-heading font-bold text-text-primary mt-1">
+                <div className="text-sm sm:text-base font-heading font-semibold text-text-primary mt-1">
                   Software Developer Intern
                 </div>
               </div>
 
               {/* Block 02 — FOCUS */}
               <div className="p-3 sm:p-4 flex flex-col justify-center">
-                <div className="text-[11px] sm:text-xs font-mono font-semibold tracking-wider text-accent-primary uppercase flex items-center gap-2">
+                <div className="text-[11px] sm:text-xs font-mono font-medium tracking-wider text-accent-primary uppercase flex items-center gap-2">
                   <span>02 — FOCUS</span>
                 </div>
-                <div className="text-sm sm:text-base font-heading font-bold text-text-primary mt-1">
+                <div className="text-sm sm:text-base font-heading font-semibold text-text-primary mt-1">
                   Technology &amp; Product Thinking
                 </div>
               </div>
 
               {/* Block 03 — CAREER */}
               <div className="p-3 sm:p-4 flex flex-col justify-center">
-                <div className="text-[11px] sm:text-xs font-mono font-semibold tracking-wider text-[#86BC25] uppercase flex items-center gap-2">
+                <div className="text-[11px] sm:text-xs font-mono font-medium tracking-wider text-[#86BC25] uppercase flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#86BC25] animate-pulse" />
                   <span>03 — CAREER</span>
                 </div>
-                <div className="text-sm sm:text-base font-heading font-bold text-text-primary mt-1 flex items-center justify-between">
+                <div className="text-sm sm:text-base font-heading font-semibold text-text-primary mt-1 flex items-center justify-between">
                   <span>Incoming Analyst at Deloitte USI</span>
                   <a 
                     href="/deloitte" 
@@ -322,7 +322,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                         onNavigate('/deloitte');
                       }
                     }}
-                    className="text-xs font-mono font-semibold text-[#86BC25] hover:text-[#97D72B] transition-colors flex items-center gap-1 bg-[#86BC25]/10 px-2 py-1 rounded border border-[#86BC25]/30 hover:border-[#86BC25]"
+                    className="text-xs font-mono font-medium text-[#86BC25] hover:text-[#97D72B] transition-colors flex items-center gap-1 bg-[#86BC25]/10 px-2 py-1 rounded border border-[#86BC25]/30 hover:border-[#86BC25]"
                   >
                     <span>Discover USI</span>
                     <ArrowRight className="w-3 h-3" />

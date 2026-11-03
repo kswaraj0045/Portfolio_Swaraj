@@ -145,15 +145,15 @@ export const InteractiveTerminal: React.FC = () => {
             <span>INTERACTIVE EXPERIENCE / 01</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-text-primary tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
             KNOW ME THROUGH TERMINAL
           </h2>
 
-          <p className="mt-2 text-base text-text-secondary">
+          <p className="mt-2 text-base text-text-secondary font-normal leading-relaxed">
             An interactive way to explore my professional journey.
           </p>
 
-          <p className="mt-1 text-xs font-mono text-accent-primary">
+          <p className="mt-1 text-xs font-mono font-normal text-accent-primary">
             Type a command and discover more about me.
           </p>
         </MotionReveal>

@@ -70,10 +70,10 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
           
           {/* Title & Tagline */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold font-heading text-text-primary">
+            <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-text-primary tracking-tight">
               {project.title}
             </h2>
-            <p className="text-base text-text-secondary mt-2 leading-relaxed">
+            <p className="text-base text-text-secondary mt-2 leading-relaxed font-normal">
               {project.tagline}
             </p>
           </div>
@@ -83,8 +83,8 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
             {project.metrics.map((m, i) => (
               <div key={i} className="p-3.5 rounded-xl bg-bg-main/80 border border-border-subtle">
                 <div className="text-[10px] font-mono text-text-muted uppercase tracking-wider">{m.label}</div>
-                <div className="text-lg font-bold font-mono text-text-primary mt-0.5">{m.value}</div>
-                {m.detail && <div className="text-[11px] text-text-secondary mt-0.5">{m.detail}</div>}
+                <div className="text-lg font-semibold font-mono text-text-primary mt-0.5">{m.value}</div>
+                {m.detail && <div className="text-[11px] text-text-secondary mt-0.5 font-normal">{m.detail}</div>}
               </div>
             ))}
           </div>
@@ -92,21 +92,21 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
           {/* Problem & Solution Dual Columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-5 rounded-2xl bg-rose-500/5 border border-rose-500/20 space-y-3">
-              <div className="flex items-center gap-2 text-rose-400 font-mono text-xs font-semibold uppercase">
+              <div className="flex items-center gap-2 text-rose-400 font-mono text-xs font-medium">
                 <AlertCircle className="w-4 h-4" />
                 <span>The Problem Statement</span>
               </div>
-              <p className="text-sm text-text-secondary leading-relaxed">
+              <p className="text-sm text-text-secondary leading-relaxed font-normal">
                 {project.problem}
               </p>
             </div>
 
             <div className="p-5 rounded-2xl bg-emerald-500/5 border border-emerald-500/20 space-y-3">
-              <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-semibold uppercase">
+              <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-medium">
                 <Lightbulb className="w-4 h-4" />
                 <span>The Engineered Solution</span>
               </div>
-              <p className="text-sm text-text-secondary leading-relaxed">
+              <p className="text-sm text-text-secondary leading-relaxed font-normal">
                 {project.solution}
               </p>
             </div>
@@ -114,13 +114,13 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 
           {/* Key Product Features */}
           <div className="space-y-3">
-            <h3 className="text-base font-bold font-heading text-text-primary flex items-center gap-2">
+            <h3 className="text-base font-semibold font-heading text-text-primary flex items-center gap-2">
               <Layers className="w-4 h-4 text-accent-primary" />
               <span>Verified Features & Capabilities</span>
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {project.keyFeatures.map((feat, i) => (
-                <div key={i} className="p-3 rounded-xl bg-bg-main/60 border border-border-subtle flex items-start gap-2.5 text-xs text-text-secondary leading-relaxed">
+                <div key={i} className="p-3 rounded-xl bg-bg-main/60 border border-border-subtle flex items-start gap-2.5 text-xs text-text-secondary leading-relaxed font-normal">
                   <CheckCircle2 className="w-4 h-4 text-accent-primary shrink-0 mt-0.5" />
                   <span>{feat}</span>
                 </div>
@@ -130,13 +130,13 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 
           {/* Technical Architecture Highlights */}
           <div className="space-y-3">
-            <h3 className="text-base font-bold font-heading text-text-primary flex items-center gap-2">
+            <h3 className="text-base font-semibold font-heading text-text-primary flex items-center gap-2">
               <Cpu className="w-4 h-4 text-accent-secondary" />
               <span>Implementation & Architecture Details</span>
             </h3>
             <ul className="space-y-2">
               {project.architectureHighlights.map((arch, i) => (
-                <li key={i} className="text-xs sm:text-sm text-text-secondary flex items-start gap-2.5">
+                <li key={i} className="text-xs sm:text-sm text-text-secondary flex items-start gap-2.5 font-normal">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent-secondary shrink-0 mt-2" />
                   <span>{arch}</span>
                 </li>
@@ -146,11 +146,11 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 
           {/* Product Management Relevance */}
           <div className="p-5 rounded-2xl bg-accent-primary/5 border border-accent-primary/20 space-y-2">
-            <div className="flex items-center gap-2 text-accent-primary font-mono text-xs font-semibold uppercase">
+            <div className="flex items-center gap-2 text-accent-primary font-mono text-xs font-medium">
               <Compass className="w-4 h-4" />
               <span>Product Management Relevance</span>
             </div>
-            <p className="text-sm text-text-secondary leading-relaxed">
+            <p className="text-sm text-text-secondary leading-relaxed font-normal">
               {project.productRelevance}
             </p>
           </div>

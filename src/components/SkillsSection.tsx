@@ -50,10 +50,10 @@ export const SkillsSection: React.FC = () => {
             <Layers className="w-3.5 h-3.5" />
             <span>CORE CAPABILITIES & COMPETENCIES</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-text-primary tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
             Product, Business & Technical Toolkit.
           </h2>
-          <p className="mt-3 text-base text-text-secondary leading-relaxed">
+          <p className="mt-3 text-base text-text-secondary leading-relaxed font-normal">
             A comprehensive matrix bridging product requirements, analytical insights, and technical implementation. (No fabricated proficiency percentages).
           </p>
         </div>
@@ -79,7 +79,7 @@ export const SkillsSection: React.FC = () => {
                     {getCategoryIcon(catGroup.category)}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold font-heading text-text-primary">
+                    <h3 className="text-xl font-semibold font-heading text-text-primary tracking-tight">
                       {catGroup.category}
                     </h3>
                   </div>
