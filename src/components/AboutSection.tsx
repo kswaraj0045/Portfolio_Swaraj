@@ -12,7 +12,7 @@ export const AboutSection: React.FC = () => {
       case 'product-thinking':
         return <Lightbulb className="w-6 h-6 text-silver-metallic" />;
       case 'business-data':
-        return <BarChart3 className="w-6 h-6 text-accent-primary" />;
+        return <BarChart3 className="w-6 h-6 text-silver-metallic" />;
       case 'technology':
         return <Terminal className="w-6 h-6 text-silver-metallic" />;
       default:
@@ -27,7 +27,7 @@ export const AboutSection: React.FC = () => {
         {/* Section Header with Motion Reveal */}
         <MotionReveal className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-silver-metallic bg-bg-elevated border border-border-silver/30 mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent-primary" />
+            <span className="w-1.5 h-1.5 rounded-full bg-silver-metallic" />
             <span>ABOUT ME & STRATEGIC PILLARS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
@@ -48,10 +48,10 @@ export const AboutSection: React.FC = () => {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.15, ease: [0.21, 0.47, 0.32, 0.98] as const }}
               whileHover={{ y: -6 }}
-              className="glass-card p-6 md:p-8 rounded-2xl flex flex-col justify-between group hover:border-accent-primary/50 hover:shadow-card-glow transition-all duration-300 relative overflow-hidden"
+              className="glass-card p-6 md:p-8 rounded-2xl flex flex-col justify-between group hover:border-silver-metallic/40 hover:shadow-silver-soft transition-all duration-300 relative overflow-hidden"
             >
               {/* Subtle top border color glow */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-silver-metallic/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
               <div>
                 <div className="w-12 h-12 rounded-xl bg-bg-main border border-border-subtle flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform">
@@ -62,7 +62,7 @@ export const AboutSection: React.FC = () => {
                   {pillar.title}
                 </h3>
 
-                <p className="text-xs font-mono font-medium text-accent-primary mb-4">
+                <p className="text-xs font-mono font-medium text-silver-steel mb-4">
                   {pillar.subtitle}
                 </p>
 
@@ -94,8 +94,8 @@ export const AboutSection: React.FC = () => {
         {/* Bottom Callout: Professional Philosophy */}
         <MotionReveal delay={0.25} className="mt-12 p-6 rounded-2xl bg-bg-card border border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center shrink-0">
-              <CheckCircle2 className="w-5 h-5 text-accent-primary" />
+            <div className="w-10 h-10 rounded-full bg-silver-metallic/10 border border-silver-metallic/30 flex items-center justify-center shrink-0">
+              <CheckCircle2 className="w-5 h-5 text-silver-metallic" />
             </div>
             <div>
               <div className="text-xs font-mono font-medium text-text-muted">OPERATIONAL PHILOSOPHY</div>
@@ -109,7 +109,7 @@ export const AboutSection: React.FC = () => {
             className="text-xs font-semibold text-silver-metallic hover:text-white inline-flex items-center gap-1.5 shrink-0 group transition-colors"
           >
             <span>See how I turn problems into products</span>
-            <ArrowRight className="w-3.5 h-3.5 text-accent-primary group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 text-silver-metallic group-hover:translate-x-1 transition-transform" />
           </a>
         </MotionReveal>
 

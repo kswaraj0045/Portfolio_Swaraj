@@ -131,13 +131,13 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
           {/* Technical Architecture Highlights */}
           <div className="space-y-3">
             <h3 className="text-base font-semibold font-heading text-text-primary flex items-center gap-2">
-              <Cpu className="w-4 h-4 text-accent-secondary" />
+              <Cpu className="w-4 h-4 text-[#527DAA]" />
               <span>Implementation & Architecture Details</span>
             </h3>
             <ul className="space-y-2">
               {project.architectureHighlights.map((arch, i) => (
                 <li key={i} className="text-xs sm:text-sm text-text-secondary flex items-start gap-2.5 font-normal">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent-secondary shrink-0 mt-2" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#527DAA] shrink-0 mt-2" />
                   <span>{arch}</span>
                 </li>
               ))}

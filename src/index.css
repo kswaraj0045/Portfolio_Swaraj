@@ -13,10 +13,19 @@
     --text-muted: #858992;
     --border-subtle: #35383F;
     --border-separator: #23262D;
+
+    /* Accents */
+    --accent-crimson: #B32635;
+    --accent-crimson-hover: #D13A49;
     --accent-primary: #B32635;
     --accent-hover: #D13A49;
+    --accent-silver: #C5C8CE;
     --accent-secondary: #C5C8CE;
-    --accent-achievement: #C5C8CE;
+    --accent-steel-blue: #527DAA;
+    --accent-champagne: #B99A6B;
+    --accent-deloitte: #86BC25;
+    --accent-teal: #4E9B83;
+    --accent-achievement: #B99A6B;
   }
 
   html {
@@ -93,6 +102,14 @@
 
   .radial-glow-deloitte {
     background: radial-gradient(circle at 50% 50%, rgba(134, 188, 37, 0.08) 0%, transparent 65%);
+  }
+
+  .radial-glow-champagne {
+    background: radial-gradient(circle at 50% 50%, rgba(185, 154, 107, 0.08) 0%, transparent 65%);
+  }
+
+  .radial-glow-steelblue {
+    background: radial-gradient(circle at 50% 50%, rgba(82, 125, 170, 0.08) 0%, transparent 65%);
   }
 
   .no-scrollbar {

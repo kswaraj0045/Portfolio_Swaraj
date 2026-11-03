@@ -79,30 +79,57 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
             <div>
               <h2 className="text-xl font-heading font-semibold mb-4 text-text-primary flex items-center gap-2">
                 <Layers className="w-5 h-5 text-accent-primary" />
-                Obsidian Silver + Crimson Color Palette & Surface Tiers
+                Obsidian Silver + Crimson Visual Identity with Steel Blue &amp; Champagne Gold
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-                {[
-                  { name: 'Main Background', hex: '#090A0C', bg: 'bg-[#090A0C]', border: 'border-border-subtle' },
-                  { name: 'Secondary Background', hex: '#111317', bg: 'bg-[#111317]', border: 'border-border-subtle' },
-                  { name: 'Card Background', hex: '#17191D', bg: 'bg-[#17191D]', border: 'border-border-subtle' },
-                  { name: 'Elevated Surfaces', hex: '#202329', bg: 'bg-[#202329]', border: 'border-border-subtle' },
-                  { name: 'Borders', hex: '#35383F', bg: 'bg-[#35383F]', border: 'border-border-subtle' },
-                  { name: 'Primary Text', hex: '#F5F5F5', bg: 'bg-[#F5F5F5]', text: 'text-[#090A0C]' },
-                  { name: 'Secondary Text', hex: '#C5C8CE', bg: 'bg-[#C5C8CE]', text: 'text-[#090A0C]' },
-                  { name: 'Muted Text', hex: '#858992', bg: 'bg-[#858992]', text: 'text-white' },
-                  { name: 'Crimson Accent', hex: '#B32635', bg: 'bg-[#B32635]', text: 'text-white' },
-                  { name: 'Crimson Hover', hex: '#D13A49', bg: 'bg-[#D13A49]', text: 'text-white' },
-                ].map((c) => (
-                  <div key={c.hex} className="rounded-xl border border-border-subtle overflow-hidden bg-bg-card">
-                    <div className={`h-16 w-full ${c.bg} ${c.border || ''} flex items-center justify-center`}>
-                      <span className={`text-xs font-mono font-bold ${c.text || 'text-white'}`}>{c.hex}</span>
-                    </div>
-                    <div className="p-2.5 text-center">
-                      <p className="text-xs font-medium text-text-primary">{c.name}</p>
-                    </div>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xs font-mono font-medium text-text-muted mb-2 uppercase tracking-wider">Base Palette</h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2.5">
+                    {[
+                      { name: 'Obsidian Bg', hex: '#090A0C', bg: 'bg-[#090A0C]', border: 'border-border-subtle' },
+                      { name: 'Secondary Bg', hex: '#111317', bg: 'bg-[#111317]', border: 'border-border-subtle' },
+                      { name: 'Card Surface', hex: '#17191D', bg: 'bg-[#17191D]', border: 'border-border-subtle' },
+                      { name: 'Elevated Surface', hex: '#202329', bg: 'bg-[#202329]', border: 'border-border-subtle' },
+                      { name: 'Primary Text', hex: '#F5F5F5', bg: 'bg-[#F5F5F5]', text: 'text-[#090A0C]' },
+                      { name: 'Silver Text', hex: '#C5C8CE', bg: 'bg-[#C5C8CE]', text: 'text-[#090A0C]' },
+                      { name: 'Muted Text', hex: '#858992', bg: 'bg-[#858992]', text: 'text-white' },
+                      { name: 'Border Subtle', hex: '#35383F', bg: 'bg-[#35383F]', border: 'border-border-subtle' },
+                    ].map((c) => (
+                      <div key={c.hex} className="rounded-xl border border-border-subtle overflow-hidden bg-bg-card">
+                        <div className={`h-14 w-full ${c.bg} ${c.border || ''} flex items-center justify-center`}>
+                          <span className={`text-[11px] font-mono font-bold ${c.text || 'text-white'}`}>{c.hex}</span>
+                        </div>
+                        <div className="p-2 text-center">
+                          <p className="text-[11px] font-medium text-text-primary truncate">{c.name}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                <div>
+                  <h3 className="text-xs font-mono font-medium text-text-muted mb-2 uppercase tracking-wider">Accent System</h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5">
+                    {[
+                      { name: 'Primary Crimson', hex: '#B32635', bg: 'bg-[#B32635]', text: 'text-white', note: 'Signature' },
+                      { name: 'Crimson Hover', hex: '#D13A49', bg: 'bg-[#D13A49]', text: 'text-white', note: 'Interactive' },
+                      { name: 'Steel Blue', hex: '#527DAA', bg: 'bg-[#527DAA]', text: 'text-white', note: 'Skills & Arch' },
+                      { name: 'Champagne Gold', hex: '#B99A6B', bg: 'bg-[#B99A6B]', text: 'text-[#090A0C]', note: 'Achievements' },
+                      { name: 'Deloitte Green', hex: '#86BC25', bg: 'bg-[#86BC25]', text: 'text-[#090A0C]', note: 'Deloitte Only' },
+                      { name: 'Muted Teal', hex: '#4E9B83', bg: 'bg-[#4E9B83]', text: 'text-white', note: 'Data / Telemetry' },
+                    ].map((c) => (
+                      <div key={c.hex} className="rounded-xl border border-border-subtle overflow-hidden bg-bg-card">
+                        <div className={`h-14 w-full ${c.bg} flex items-center justify-center`}>
+                          <span className={`text-[11px] font-mono font-bold ${c.text}`}>{c.hex}</span>
+                        </div>
+                        <div className="p-2 text-center">
+                          <p className="text-[11px] font-medium text-text-primary truncate">{c.name}</p>
+                          <p className="text-[10px] font-mono text-text-muted">{c.note}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 

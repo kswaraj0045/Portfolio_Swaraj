@@ -61,9 +61,9 @@ export const ProjectCard: React.FC<Props> = ({ project, onOpenDetails }) => {
       case 'Full-Stack SaaS':
         return 'text-accent-primary bg-accent-primary/10 border-accent-primary/30';
       case 'AI & Deep Learning':
-        return 'text-accent-secondary bg-accent-secondary/10 border-accent-secondary/30';
+        return 'text-[#527DAA] bg-[#527DAA]/10 border-[#527DAA]/30';
       case 'Healthcare Systems':
-        return 'text-accent-secondary bg-accent-secondary/10 border-accent-secondary/30';
+        return 'text-[#527DAA] bg-[#527DAA]/10 border-[#527DAA]/30';
       default:
         return 'text-text-secondary bg-bg-card border-border-subtle';
     }

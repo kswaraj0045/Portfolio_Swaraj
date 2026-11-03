@@ -205,7 +205,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
       return {
         output: (
           <div className="space-y-2 leading-relaxed">
-            <div className="text-accent-primary font-bold tracking-wider">CERTIFICATIONS</div>
+            <div className="text-[#B99A6B] font-bold tracking-wider">CERTIFICATIONS &amp; CREDENTIALS</div>
             <div className="space-y-1">
               <div>• Career Edge - Young Professionals | <span className="text-text-primary">TCS</span></div>
               <div>• Claude 101 | <span className="text-text-primary">Anthropic</span></div>
