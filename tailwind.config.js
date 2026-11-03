@@ -37,13 +37,13 @@ export default {
           metallic: '#C5C8CE',
           platinum: '#F5F5F5',
           steel: '#A4A7AE',
-          muted: '#737780',
+          muted: '#858992',
         },
         text: {
-          primary: '#F5F5F5',     // Platinum White
-          secondary: '#C5C8CE',   // Metallic Silver
-          muted: '#737780',       // Muted Gray
-          steel: '#A4A7AE',       // Steel Gray
+          primary: '#F5F5F5',     // Primary text: Platinum White (#F5F5F5)
+          secondary: '#C5C8CE',   // Secondary text: Metallic Silver (#C5C8CE)
+          muted: '#858992',       // Muted text: Slate Gray (#858992)
+          steel: '#A4A7AE',       // Steel Gray (#A4A7AE)
         }
       },
       fontFamily: {

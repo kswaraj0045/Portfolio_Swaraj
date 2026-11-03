@@ -152,7 +152,7 @@ export const projectsData: Project[] = [
       'Two-Stage Deep Learning Pipeline: Gross spine/torso localization combined with precise 4-corner vertebral landmark detection.',
       'Automated Geometric Cobb Angle Engine: Calculates vertebra tilt vectors, identifies superior/inferior end-vertebrae, and computes Cobb angle.',
       'Multi-Curve Measurement: Simultaneously outputs Proximal Thoracic (PT), Main Thoracic (MT), and Lumbar (TL/L) curvature degrees.',
-      'Interactive 5-Stage Visualizer: Step-by-step progressive rendering of bounding boxes, cyan keypoints, horizontal tilt lines, and Cobb vectors.',
+      'Interactive 5-Stage Visualizer: Step-by-step progressive rendering of bounding boxes, vertebral keypoints, horizontal tilt lines, and Cobb vectors.',
       'Model Comparative Studio: Researchers can toggle between Keypoint R-CNN, YOLOv8 Pose, VerteNet, and Residual-UNet to compare inference.'
     ],
     techStack: ['PyTorch', 'Torchvision', 'Keypoint R-CNN', 'YOLOv8', 'FastAPI', 'OpenCV', 'Next.js 14', 'TypeScript', 'Zustand'],

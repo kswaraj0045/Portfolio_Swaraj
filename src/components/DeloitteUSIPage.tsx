@@ -42,12 +42,12 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
       </div>
 
       {/* Top Header Navigation */}
-      <header className="sticky top-0 z-50 bg-[#090A0C]/85 backdrop-blur-md border-b border-[#343A42]/60">
+      <header className="sticky top-0 z-50 bg-[#090A0C]/85 backdrop-blur-md border-b border-[#35383F]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
           
           <button
             onClick={onNavigateHome}
-            className="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm font-mono text-[#C5C8CE] hover:text-white bg-[#17191D] border border-[#343A42] hover:border-[#86BC25]/60 hover:shadow-[0_0_15px_rgba(134,188,37,0.15)] transition-all cursor-pointer group"
+            className="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-xl text-sm font-mono text-[#C5C8CE] hover:text-white bg-[#17191D] border border-[#35383F] hover:border-[#86BC25]/60 hover:shadow-[0_0_15px_rgba(134,188,37,0.15)] transition-all cursor-pointer group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform text-[#86BC25]" />
             <span>Return to Portfolio</span>
@@ -129,29 +129,29 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 pt-2">
                 
                 {/* Organization */}
-                <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/40 transition-colors">
-                  <span className="text-[11px] font-mono font-medium text-[#858A93] uppercase tracking-wider block">Organization</span>
+                <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#35383F] hover:border-[#86BC25]/40 transition-colors">
+                  <span className="text-[11px] font-mono font-medium text-[#858992] uppercase tracking-wider block">Organization</span>
                   <span className="text-base font-semibold font-sans text-[#F5F5F5] mt-1 block">Deloitte USI</span>
                   <span className="text-[11px] text-[#A4A7AE] mt-0.5 block font-normal font-sans">Deloitte US-India Offices</span>
                 </div>
 
                 {/* Position */}
-                <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/40 transition-colors">
-                  <span className="text-[11px] font-mono font-medium text-[#858A93] uppercase tracking-wider block">Position</span>
+                <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#35383F] hover:border-[#86BC25]/40 transition-colors">
+                  <span className="text-[11px] font-mono font-medium text-[#858992] uppercase tracking-wider block">Position</span>
                   <span className="text-base font-semibold font-sans text-[#F5F5F5] mt-1 block">Incoming Analyst</span>
                   <span className="text-[11px] text-[#A4A7AE] mt-0.5 block font-normal font-sans">Early Career Track</span>
                 </div>
 
                 {/* Selection Track */}
-                <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/40 transition-colors">
-                  <span className="text-[11px] font-mono font-medium text-[#858A93] uppercase tracking-wider block">Selection</span>
+                <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#35383F] hover:border-[#86BC25]/40 transition-colors">
+                  <span className="text-[11px] font-mono font-medium text-[#858992] uppercase tracking-wider block">Selection</span>
                   <span className="text-base font-semibold font-sans text-[#F5F5F5] mt-1 block">Campus Placement</span>
                   <span className="text-[11px] text-[#A4A7AE] mt-0.5 block font-normal font-sans">On-Campus Evaluation</span>
                 </div>
 
                 {/* Institution */}
-                <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#343A42] hover:border-[#86BC25]/40 transition-colors sm:col-span-2 lg:col-span-1">
-                  <span className="text-[11px] font-mono font-medium text-[#858A93] uppercase tracking-wider block">Institution</span>
+                <div className="p-4 rounded-xl bg-[#0D0F11] border border-[#35383F] hover:border-[#86BC25]/40 transition-colors sm:col-span-2 lg:col-span-1">
+                  <span className="text-[11px] font-mono font-medium text-[#858992] uppercase tracking-wider block">Institution</span>
                   <span className="text-base font-semibold font-sans text-[#F5F5F5] mt-1 block">MIT Academy of Engineering</span>
                   <span className="text-[11px] text-[#A4A7AE] mt-0.5 block font-normal font-sans">Pune, India</span>
                 </div>
@@ -169,7 +169,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
               </div>
 
               {/* Verification & Compliance Note */}
-              <div className="pt-4 border-t border-[#343A42]/50 flex items-start sm:items-center gap-2 text-xs font-mono font-normal text-[#858A93]">
+              <div className="pt-4 border-t border-[#35383F]/50 flex items-start sm:items-center gap-2 text-xs font-mono font-normal text-[#858992]">
                 <ShieldCheck className="w-4 h-4 text-[#86BC25] shrink-0 mt-0.5 sm:mt-0" />
                 <span>Selection milestone verified via university campus placement. No employment commencement or unauthorized agency claimed.</span>
               </div>
@@ -215,16 +215,16 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
                   Operates as part of Deloitte LLP (the US member firm). Located across major Indian tech hubs (Hyderabad, Bengaluru, Mumbai, Gurugram), Deloitte USI teams collaborate directly with US practitioners to deliver complex technology, consulting, analytics, and operational solutions for US and global multinational clients.
                 </p>
               </div>
-              <div className="pt-3 border-t border-[#343A42] text-xs font-mono font-normal text-[#858A93]">
+              <div className="pt-3 border-t border-[#35383F] text-xs font-mono font-normal text-[#858992]">
                 Mandate: Global &amp; US client engagement delivery
               </div>
             </div>
 
             {/* Entity 2: Deloitte India */}
-            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#343A42] flex flex-col justify-between space-y-4">
+            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#35383F] flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-[#202329] text-[#C5C8CE] border border-[#343A42]">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-[#202329] text-[#C5C8CE] border border-[#35383F]">
                     DOMESTIC FIRM
                   </span>
                   <Building2 className="w-5 h-5 text-[#A4A7AE]" />
@@ -239,16 +239,16 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
                   An independent licensed member firm within the Deloitte Touche Tohmatsu Limited (DTTL) network dedicated primarily to providing audit, consulting, tax, and risk advisory services to corporate and public-sector clients within the domestic Indian market.
                 </p>
               </div>
-              <div className="pt-3 border-t border-[#343A42] text-xs font-mono font-normal text-[#858A93]">
+              <div className="pt-3 border-t border-[#35383F] text-xs font-mono font-normal text-[#858992]">
                 Mandate: Domestic Indian market client services
               </div>
             </div>
 
             {/* Entity 3: Deloitte Global (DTTL) */}
-            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#343A42] flex flex-col justify-between space-y-4">
+            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#35383F] flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-[#202329] text-[#C5C8CE] border border-[#343A42]">
+                  <span className="px-2.5 py-1 rounded-md text-[11px] font-mono font-medium bg-[#202329] text-[#C5C8CE] border border-[#35383F]">
                     GLOBAL UMBRELLA
                   </span>
                   <ShieldCheck className="w-5 h-5 text-[#A4A7AE]" />
@@ -263,7 +263,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
                   Deloitte Touche Tohmatsu Limited is a UK private company limited by guarantee that acts as the coordinating umbrella across independent member firms worldwide. DTTL establishes global quality standards, brand governance, and strategic policies, but does not provide services to clients directly.
                 </p>
               </div>
-              <div className="pt-3 border-t border-[#343A42] text-xs font-mono font-normal text-[#858A93]">
+              <div className="pt-3 border-t border-[#35383F] text-xs font-mono font-normal text-[#858992]">
                 Mandate: Brand governance &amp; global standards
               </div>
             </div>
@@ -290,8 +290,8 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             {/* Capability 1: Technology & Engineering */}
-            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#343A42] hover:border-[#86BC25]/40 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#343A42] flex items-center justify-center text-[#86BC25]">
+            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#35383F] hover:border-[#86BC25]/40 transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#35383F] flex items-center justify-center text-[#86BC25]">
                 <Laptop className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-semibold font-heading text-[#F5F5F5] tracking-tight">
@@ -303,8 +303,8 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
             </div>
 
             {/* Capability 2: Analytics & AI */}
-            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#343A42] hover:border-[#86BC25]/40 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#343A42] flex items-center justify-center text-[#86BC25]">
+            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#35383F] hover:border-[#86BC25]/40 transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#35383F] flex items-center justify-center text-[#86BC25]">
                 <Brain className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-semibold font-heading text-[#F5F5F5] tracking-tight">
@@ -316,8 +316,8 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
             </div>
 
             {/* Capability 3: Consulting & Business Transformation */}
-            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#343A42] hover:border-[#86BC25]/40 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#343A42] flex items-center justify-center text-[#86BC25]">
+            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#35383F] hover:border-[#86BC25]/40 transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#35383F] flex items-center justify-center text-[#86BC25]">
                 <Workflow className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-semibold font-heading text-[#F5F5F5] tracking-tight">
@@ -329,8 +329,8 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
             </div>
 
             {/* Capability 4: Risk & Regulatory Advisory */}
-            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#343A42] hover:border-[#86BC25]/40 transition-all space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#343A42] flex items-center justify-center text-[#86BC25]">
+            <div className="p-6 rounded-2xl bg-[#17191D] border border-[#35383F] hover:border-[#86BC25]/40 transition-all space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-[#202329] border border-[#35383F] flex items-center justify-center text-[#86BC25]">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-semibold font-heading text-[#F5F5F5] tracking-tight">
@@ -347,7 +347,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
         {/* ========================================================= */}
         {/* CAREER OPPORTUNITIES & THE ANALYST ROLE */}
         {/* ========================================================= */}
-        <section className="p-6 sm:p-10 rounded-3xl bg-[#17191D] border border-[#343A42] space-y-6">
+        <section className="p-6 sm:p-10 rounded-3xl bg-[#17191D] border border-[#35383F] space-y-6">
           <div className="space-y-2">
             <div className="text-xs font-mono font-medium text-[#86BC25] uppercase tracking-wider">
               CAREER TRACK
@@ -362,7 +362,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-2">
             
-            <div className="p-5 rounded-xl bg-[#0D0F11] border border-[#343A42]/60 space-y-2.5">
+            <div className="p-5 rounded-xl bg-[#0D0F11] border border-[#35383F]/60 space-y-2.5">
               <div className="flex items-center gap-2 text-[#86BC25] font-mono text-xs font-medium">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>CLIENT DELIVERY</span>
@@ -372,7 +372,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-[#0D0F11] border border-[#343A42]/60 space-y-2.5">
+            <div className="p-5 rounded-xl bg-[#0D0F11] border border-[#35383F]/60 space-y-2.5">
               <div className="flex items-center gap-2 text-[#86BC25] font-mono text-xs font-medium">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>STRUCTURED LEARNING</span>
@@ -382,7 +382,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-[#0D0F11] border border-[#343A42]/60 space-y-2.5">
+            <div className="p-5 rounded-xl bg-[#0D0F11] border border-[#35383F]/60 space-y-2.5">
               <div className="flex items-center gap-2 text-[#86BC25] font-mono text-xs font-medium">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>GLOBAL COLLABORATION</span>
@@ -404,7 +404,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span>Return to Portfolio Home</span>
           </button>
-          <div className="text-xs font-mono text-[#858A93]">
+          <div className="text-xs font-mono text-[#858992]">
             Swaraj Sanjay Khadalkar • Portfolio 2026
           </div>
         </section>

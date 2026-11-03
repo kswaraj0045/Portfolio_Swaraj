@@ -91,8 +91,8 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 
           {/* Problem & Solution Dual Columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-5 rounded-2xl bg-rose-500/5 border border-rose-500/20 space-y-3">
-              <div className="flex items-center gap-2 text-rose-400 font-mono text-xs font-medium">
+            <div className="p-5 rounded-2xl bg-accent-primary/5 border border-accent-primary/25 space-y-3">
+              <div className="flex items-center gap-2 text-accent-primary font-mono text-xs font-medium">
                 <AlertCircle className="w-4 h-4" />
                 <span>The Problem Statement</span>
               </div>
@@ -101,8 +101,8 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-emerald-500/5 border border-emerald-500/20 space-y-3">
-              <div className="flex items-center gap-2 text-emerald-400 font-mono text-xs font-medium">
+            <div className="p-5 rounded-2xl bg-bg-elevated border border-border-silver/30 space-y-3">
+              <div className="flex items-center gap-2 text-silver-metallic font-mono text-xs font-medium">
                 <Lightbulb className="w-4 h-4" />
                 <span>The Engineered Solution</span>
               </div>

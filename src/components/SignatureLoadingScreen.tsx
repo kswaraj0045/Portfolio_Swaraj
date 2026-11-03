@@ -139,7 +139,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
               width: p.size,
               height: p.size,
             }}
-            className="rounded-full bg-slate-400/40"
+            className="rounded-full bg-silver-steel/30"
           />
         ))}
       </div>
@@ -159,7 +159,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
             scale: { duration: isExiting ? 0.6 : 1 },
             rotate: { duration: 40, repeat: Infinity, ease: 'linear' },
           }}
-          className="w-[280px] sm:w-[560px] md:w-[780px] lg:w-[920px] h-[160px] sm:h-[270px] md:h-[350px] lg:h-[400px] rounded-[100%] border border-dashed border-slate-600/35"
+          className="w-[280px] sm:w-[560px] md:w-[780px] lg:w-[920px] h-[160px] sm:h-[270px] md:h-[350px] lg:h-[400px] rounded-[100%] border border-dashed border-border-subtle/60"
         />
 
         {/* Inner Ellipse */}
@@ -175,7 +175,7 @@ export const SignatureLoadingScreen: React.FC<Props> = ({ onComplete }) => {
             scale: { duration: isExiting ? 0.6 : 1 },
             rotate: { duration: 32, repeat: Infinity, ease: 'linear' },
           }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[440px] md:w-[620px] lg:w-[740px] h-[120px] sm:h-[200px] md:h-[260px] lg:h-[300px] rounded-[100%] border border-slate-500/25"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[440px] md:w-[620px] lg:w-[740px] h-[120px] sm:h-[200px] md:h-[260px] lg:h-[300px] rounded-[100%] border border-border-subtle/40"
         />
 
         {/* Orbiting Satellite Dot */}

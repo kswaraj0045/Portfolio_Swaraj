@@ -47,7 +47,7 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
           {onDismissPreview && (
             <button
               onClick={onDismissPreview}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-bg-main bg-accent-primary hover:bg-sky-400 transition-colors shadow-card-glow cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-accent-primary hover:bg-accent-hover transition-colors shadow-card-glow cursor-pointer"
             >
               <Eye className="w-4 h-4" />
               <span>Switch to Full Website View</span>
@@ -79,18 +79,20 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
             <div>
               <h2 className="text-xl font-heading font-semibold mb-4 text-text-primary flex items-center gap-2">
                 <Layers className="w-5 h-5 text-accent-primary" />
-                Color Palette & Surface Tiers
+                Obsidian Silver + Crimson Color Palette & Surface Tiers
               </h2>
-              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
                 {[
-                  { name: 'Canvas Main', hex: '#090A0C', bg: 'bg-[#090A0C]', border: 'border-slate-800' },
-                  { name: 'Secondary Canvas', hex: '#111317', bg: 'bg-[#111317]', border: 'border-slate-800' },
-                  { name: 'Card Surface', hex: '#17191D', bg: 'bg-[#17191D]', border: 'border-slate-800' },
-                  { name: 'Elevated Surface', hex: '#202329', bg: 'bg-[#202329]', border: 'border-slate-700' },
-                  { name: 'Metallic Silver', hex: '#C5C8CE', bg: 'bg-[#C5C8CE]', text: 'text-slate-950' },
-                  { name: 'Platinum White', hex: '#F5F5F5', bg: 'bg-[#F5F5F5]', text: 'text-slate-950' },
-                  { name: 'Steel Gray', hex: '#A4A7AE', bg: 'bg-[#A4A7AE]', text: 'text-slate-950' },
-                  { name: 'Crimson Red', hex: '#B32635', bg: 'bg-[#B32635]', text: 'text-white' },
+                  { name: 'Main Background', hex: '#090A0C', bg: 'bg-[#090A0C]', border: 'border-border-subtle' },
+                  { name: 'Secondary Background', hex: '#111317', bg: 'bg-[#111317]', border: 'border-border-subtle' },
+                  { name: 'Card Background', hex: '#17191D', bg: 'bg-[#17191D]', border: 'border-border-subtle' },
+                  { name: 'Elevated Surfaces', hex: '#202329', bg: 'bg-[#202329]', border: 'border-border-subtle' },
+                  { name: 'Borders', hex: '#35383F', bg: 'bg-[#35383F]', border: 'border-border-subtle' },
+                  { name: 'Primary Text', hex: '#F5F5F5', bg: 'bg-[#F5F5F5]', text: 'text-[#090A0C]' },
+                  { name: 'Secondary Text', hex: '#C5C8CE', bg: 'bg-[#C5C8CE]', text: 'text-[#090A0C]' },
+                  { name: 'Muted Text', hex: '#858992', bg: 'bg-[#858992]', text: 'text-white' },
+                  { name: 'Crimson Accent', hex: '#B32635', bg: 'bg-[#B32635]', text: 'text-white' },
+                  { name: 'Crimson Hover', hex: '#D13A49', bg: 'bg-[#D13A49]', text: 'text-white' },
                 ].map((c) => (
                   <div key={c.hex} className="rounded-xl border border-border-subtle overflow-hidden bg-bg-card">
                     <div className={`h-16 w-full ${c.bg} ${c.border || ''} flex items-center justify-center`}>
@@ -166,13 +168,13 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                 </div>
 
                 {/* Status Pills */}
-                <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/25">
+                <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-accent-primary/10 text-accent-primary border border-accent-primary/25">
                   ● Live Demo
                 </span>
-                <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-sky-500/10 text-sky-400 border border-sky-500/25">
+                <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-accent-secondary/15 text-silver-metallic border border-accent-secondary/30">
                   ● Production
                 </span>
-                <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-purple-500/10 text-purple-400 border border-purple-500/25">
+                <span className="px-2.5 py-1 rounded-md text-xs font-mono bg-bg-elevated text-silver-steel border border-border-subtle">
                   ● Research Prototype
                 </span>
               </div>
@@ -256,9 +258,9 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 {[
                   { label: 'Transactions Curated', val: '35,000+', sub: 'Star Schema Data Model', icon: TrendingUp, color: 'text-accent-primary' },
-                  { label: 'Cobb Angle Accuracy', val: 'MAE < 5.0°', sub: 'Deep Learning Keypoints', icon: Activity, color: 'text-accent-secondary' },
+                  { label: 'Cobb Angle Accuracy', val: 'MAE < 5.0°', sub: 'Deep Learning Keypoints', icon: Activity, color: 'text-silver-metallic' },
                   { label: 'Tenant Isolation', val: '100% RLS', sub: 'Postgres Supabase Security', icon: ShieldCheck, color: 'text-accent-primary' },
-                  { label: 'Sync Latency', val: '< 100ms', sub: 'Socket.IO Real-time Events', icon: Cpu, color: 'text-sky-400' },
+                  { label: 'Sync Latency', val: '< 100ms', sub: 'Socket.IO Real-time Events', icon: Cpu, color: 'text-silver-metallic' },
                 ].map((stat, i) => {
                   const Icon = stat.icon;
                   return (
@@ -269,7 +271,7 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                       </div>
                       <div className="text-2xl font-bold font-mono text-text-primary">{stat.val}</div>
                       <div className="text-xs text-text-secondary mt-1 flex items-center gap-1">
-                        <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                        <CheckCircle2 className="w-3 h-3 text-accent-primary" />
                         <span>{stat.sub}</span>
                       </div>
                     </div>
@@ -288,7 +290,7 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                   <span className="px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20">
                     Product & Analytics
                   </span>
-                  <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                  <span className="text-xs font-mono text-silver-metallic bg-silver-metallic/10 px-2 py-0.5 rounded border border-silver-metallic/25">
                     Verified Repository
                   </span>
                 </div>

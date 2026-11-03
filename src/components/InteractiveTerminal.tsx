@@ -177,19 +177,19 @@ export const InteractiveTerminal: React.FC = () => {
               <button 
                 onClick={() => setHistory([])}
                 title="Clear terminal session"
-                className="w-3 h-3 rounded-full bg-rose-500/80 hover:bg-rose-500 transition-colors cursor-pointer"
+                className="w-3 h-3 rounded-full bg-accent-primary/80 hover:bg-accent-hover transition-colors cursor-pointer"
                 aria-label="Clear session"
               />
               <button 
                 onClick={() => setIsMinimized(!isMinimized)}
                 title="Minimize / expand terminal body"
-                className="w-3 h-3 rounded-full bg-amber-500/80 hover:bg-amber-500 transition-colors cursor-pointer"
+                className="w-3 h-3 rounded-full bg-silver-steel/50 hover:bg-silver-metallic transition-colors cursor-pointer"
                 aria-label="Minimize toggle"
               />
               <button 
                 onClick={() => setIsMaximized(!isMaximized)}
                 title="Toggle fullscreen terminal view"
-                className="w-3 h-3 rounded-full bg-emerald-500/80 hover:bg-emerald-500 transition-colors cursor-pointer"
+                className="w-3 h-3 rounded-full bg-silver-steel/50 hover:bg-silver-platinum transition-colors cursor-pointer"
                 aria-label="Maximize toggle"
               />
             </div>
@@ -321,7 +321,7 @@ export const InteractiveTerminal: React.FC = () => {
 
             <button
               onClick={() => setHistory([])}
-              className="px-3 py-1.5 rounded-lg text-xs font-mono text-text-muted hover:text-rose-400 border border-border-subtle hover:border-rose-500/40 transition-colors ml-auto flex items-center gap-1 cursor-pointer"
+              className="px-3 py-1.5 rounded-lg text-xs font-mono text-text-muted hover:text-accent-primary border border-border-subtle hover:border-accent-primary/40 transition-colors ml-auto flex items-center gap-1 cursor-pointer"
               title="Clear terminal history"
             >
               <RotateCcw className="w-3 h-3" />

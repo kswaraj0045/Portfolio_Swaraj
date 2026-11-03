@@ -374,7 +374,7 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
     default:
       return {
         output: (
-          <div className="space-y-1 text-rose-400">
+          <div className="space-y-1 text-accent-primary">
             <div>Command not found: <span className="text-white font-bold">{trimmed}</span></div>
             <div className="text-text-muted text-xs">Type <span className="text-accent-primary font-bold cursor-pointer underline">'help'</span> to see the available commands.</div>
           </div>
