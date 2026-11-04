@@ -16,6 +16,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { DesignSystemPreview } from './components/DesignSystemPreview';
 import { DeloitteUSIPage } from './components/DeloitteUSIPage';
+import { RecommendationRoomPage } from './components/RecommendationRoomPage';
 
 export function App() {
   const [showDesignSystem, setShowDesignSystem] = useState(false);
@@ -45,15 +46,24 @@ export function App() {
     window.location.hash.toLowerCase() === '#/deloitte' ||
     window.location.hash.toLowerCase() === '#deloitte-usi';
 
-  // If directly landing on /deloitte, dismiss the signature loading screen immediately
+  const isRecommendationsPage = currentPath.toLowerCase().includes('recommendations') || 
+    window.location.pathname.toLowerCase().includes('recommendations') || 
+    window.location.hash.toLowerCase() === '#/recommendations' ||
+    window.location.hash.toLowerCase() === '#recommendations';
+
+  // If directly landing on /deloitte or /recommendations, dismiss the signature loading screen immediately
   useEffect(() => {
-    if (isDeloittePage) {
+    if (isDeloittePage || isRecommendationsPage) {
       setIsLoading(false);
     }
-  }, [isDeloittePage]);
+  }, [isDeloittePage, isRecommendationsPage]);
 
   if (isDeloittePage) {
     return <DeloitteUSIPage onNavigateHome={() => navigateTo('/')} />;
+  }
+
+  if (isRecommendationsPage) {
+    return <RecommendationRoomPage onNavigateHome={() => navigateTo('/')} />;
   }
 
   return (

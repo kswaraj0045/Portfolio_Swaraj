@@ -5,6 +5,7 @@ import { personalInfo } from '../data/portfolioData';
 
 interface NavLinkItem {
   name: string;
+  shortName?: string;
   href: string;
   id: string;
   badge?: string;
@@ -31,6 +32,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
     { name: 'Experience', href: '#experience', id: 'experience' },
     { name: 'Leadership', href: '#leadership', id: 'leadership' },
     { name: 'Skills', href: '#skills', id: 'skills' },
+    { name: 'Recommendation Room', shortName: 'Room', href: '/recommendations', id: 'recommendations', isPage: true },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -126,7 +128,8 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
                     />
                   )}
 
-                  <span>{link.name}</span>
+                  <span className="hidden xl:inline">{link.name}</span>
+                  <span className="xl:hidden">{link.shortName || link.name}</span>
                   {link.badge && (
                     <span className={`px-1.5 py-0.2 rounded text-[10px] font-mono font-medium ${
                       link.badge === 'USI' 
