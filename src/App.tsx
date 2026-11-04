@@ -12,12 +12,10 @@ import { ExperienceSection } from './components/ExperienceSection';
 import { LeadershipSection } from './components/LeadershipSection';
 import { SkillsSection } from './components/SkillsSection';
 import { EducationAndCertifications } from './components/EducationAndCertifications';
-import { RecommendationRoomSection } from './components/RecommendationRoomSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { DesignSystemPreview } from './components/DesignSystemPreview';
 import { DeloitteUSIPage } from './components/DeloitteUSIPage';
-import { RecommendationRoomPage } from './components/RecommendationRoomPage';
 
 export function App() {
   const [showDesignSystem, setShowDesignSystem] = useState(false);
@@ -47,24 +45,15 @@ export function App() {
     window.location.hash.toLowerCase() === '#/deloitte' ||
     window.location.hash.toLowerCase() === '#deloitte-usi';
 
-  const isRecommendationsPage = currentPath.toLowerCase().includes('recommendations') || 
-    window.location.pathname.toLowerCase().includes('recommendations') || 
-    window.location.hash.toLowerCase() === '#/recommendations' ||
-    window.location.hash.toLowerCase() === '#recommendations';
-
-  // If directly landing on /deloitte or /recommendations, dismiss the signature loading screen immediately
+  // If directly landing on /deloitte, dismiss the signature loading screen immediately
   useEffect(() => {
-    if (isDeloittePage || isRecommendationsPage) {
+    if (isDeloittePage) {
       setIsLoading(false);
     }
-  }, [isDeloittePage, isRecommendationsPage]);
+  }, [isDeloittePage]);
 
   if (isDeloittePage) {
     return <DeloitteUSIPage onNavigateHome={() => navigateTo('/')} />;
-  }
-
-  if (isRecommendationsPage) {
-    return <RecommendationRoomPage onNavigateHome={() => navigateTo('/')} />;
   }
 
   return (
@@ -147,7 +136,6 @@ export function App() {
           <LeadershipSection />
           <SkillsSection />
           <EducationAndCertifications />
-          <RecommendationRoomSection onNavigate={navigateTo} />
           <ContactSection />
         </main>
       )}
