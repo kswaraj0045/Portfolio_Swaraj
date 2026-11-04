@@ -8,19 +8,19 @@ export const EducationAndCertifications: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="education" className="py-20 md:py-28 relative border-t border-border-subtle bg-bg-secondary/20 overflow-hidden">
+    <section id="education" className="py-14 sm:py-20 md:py-28 relative border-t border-border-subtle bg-bg-secondary/20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12">
           
           {/* Left Column: Education */}
-          <div className="lg:col-span-6 space-y-8">
+          <div className="lg:col-span-6 space-y-6 sm:space-y-8">
             <MotionReveal>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20 mb-3">
                 <GraduationCap className="w-3.5 h-3.5" />
                 <span>ACADEMIC BACKGROUND</span>
               </div>
-              <h2 className="text-3xl font-semibold font-heading text-text-primary tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-text-primary tracking-tight">
                 Education.
               </h2>
               <p className="mt-2 text-sm text-text-secondary font-normal leading-relaxed">
@@ -37,7 +37,7 @@ export const EducationAndCertifications: React.FC = () => {
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.45, delay: i * 0.12 }}
                   whileHover={{ y: -3 }}
-                  className="glass-card p-6 rounded-2xl border border-border-subtle bg-bg-card/80 space-y-3 hover:border-accent-primary/40 transition-colors"
+                  className="glass-card p-4 sm:p-6 rounded-2xl border border-border-subtle bg-bg-card/80 space-y-3 hover:border-accent-primary/40 transition-colors"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <h3 className="text-lg font-semibold font-heading text-text-primary">

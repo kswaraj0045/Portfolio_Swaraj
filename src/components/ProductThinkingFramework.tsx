@@ -38,27 +38,27 @@ export const ProductThinkingFramework: React.FC = () => {
   const progressPercent = ((currentIndex + 1) / productThinkingFramework.length) * 100;
 
   return (
-    <section id="framework" className="py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
+    <section id="framework" className="py-14 sm:py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header with Motion Reveal */}
-        <MotionReveal className="max-w-3xl mb-12">
+        <MotionReveal className="max-w-3xl mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20 mb-3">
             <Compass className="w-3.5 h-3.5" />
             <span>PRODUCT METHODOLOGY & EXECUTION MINDSET</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-text-primary tracking-tight">
             From Problems to Products.
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
+          <p className="mt-2.5 sm:mt-3 text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed font-normal">
             A structured, iterative 6-stage framework connecting user discovery, analytical scoping, and technical execution.
           </p>
         </MotionReveal>
 
         {/* Disclaimer Note */}
-        <MotionReveal delay={0.1} className="mb-10 p-4 rounded-xl bg-bg-card/50 border border-border-subtle/80 flex items-start gap-3 text-xs text-text-secondary">
+        <MotionReveal delay={0.1} className="mb-8 sm:mb-10 p-3.5 sm:p-4 rounded-xl bg-bg-card/50 border border-border-subtle/80 flex items-start gap-2.5 sm:gap-3 text-xs text-text-secondary">
           <Info className="w-4 h-4 text-accent-primary shrink-0 mt-0.5" />
-          <span>
+          <span className="leading-relaxed">
             <strong>Note on Framework:</strong> This workflow represents my product-oriented learning framework and practical problem-solving methodology applied during academic research, startup projects, and software internships, not a claim of independently directing every stage in enterprise production.
           </span>
         </MotionReveal>
@@ -121,7 +121,7 @@ export const ProductThinkingFramework: React.FC = () => {
               <button
                 key={stage.id}
                 onClick={() => setSelectedStageId(stage.id)}
-                className={`p-3 rounded-xl border text-left transition-all ${
+                className={`p-2.5 xs:p-3 rounded-xl border text-left transition-all min-h-[50px] cursor-pointer ${
                   isActive
                     ? 'bg-accent-primary/15 border-accent-primary text-accent-primary font-semibold'
                     : 'bg-bg-card border-border-subtle text-text-secondary hover:text-text-primary'
@@ -147,7 +147,7 @@ export const ProductThinkingFramework: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -15 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="glass-card p-4 sm:p-8 md:p-10 rounded-3xl border border-accent-primary/30 relative overflow-hidden bg-bg-card/90 shadow-xl"
+            className="glass-card p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-accent-primary/30 relative overflow-hidden bg-bg-card/90 shadow-xl"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               

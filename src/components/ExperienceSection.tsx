@@ -8,19 +8,19 @@ export const ExperienceSection: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="experience" className="py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
+    <section id="experience" className="py-14 sm:py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20 mb-3">
             <Briefcase className="w-3.5 h-3.5" />
             <span>CAREER TRAJECTORY & EXPERIENCE</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
-            Professional Experience & Milestones.
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-text-primary tracking-tight">
+            Professional Experience &amp; Milestones.
           </h2>
-          <p className="mt-3 text-base text-text-secondary leading-relaxed font-normal">
+          <p className="mt-2.5 sm:mt-3 text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
             Hands-on exposure combining software engineering internships, startup agile delivery, and competitive enterprise campus selection.
           </p>
         </div>

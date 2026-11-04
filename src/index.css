@@ -32,6 +32,7 @@
     color-scheme: dark;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
@@ -44,6 +45,14 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
+  }
+
+  /* Prevent automatic iOS Safari zoom-in when tapping form inputs */
+  @media screen and (max-width: 640px) {
+    input, textarea, select {
+      font-size: 16px !important;
+    }
   }
 
   /* Custom subtle scrollbar */

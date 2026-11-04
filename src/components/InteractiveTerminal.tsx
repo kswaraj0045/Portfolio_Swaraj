@@ -132,24 +132,24 @@ export const InteractiveTerminal: React.FC = () => {
   ];
 
   return (
-    <section id="terminal" className="py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
+    <section id="terminal" className="py-14 sm:py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-accent-primary/5 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-5xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <MotionReveal className="text-center max-w-2xl mx-auto mb-10">
+        <MotionReveal className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20 mb-3">
             <Command className="w-3.5 h-3.5" />
             <span>INTERACTIVE EXPERIENCE / 01</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-text-primary tracking-tight">
             KNOW ME THROUGH TERMINAL
           </h2>
 
-          <p className="mt-2 text-base text-text-secondary font-normal leading-relaxed">
+          <p className="mt-2 text-sm sm:text-base text-text-secondary font-normal leading-relaxed">
             An interactive way to explore my professional journey.
           </p>
 
@@ -219,8 +219,8 @@ export const InteractiveTerminal: React.FC = () => {
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.25 }}
                 onClick={handleBodyClick}
-                className={`p-4 sm:p-6 font-mono text-xs sm:text-[13px] leading-relaxed text-text-primary overflow-y-auto cursor-text ${
-                  isMaximized ? 'flex-1 max-h-none' : 'max-h-[460px] min-h-[320px]'
+                className={`p-3.5 sm:p-6 font-mono text-xs sm:text-[13px] leading-relaxed text-text-primary overflow-y-auto cursor-text ${
+                  isMaximized ? 'flex-1 max-h-none' : 'max-h-[380px] sm:max-h-[460px] min-h-[260px] sm:min-h-[320px]'
                 }`}
               >
                 {/* Initial Welcome Message */}
@@ -250,7 +250,7 @@ export const InteractiveTerminal: React.FC = () => {
                         <span className="text-accent-primary font-bold">swaraj@portfolio:~$</span>
                         <span className="text-text-primary font-bold">{item.command}</span>
                       </div>
-                      <div className="pl-4 border-l border-border-subtle text-text-secondary text-xs sm:text-[13px]">
+                      <div className="pl-3 sm:pl-4 border-l border-border-subtle text-text-secondary text-xs sm:text-[13px] overflow-x-auto">
                         {item.output}
                       </div>
                     </div>

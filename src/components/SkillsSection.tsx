@@ -41,19 +41,19 @@ export const SkillsSection: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
+    <section id="skills" className="py-14 sm:py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-[#527DAA] bg-[#527DAA]/10 border border-[#527DAA]/30 mb-3">
             <Layers className="w-3.5 h-3.5" />
             <span>CORE CAPABILITIES & COMPETENCIES</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
-            Product, Business & Technical Toolkit.
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-text-primary tracking-tight">
+            Product, Business &amp; Technical Toolkit.
           </h2>
-          <p className="mt-3 text-base text-text-secondary leading-relaxed font-normal">
+          <p className="mt-2.5 sm:mt-3 text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
             A comprehensive matrix bridging product requirements, analytical insights, and technical implementation. (No fabricated proficiency percentages).
           </p>
         </div>
@@ -71,7 +71,7 @@ export const SkillsSection: React.FC = () => {
               key={catGroup.category}
               variants={cardVariants}
               whileHover={{ y: -4 }}
-              className="glass-card p-6 sm:p-8 rounded-3xl border border-border-subtle bg-bg-card/70 flex flex-col justify-between hover:border-[#527DAA]/45 hover:shadow-steelblue-glow transition-all"
+              className="glass-card p-5 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl border border-border-subtle bg-bg-card/70 flex flex-col justify-between hover:border-[#527DAA]/45 hover:shadow-steelblue-glow transition-all"
             >
               <div>
                 <div className="flex items-center gap-3 mb-2">

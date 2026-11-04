@@ -10,7 +10,7 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="deloitte" className="py-16 md:py-24 relative overflow-hidden">
+    <section id="deloitte" className="py-12 sm:py-16 md:py-24 relative overflow-hidden">
       {/* Deloitte Green ambient halo */}
       <motion.div 
         animate={shouldReduceMotion ? {} : { scale: [1, 1.08, 1], opacity: [0.08, 0.14, 0.08] }}
@@ -24,7 +24,7 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] as const }}
-          className="p-6 sm:p-8 md:p-12 rounded-3xl relative overflow-hidden backdrop-blur-xl bg-[#000000] border border-[#86BC25]/30 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.9),0_0_30px_-5px_rgba(134,188,37,0.18)]"
+          className="p-5 sm:p-8 md:p-12 rounded-3xl relative overflow-hidden backdrop-blur-xl bg-[#000000] border border-[#86BC25]/30 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.9),0_0_30px_-5px_rgba(134,188,37,0.18)]"
         >
           {/* Subtle architectural grid overlay */}
           <div 
@@ -38,10 +38,10 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
           {/* Corner green radial reflection */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(ellipse_at_top_right,rgba(134,188,37,0.14),transparent_70%)] pointer-events-none" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center relative z-10">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-7 xl:col-span-8 space-y-6">
+            <div className="lg:col-span-7 xl:col-span-8 space-y-5 sm:space-y-6">
               
               {/* Section Title Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-semibold text-[#86BC25] bg-[#000000] border border-[#86BC25]/40 shadow-[0_0_12px_rgba(134,188,37,0.16)]">
@@ -50,40 +50,40 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
               </div>
 
               {/* Main Heading & Role */}
-              <div className="space-y-2">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-[#FFFFFF] tracking-tight">
+              <div className="space-y-1.5 sm:space-y-2">
+                <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-[#FFFFFF] tracking-tight">
                   SELECTED AT DELOITTE USI
                 </h2>
-                <div className="text-lg sm:text-xl font-heading font-semibold text-[#86BC25] tracking-tight">
+                <div className="text-base sm:text-xl font-heading font-semibold text-[#86BC25] tracking-tight">
                   Incoming Analyst
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-sm sm:text-base md:text-lg text-[#C5C8CE] leading-relaxed max-w-2xl font-normal font-sans">
+              <p className="text-xs xs:text-sm sm:text-base md:text-lg text-[#C5C8CE] leading-relaxed max-w-2xl font-normal font-sans">
                 Selected through college campus placement. This dedicated milestone marks an important step in connecting technology implementations with enterprise business value.
               </p>
 
               {/* Core Information Highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1 text-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-sm">
                 
                 {/* Institution Card */}
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-[#0D0F11] border border-[#35383F] hover:border-[#86BC25]/40 transition-colors">
+                <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl bg-[#0D0F11] border border-[#35383F] hover:border-[#86BC25]/40 transition-colors">
                   <GraduationCap className="w-5 h-5 text-[#86BC25] shrink-0 mt-0.5" />
                   <div>
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#858992] block">Institution</span>
-                    <span className="font-semibold text-[#FFFFFF] text-sm block mt-0.5 font-sans">
+                    <span className="font-semibold text-[#FFFFFF] text-xs sm:text-sm block mt-0.5 font-sans">
                       MIT Academy of Engineering, Pune
                     </span>
                   </div>
                 </div>
 
                 {/* Status Card */}
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-[#0D0F11] border border-[#35383F] hover:border-[#86BC25]/40 transition-colors">
+                <div className="flex items-start gap-3 p-3.5 sm:p-4 rounded-xl bg-[#0D0F11] border border-[#35383F] hover:border-[#86BC25]/40 transition-colors">
                   <CheckCircle2 className="w-5 h-5 text-[#86BC25] shrink-0 mt-0.5" />
                   <div>
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#858992] block">Status</span>
-                    <span className="font-semibold text-[#FFFFFF] text-sm flex items-center gap-2 mt-0.5 font-sans">
+                    <span className="font-semibold text-[#FFFFFF] text-xs sm:text-sm flex items-center gap-2 mt-0.5 font-sans">
                       <span className="w-2 h-2 rounded-full bg-[#86BC25] animate-pulse" />
                       Selected / Incoming
                     </span>
@@ -104,7 +104,7 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
                   }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold font-sans text-[#000000] bg-[#86BC25] hover:bg-[#97D72B] shadow-[0_0_20px_rgba(134,188,37,0.35)] hover:shadow-[0_0_28px_rgba(134,188,37,0.5)] transition-all cursor-pointer group/btn"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold font-sans text-[#000000] bg-[#86BC25] hover:bg-[#97D72B] shadow-[0_0_20px_rgba(134,188,37,0.35)] hover:shadow-[0_0_28px_rgba(134,188,37,0.5)] transition-all cursor-pointer group/btn min-h-[46px] w-full sm:w-auto"
                 >
                   <span>KNOW ABOUT DELOITTE</span>
                   <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -123,7 +123,7 @@ export const DeloitteMilestone: React.FC<Props> = ({ onNavigate }) => {
               <motion.div 
                 whileHover={shouldReduceMotion ? {} : { y: -3 }}
                 transition={{ duration: 0.2 }}
-                className="w-full max-w-sm p-6 sm:p-8 rounded-2xl bg-[#0D0F11] border border-[#86BC25]/35 shadow-2xl space-y-6 relative overflow-hidden group hover:border-[#86BC25]/60 hover:shadow-[0_12px_36px_-6px_rgba(134,188,37,0.22)] transition-all duration-300"
+                className="w-full max-w-sm p-5 sm:p-8 rounded-2xl bg-[#0D0F11] border border-[#86BC25]/35 shadow-2xl space-y-6 relative overflow-hidden group hover:border-[#86BC25]/60 hover:shadow-[0_12px_36px_-6px_rgba(134,188,37,0.22)] transition-all duration-300"
               >
                 {/* Green corner reflection */}
                 <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#86BC25]/15 rounded-full blur-2xl pointer-events-none group-hover:bg-[#86BC25]/25 transition-colors" />

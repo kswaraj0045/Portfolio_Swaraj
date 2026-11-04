@@ -56,13 +56,22 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock body scroll when mobile navigation menu is open
+  // Lock body scroll and listen for Escape key when mobile navigation menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       const originalOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
+
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          setMobileMenuOpen(false);
+        }
+      };
+
+      window.addEventListener('keydown', handleKeyDown);
       return () => {
         document.body.style.overflow = originalOverflow;
+        window.removeEventListener('keydown', handleKeyDown);
       };
     }
   }, [mobileMenuOpen]);
@@ -75,25 +84,25 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
           : 'bg-transparent border-b border-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18">
           
           {/* Brand Logo */}
-          <a href="#hero" className="flex items-center gap-3 group">
+          <a href="#hero" className="flex items-center gap-2.5 sm:gap-3 group min-w-0">
             <motion.div 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 rounded-xl bg-bg-card border border-border-subtle group-hover:border-accent-primary transition-colors flex items-center justify-center relative overflow-hidden"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-bg-card border border-border-subtle group-hover:border-accent-primary transition-colors flex items-center justify-center relative overflow-hidden shrink-0"
             >
               <div className="absolute inset-0 bg-accent-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <span className="font-heading font-bold text-silver-metallic text-base tracking-normal">SK</span>
+              <span className="font-heading font-bold text-silver-metallic text-sm sm:text-base tracking-normal">SK</span>
               <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 rounded-full bg-accent-primary shadow-[0_0_6px_rgba(179,38,53,0.6)]" />
             </motion.div>
-            <div>
-              <span className="font-heading font-semibold text-text-primary text-base tracking-tight block group-hover:text-silver-metallic transition-colors">
+            <div className="min-w-0">
+              <span className="font-heading font-semibold text-text-primary text-sm sm:text-base tracking-tight block truncate group-hover:text-silver-metallic transition-colors">
                 Swaraj Khadalkar
               </span>
-              <span className="text-[11px] font-sans font-normal text-text-muted block -mt-0.5">
+              <span className="text-[10px] sm:text-[11px] font-sans font-normal text-text-muted block truncate -mt-0.5">
                 Aspiring Product Manager
               </span>
             </div>
@@ -193,81 +202,97 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
         </div>
       </div>
 
-      {/* Mobile & Tablet Drawer */}
+      {/* Mobile & Tablet Drawer and Backdrop Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div 
-            id="mobile-navigation"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="lg:hidden bg-bg-card/98 backdrop-blur-2xl border-b border-border-subtle px-4 pt-3 pb-6 space-y-3 overflow-hidden shadow-2xl max-h-[calc(100vh-4.5rem)] overflow-y-auto"
-          >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    setMobileMenuOpen(false);
-                    if (link.isPage && onNavigate) {
-                      e.preventDefault();
-                      onNavigate(link.href);
-                    }
-                  }}
-                  className={`px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors flex items-center justify-between min-h-[44px] ${
-                    activeSection === link.id
-                      ? 'bg-accent-primary/15 text-accent-primary border border-accent-primary/30 font-semibold'
-                      : 'text-text-secondary hover:text-text-primary hover:bg-bg-secondary'
-                  }`}
-                >
-                  <span>{link.name}</span>
-                  {link.badge && (
-                    <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
-                      link.badge === 'USI'
-                        ? 'text-[#86BC25] bg-[#86BC25]/15 border border-[#86BC25]/40'
-                        : 'text-accent-secondary bg-accent-secondary/15 border border-accent-secondary/30'
-                    }`}>
-                      {link.badge}
-                    </span>
-                  )}
-                </a>
-              ))}
-            </div>
+          <>
+            {/* Backdrop click dismiss */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 top-18 bg-black/60 backdrop-blur-sm z-40 lg:hidden cursor-pointer"
+              aria-hidden="true"
+            />
 
-            <div className="pt-3 border-t border-border-subtle/60 flex flex-col gap-2">
-              <a
-                href={personalInfo.resumeUrl}
-                download="Swaraj_Khadalkar_Resume.pdf"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-3 rounded-xl text-xs font-semibold text-center text-text-primary bg-bg-secondary border border-border-subtle flex items-center justify-center gap-2 min-h-[44px]"
-              >
-                <FileText className="w-4 h-4 text-accent-primary" />
-                <span>Download Verified Resume</span>
-              </a>
-              <a
-                href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-3 rounded-xl text-xs font-semibold text-center text-white bg-accent-primary hover:bg-accent-hover flex items-center justify-center gap-1.5 min-h-[44px] shadow-card-glow"
-              >
-                <span>Get in Touch</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </a>
-              {onToggleDesignSystem && (
-                <button
-                  onClick={() => {
-                    onToggleDesignSystem();
-                    setMobileMenuOpen(false);
-                  }}
-                  className="w-full py-2.5 rounded-xl text-xs font-mono text-center text-accent-primary bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center gap-1.5 min-h-[40px] cursor-pointer"
+            <motion.div 
+              id="mobile-navigation"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Mobile Navigation Menu"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.25, ease: "easeInOut" }}
+              className="relative z-50 lg:hidden bg-bg-card/98 backdrop-blur-2xl border-b border-border-subtle px-4 pt-3 pb-6 space-y-3 overflow-hidden shadow-2xl max-h-[calc(100vh-4.5rem)] overflow-y-auto"
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => {
+                      setMobileMenuOpen(false);
+                      if (link.isPage && onNavigate) {
+                        e.preventDefault();
+                        onNavigate(link.href);
+                      }
+                    }}
+                    className={`px-3.5 py-3 rounded-xl text-sm font-medium transition-colors flex items-center justify-between min-h-[46px] ${
+                      activeSection === link.id
+                        ? 'bg-accent-primary/15 text-accent-primary border border-accent-primary/30 font-semibold'
+                        : 'text-text-secondary hover:text-text-primary hover:bg-bg-secondary border border-transparent'
+                    }`}
+                  >
+                    <span>{link.name}</span>
+                    {link.badge && (
+                      <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                        link.badge === 'USI'
+                          ? 'text-[#86BC25] bg-[#86BC25]/15 border border-[#86BC25]/40'
+                          : 'text-accent-secondary bg-accent-secondary/15 border border-accent-secondary/30'
+                      }`}>
+                        {link.badge}
+                      </span>
+                    )}
+                  </a>
+                ))}
+              </div>
+
+              <div className="pt-3 border-t border-border-subtle/60 flex flex-col gap-2.5">
+                <a
+                  href={personalInfo.resumeUrl}
+                  download="Swaraj_Khadalkar_Resume.pdf"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full py-3 rounded-xl text-xs font-semibold text-center text-text-primary bg-bg-secondary hover:bg-bg-elevated border border-border-subtle flex items-center justify-center gap-2 min-h-[46px] transition-colors"
                 >
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>{showDesignSystem ? 'Exit Design System' : 'View Design System Tokens'}</span>
-                </button>
-              )}
-            </div>
-          </motion.div>
+                  <FileText className="w-4 h-4 text-accent-primary" />
+                  <span>Download Verified Resume</span>
+                </a>
+                <a
+                  href="#contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full py-3 rounded-xl text-xs font-semibold text-center text-white bg-accent-primary hover:bg-accent-hover flex items-center justify-center gap-1.5 min-h-[46px] shadow-card-glow transition-all"
+                >
+                  <span>Get in Touch</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+                {onToggleDesignSystem && (
+                  <button
+                    onClick={() => {
+                      onToggleDesignSystem();
+                      setMobileMenuOpen(false);
+                    }}
+                    className="w-full py-2.5 rounded-xl text-xs font-mono text-center text-accent-primary bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center gap-1.5 min-h-[44px] cursor-pointer"
+                  >
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>{showDesignSystem ? 'Exit Design System' : 'View Design System Tokens'}</span>
+                  </button>
+                )}
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

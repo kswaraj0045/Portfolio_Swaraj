@@ -22,13 +22,13 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
+    <section id="contact" className="py-14 sm:py-20 md:py-28 relative border-t border-border-subtle bg-bg-main overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[350px] bg-accent-primary/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column: Direct Info */}
           <MotionReveal className="lg:col-span-5 space-y-6">
@@ -37,7 +37,7 @@ export const ContactSection: React.FC = () => {
               <span>LET'S CONNECT</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold font-heading text-text-primary tracking-tight">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-semibold font-heading text-text-primary tracking-tight">
               Let's Build Something Meaningful.
             </h2>
 
@@ -114,9 +114,9 @@ export const ContactSection: React.FC = () => {
 
           {/* Right Column: Functional Form */}
           <div className="lg:col-span-7">
-            <MotionReveal delay={0.2} className="glass-card p-6 sm:p-10 rounded-3xl border border-border-subtle bg-bg-card/85 space-y-6">
+            <MotionReveal delay={0.2} className="glass-card p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border border-border-subtle bg-bg-card/85 space-y-5 sm:space-y-6">
               <div>
-                <h3 className="text-2xl font-semibold font-heading text-text-primary">
+                <h3 className="text-xl sm:text-2xl font-semibold font-heading text-text-primary">
                   Send a Message
                 </h3>
                 <p className="text-xs font-mono font-normal text-text-muted mt-1">
@@ -136,7 +136,7 @@ export const ContactSection: React.FC = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Enter your name"
-                    className="w-full px-4 py-3 rounded-xl bg-bg-main border border-border-subtle text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary transition-colors text-sm"
+                    className="w-full px-4 py-3 min-h-[46px] rounded-xl bg-bg-main border border-border-subtle text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary transition-colors text-sm"
                   />
                 </div>
 
@@ -151,7 +151,7 @@ export const ContactSection: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="you@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-bg-main border border-border-subtle text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary transition-colors text-sm"
+                    className="w-full px-4 py-3 min-h-[46px] rounded-xl bg-bg-main border border-border-subtle text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary transition-colors text-sm"
                   />
                 </div>
 
@@ -174,7 +174,7 @@ export const ContactSection: React.FC = () => {
                   type="submit"
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-accent-primary hover:bg-accent-hover transition-all shadow-card-glow cursor-pointer group"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[48px] rounded-xl text-sm font-semibold text-white bg-accent-primary hover:bg-accent-hover transition-all shadow-card-glow cursor-pointer group"
                 >
                   <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   <span>Send Message via Email</span>

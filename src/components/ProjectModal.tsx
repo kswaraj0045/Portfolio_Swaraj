@@ -38,15 +38,15 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-bg-main/80 backdrop-blur-md overflow-y-auto cursor-pointer"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 xs:p-4 sm:p-6 lg:p-8 bg-bg-main/80 backdrop-blur-md overflow-y-auto cursor-pointer"
       onClick={onClose}
     >
       <div 
-        className="relative w-full max-w-4xl bg-bg-card border border-border-subtle rounded-3xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col my-auto cursor-default"
+        className="relative w-full max-w-4xl bg-bg-card border border-border-subtle rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col my-auto cursor-default"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Top Bar */}
-        <div className="p-4 sm:p-6 border-b border-border-subtle flex items-center justify-between sticky top-0 bg-bg-card/95 backdrop-blur-md z-10 gap-2">
+        <div className="p-3.5 sm:p-6 border-b border-border-subtle flex items-center justify-between sticky top-0 bg-bg-card/95 backdrop-blur-md z-10 gap-2">
           <div className="flex flex-wrap items-center gap-2">
             <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/25">
               {project.category}
@@ -66,25 +66,25 @@ export const ProjectModal: React.FC<Props> = ({ project, onClose }) => {
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-4 sm:p-8 overflow-y-auto space-y-6 sm:space-y-8">
+        <div className="p-4 sm:p-8 overflow-y-auto space-y-5 sm:space-y-8">
           
           {/* Title & Tagline */}
           <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold font-heading text-text-primary tracking-tight">
+            <h2 className="text-xl sm:text-3xl font-semibold font-heading text-text-primary tracking-tight">
               {project.title}
             </h2>
-            <p className="text-base text-text-secondary mt-2 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-text-secondary mt-1.5 sm:mt-2 leading-relaxed font-normal">
               {project.tagline}
             </p>
           </div>
 
           {/* Quick Metrics Bar */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
             {project.metrics.map((m, i) => (
-              <div key={i} className="p-3.5 rounded-xl bg-bg-main/80 border border-border-subtle">
+              <div key={i} className="p-2.5 xs:p-3.5 rounded-xl bg-bg-main/80 border border-border-subtle">
                 <div className="text-[10px] font-mono text-text-muted uppercase tracking-wider">{m.label}</div>
-                <div className="text-lg font-semibold font-mono text-text-primary mt-0.5">{m.value}</div>
-                {m.detail && <div className="text-[11px] text-text-secondary mt-0.5 font-normal">{m.detail}</div>}
+                <div className="text-base sm:text-lg font-semibold font-mono text-text-primary mt-0.5">{m.value}</div>
+                {m.detail && <div className="text-[10px] sm:text-[11px] text-text-secondary mt-0.5 font-normal">{m.detail}</div>}
               </div>
             ))}
           </div>

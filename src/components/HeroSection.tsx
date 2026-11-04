@@ -90,18 +90,18 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
             {/* =================================================== */}
             {/* LEFT SIDE — PERSONAL IDENTITY (~48% width) */}
             {/* =================================================== */}
-            <div className="w-full md:w-[48%] flex flex-col justify-between p-6 sm:p-8 md:p-8 lg:p-10 xl:p-12 z-10 relative space-y-8">
+            <div className="w-full md:w-[48%] flex flex-col justify-between p-5 xs:p-6 sm:p-8 md:p-8 lg:p-10 xl:p-12 z-10 relative space-y-6 sm:space-y-8">
               
-              <div className="space-y-6">
+              <div className="space-y-5 sm:space-y-6">
                 {/* Small upper label with crimson decorative accent line */}
                 <motion.div 
                   initial={{ opacity: 0, x: -15 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                  className="flex items-center gap-3"
+                  className="flex items-center gap-2.5 sm:gap-3"
                 >
-                  <span className="h-[2px] w-8 sm:w-10 bg-gradient-to-r from-accent-primary to-accent-hover rounded-full shadow-[0_0_8px_#B32635]" />
-                  <span className="text-xs font-mono font-medium tracking-wider text-silver-steel uppercase">
+                  <span className="h-[2px] w-6 sm:w-10 bg-gradient-to-r from-accent-primary to-accent-hover rounded-full shadow-[0_0_8px_#B32635]" />
+                  <span className="text-[11px] sm:text-xs font-mono font-medium tracking-wider text-silver-steel uppercase">
                     PORTFOLIO / THE DIGITAL SPACE
                   </span>
                 </motion.div>
@@ -115,7 +115,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                     className="font-heading font-bold tracking-tight leading-[0.96] select-none"
                   >
                     {/* First Name */}
-                    <div className="text-4xl sm:text-5xl md:text-[2.2rem] lg:text-[2.75rem] xl:text-[3.25rem] 2xl:text-[3.6rem] flex flex-nowrap whitespace-nowrap shrink-0">
+                    <div className="text-[1.85rem] xs:text-[2.25rem] sm:text-5xl md:text-[2.2rem] lg:text-[2.75rem] xl:text-[3.25rem] 2xl:text-[3.6rem] flex flex-nowrap whitespace-nowrap shrink-0">
                       {firstName.split("").map((char, index) => (
                         <motion.span
                           key={`first-${index}`}
@@ -128,7 +128,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                     </div>
 
                     {/* Last Name — Always a single unbroken word on laptop, PC, tablet, and mobile */}
-                    <div className="text-4xl sm:text-5xl md:text-[2.2rem] lg:text-[2.75rem] xl:text-[3.25rem] 2xl:text-[3.6rem] flex flex-nowrap whitespace-nowrap shrink-0 mt-1 sm:mt-2">
+                    <div className="text-[1.85rem] xs:text-[2.25rem] sm:text-5xl md:text-[2.2rem] lg:text-[2.75rem] xl:text-[3.25rem] 2xl:text-[3.6rem] flex flex-nowrap whitespace-nowrap shrink-0 mt-1 sm:mt-2">
                       {lastName.split("").map((char, index) => (
                         <motion.span
                           key={`last-${index}`}
@@ -145,7 +145,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
                       transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                      className="h-1 w-24 sm:w-32 bg-gradient-to-r from-accent-primary to-accent-hover rounded-full mt-3 origin-left shadow-[0_0_12px_rgba(179,38,53,0.5)]"
+                      className="h-1 w-20 sm:w-32 bg-gradient-to-r from-accent-primary to-accent-hover rounded-full mt-2.5 sm:mt-3 origin-left shadow-[0_0_12px_rgba(179,38,53,0.5)]"
                     />
                   </motion.div>
                 </div>
@@ -155,14 +155,14 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.65, ease: "easeOut" }}
-                  className="space-y-3"
+                  className="space-y-2.5 sm:space-y-3"
                 >
-                  <p className="text-base sm:text-lg md:text-xl font-heading font-medium text-silver-metallic tracking-normal">
+                  <p className="text-sm xs:text-base sm:text-lg md:text-xl font-heading font-medium text-silver-metallic tracking-normal">
                     Technology Enthusiast. Product Thinker. Data-Driven Problem Solver.
                   </p>
 
                   {/* Supporting description */}
-                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed max-w-xl font-normal font-sans">
+                  <p className="text-xs xs:text-sm sm:text-base text-text-secondary leading-relaxed max-w-xl font-normal font-sans">
                     Building meaningful digital experiences by connecting technology, data and business thinking.
                   </p>
                 </motion.div>
@@ -172,13 +172,13 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-                  className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2"
+                  className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-1 sm:pt-2"
                 >
                   <motion.a
                     href="#projects"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-accent-primary hover:bg-accent-hover transition-all shadow-card-glow cursor-pointer group min-h-[44px]"
+                    className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-accent-primary hover:bg-accent-hover transition-all shadow-card-glow cursor-pointer group min-h-[46px]"
                   >
                     <span>Explore My Work</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -189,7 +189,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                     download="Swaraj_Khadalkar_Resume.pdf"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-silver-steel hover:text-white bg-bg-card border border-border-silver/40 hover:border-silver-metallic transition-all cursor-pointer min-h-[44px]"
+                    className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-silver-steel hover:text-white bg-bg-card border border-border-silver/40 hover:border-silver-metallic transition-all cursor-pointer min-h-[46px]"
                   >
                     <FileText className="w-4 h-4" />
                     <span>Download Resume</span>
@@ -202,14 +202,14 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.95 }}
-                className="pt-2 flex flex-wrap items-center gap-5 text-sm text-text-secondary"
+                className="pt-2 flex flex-wrap items-center gap-x-4 gap-y-2 sm:gap-5 text-xs sm:text-sm text-text-secondary"
               >
-                <span className="text-xs font-mono text-text-muted uppercase tracking-wider">Connect:</span>
+                <span className="text-[11px] sm:text-xs font-mono text-text-muted uppercase tracking-wider">Connect:</span>
                 <a 
                   href={personalInfo.github} 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="inline-flex items-center gap-1.5 hover:text-accent-primary transition-colors"
+                  className="inline-flex items-center gap-1.5 hover:text-accent-primary transition-colors py-1"
                 >
                   <Github className="w-4 h-4" />
                   <span>GitHub</span>
@@ -218,17 +218,17 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                   href={personalInfo.linkedin} 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="inline-flex items-center gap-1.5 hover:text-accent-primary transition-colors"
+                  className="inline-flex items-center gap-1.5 hover:text-accent-primary transition-colors py-1"
                 >
                   <Linkedin className="w-4 h-4" />
                   <span>LinkedIn</span>
                 </a>
                 <a 
                   href={`mailto:${personalInfo.email}`} 
-                  className="inline-flex items-center gap-1.5 hover:text-accent-primary transition-colors"
+                  className="inline-flex items-center gap-1.5 hover:text-accent-primary transition-colors py-1"
                 >
                   <Mail className="w-4 h-4" />
-                  <span className="font-mono text-xs">{personalInfo.email}</span>
+                  <span className="font-mono text-xs break-all sm:break-normal">{personalInfo.email}</span>
                 </a>
               </motion.div>
 
@@ -237,7 +237,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
             {/* =================================================== */}
             {/* RIGHT SIDE — PERSONAL PORTRAIT (~52% width) */}
             {/* =================================================== */}
-            <div className="w-full md:w-[52%] relative h-[420px] sm:h-[500px] md:h-auto min-h-[420px] sm:min-h-[500px] md:min-h-[560px] lg:min-h-[620px] xl:min-h-[660px] overflow-hidden group">
+            <div className="w-full md:w-[52%] relative h-[320px] xs:h-[380px] sm:h-[480px] md:h-auto min-h-[320px] xs:min-h-[380px] sm:min-h-[480px] md:min-h-[560px] lg:min-h-[620px] xl:min-h-[660px] overflow-hidden group">
               
               {/* Actual Personal Photograph */}
               <div className="absolute inset-0 w-full h-full overflow-hidden bg-[#0D0F12]">
@@ -247,7 +247,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                     (e.currentTarget as HTMLImageElement).src = "/swaraj-portrait.jpg";
                   }}
                   alt="Swaraj Sanjay Khadalkar"
-                  className="w-full h-full object-cover object-[center_15%] brightness-[0.98] contrast-[1.05] transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  className="w-full h-full object-cover object-[center_12%] sm:object-[center_15%] brightness-[0.98] contrast-[1.05] transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   loading="eager"
                 />
               </div>
@@ -284,7 +284,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
           {/* BOTTOM INFORMATION STRIP (Three Compact Information Blocks) */}
           {/* ========================================================= */}
           <div className="border-t border-border-silver/20 bg-bg-main/90 backdrop-blur-md relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border-silver/15 p-4 sm:p-6 lg:px-12 lg:py-5">
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border-silver/15 p-2.5 sm:p-6 lg:px-12 lg:py-5">
               
               {/* Block 01 — EXPERIENCE */}
               <div className="p-3 sm:p-4 flex flex-col justify-center">
@@ -311,7 +311,7 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                 <div className="text-[11px] sm:text-xs font-mono font-medium tracking-wider text-accent-primary uppercase flex items-center gap-2">
                   <span>03 — MINDSET</span>
                 </div>
-                <div className="text-sm sm:text-base font-heading font-semibold text-text-primary mt-1 flex items-center justify-between">
+                <div className="text-sm sm:text-base font-heading font-semibold text-text-primary mt-1 flex flex-wrap items-center justify-between gap-2">
                   <span>Data-Driven Problem Solver</span>
                   <a 
                     href="#framework" 

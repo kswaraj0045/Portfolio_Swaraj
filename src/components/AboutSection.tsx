@@ -21,25 +21,25 @@ export const AboutSection: React.FC = () => {
   };
 
   return (
-    <section id="about" className="py-20 md:py-28 relative border-t border-border-subtle bg-bg-secondary/30 overflow-hidden">
+    <section id="about" className="py-14 sm:py-20 md:py-28 relative border-t border-border-subtle bg-bg-secondary/30 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header with Motion Reveal */}
-        <MotionReveal className="max-w-3xl mb-16">
+        <MotionReveal className="max-w-3xl mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-silver-metallic bg-bg-elevated border border-border-silver/30 mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-silver-metallic" />
             <span>ABOUT ME & STRATEGIC PILLARS</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-text-primary tracking-tight">
             {personalInfo.aboutHeadline}
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-text-secondary leading-relaxed font-normal">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed font-normal">
             {personalInfo.aboutDescription}
           </p>
         </MotionReveal>
 
         {/* The 3 Strategic Pillars Grid with Staggered Entrance */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {aboutPillars.map((pillar, index) => (
             <motion.div 
               key={pillar.id}
@@ -48,7 +48,7 @@ export const AboutSection: React.FC = () => {
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: index * 0.15, ease: [0.21, 0.47, 0.32, 0.98] as const }}
               whileHover={{ y: -6 }}
-              className="glass-card p-6 md:p-8 rounded-2xl flex flex-col justify-between group hover:border-silver-metallic/40 hover:shadow-silver-soft transition-all duration-300 relative overflow-hidden"
+              className="glass-card p-5 sm:p-7 md:p-8 rounded-2xl flex flex-col justify-between group hover:border-silver-metallic/40 hover:shadow-silver-soft transition-all duration-300 relative overflow-hidden"
             >
               {/* Subtle top border color glow */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-silver-metallic/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -92,21 +92,21 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* Bottom Callout: Professional Philosophy */}
-        <MotionReveal delay={0.25} className="mt-12 p-6 rounded-2xl bg-bg-card border border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-silver-metallic/10 border border-silver-metallic/30 flex items-center justify-center shrink-0">
+        <MotionReveal delay={0.25} className="mt-8 sm:mt-12 p-5 sm:p-6 rounded-2xl bg-bg-card border border-border-subtle flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md">
+          <div className="flex items-start sm:items-center gap-3.5 sm:gap-4">
+            <div className="w-10 h-10 rounded-full bg-silver-metallic/10 border border-silver-metallic/30 flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">
               <CheckCircle2 className="w-5 h-5 text-silver-metallic" />
             </div>
             <div>
-              <div className="text-xs font-mono font-medium text-text-muted">OPERATIONAL PHILOSOPHY</div>
-              <div className="text-base font-semibold font-heading text-text-primary">
+              <div className="text-[11px] sm:text-xs font-mono font-medium text-text-muted">OPERATIONAL PHILOSOPHY</div>
+              <div className="text-sm sm:text-base font-semibold font-heading text-text-primary">
                 "{personalInfo.tagline}"
               </div>
             </div>
           </div>
           <a
             href="#framework"
-            className="text-xs font-semibold text-silver-metallic hover:text-white inline-flex items-center gap-1.5 shrink-0 group transition-colors"
+            className="text-xs font-semibold text-silver-metallic hover:text-white inline-flex items-center gap-1.5 shrink-0 group transition-colors pt-1 sm:pt-0"
           >
             <span>See how I turn problems into products</span>
             <ArrowRight className="w-3.5 h-3.5 text-silver-metallic group-hover:translate-x-1 transition-transform" />

@@ -18,33 +18,33 @@ export const ProjectSection: React.FC = () => {
     : projectsData.filter((p) => p.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-20 md:py-28 relative border-t border-border-subtle bg-bg-secondary/20 overflow-hidden">
+    <section id="projects" className="py-14 sm:py-20 md:py-28 relative border-t border-border-subtle bg-bg-secondary/20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header with Motion Reveal */}
-        <MotionReveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <MotionReveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-12">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20 mb-3">
               <Layers className="w-3.5 h-3.5" />
               <span>VERIFIED PROJECT PORTFOLIO</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-text-primary tracking-tight">
-              Featured Case Studies & Systems.
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-heading text-text-primary tracking-tight">
+              Featured Case Studies &amp; Systems.
             </h2>
-            <p className="mt-2 text-base text-text-secondary max-w-2xl font-normal leading-relaxed">
+            <p className="mt-2 text-sm sm:text-base text-text-secondary max-w-2xl font-normal leading-relaxed">
               Authentic systems inspected directly from GitHub repositories and technical specifications. Every project showcases problem definition, technical feasibility, and business value.
             </p>
           </div>
 
           {/* Filter Pills with Motion Highlights */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
             {categories.map((cat) => (
               <motion.button
                 key={cat}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer relative ${
+                className={`px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-lg text-xs font-medium transition-all cursor-pointer relative min-h-[36px] ${
                   selectedCategory === cat
                     ? 'bg-accent-primary text-white font-semibold shadow-card-glow'
                     : 'bg-bg-card border border-border-subtle text-text-secondary hover:text-text-primary hover:border-accent-primary/50'

@@ -10,15 +10,15 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="border-t border-border-subtle bg-bg-secondary/40 py-12 relative">
+    <footer className="border-t border-border-subtle bg-bg-secondary/40 py-10 sm:py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-border-subtle/60 items-center">
           
           {/* Brand Info */}
           <div className="md:col-span-6 space-y-2">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-bg-card border border-border-silver/40 flex items-center justify-center font-heading font-bold text-silver-metallic text-xs">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+              <div className="w-8 h-8 rounded-lg bg-bg-card border border-border-silver/40 flex items-center justify-center font-heading font-bold text-silver-metallic text-xs shrink-0">
                 SK
               </div>
               <span className="font-heading font-semibold text-text-primary text-base">
@@ -38,12 +38,12 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links & Socials */}
-          <div className="md:col-span-6 flex flex-wrap items-center md:justify-end gap-6">
+          <div className="md:col-span-6 flex flex-wrap items-center md:justify-end gap-3 sm:gap-6">
             <a 
               href={personalInfo.github} 
               target="_blank" 
               rel="noreferrer" 
-              className="text-text-secondary hover:text-text-primary transition-colors flex items-center gap-1.5 text-xs font-mono"
+              className="text-text-secondary hover:text-text-primary transition-colors flex items-center gap-1.5 text-xs font-mono py-2 min-h-[44px]"
             >
               <Github className="w-4 h-4" />
               <span>GitHub</span>
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
               href={personalInfo.linkedin} 
               target="_blank" 
               rel="noreferrer" 
-              className="text-text-secondary hover:text-accent-primary transition-colors flex items-center gap-1.5 text-xs font-mono"
+              className="text-text-secondary hover:text-accent-primary transition-colors flex items-center gap-1.5 text-xs font-mono py-2 min-h-[44px]"
             >
               <Linkedin className="w-4 h-4" />
               <span>LinkedIn</span>
@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
 
             <a 
               href={`mailto:${personalInfo.email}`} 
-              className="text-text-secondary hover:text-accent-secondary transition-colors flex items-center gap-1.5 text-xs font-mono"
+              className="text-text-secondary hover:text-accent-secondary transition-colors flex items-center gap-1.5 text-xs font-mono py-2 min-h-[44px]"
             >
               <Mail className="w-4 h-4" />
               <span>{personalInfo.email}</span>
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
 
             <button
               onClick={scrollToTop}
-              className="p-2.5 rounded-xl bg-bg-card border border-border-subtle text-text-secondary hover:text-text-primary hover:border-accent-primary transition-all cursor-pointer"
+              className="p-2.5 rounded-xl bg-bg-card border border-border-subtle text-text-secondary hover:text-text-primary hover:border-accent-primary transition-all cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center shrink-0"
               title="Back to Top"
               aria-label="Back to top"
             >
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright & Compliance */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-text-muted">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-text-muted text-center sm:text-left">
           <div>
             © {currentYear} {personalInfo.name}. All rights reserved.
           </div>

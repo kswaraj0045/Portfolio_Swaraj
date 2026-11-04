@@ -67,12 +67,12 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-16 sm:space-y-24">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 md:py-16 space-y-12 sm:space-y-20 md:space-y-24">
         
         {/* ========================================================= */}
         {/* HERO SECTION — DISCOVER DELOITTE USI */}
         {/* ========================================================= */}
-        <section className="space-y-6 pt-4">
+        <section className="space-y-6 pt-2 sm:pt-4">
           <motion.div
             initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
               <span>GLOBAL PROFESSIONAL SERVICES &amp; CAPABILITY HUB</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading tracking-tight text-[#F5F5F5]">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold font-heading tracking-tight text-[#F5F5F5]">
               DISCOVER DELOITTE USI
             </h1>
 
@@ -103,12 +103,12 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="p-6 sm:p-10 md:p-12 rounded-3xl bg-gradient-to-b from-[#17191D] to-[#0D0F11] border border-[#86BC25]/40 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.85),0_0_30px_-5px_rgba(134,188,37,0.15)] relative overflow-hidden"
+            className="p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#17191D] to-[#0D0F11] border border-[#86BC25]/40 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.85),0_0_30px_-5px_rgba(134,188,37,0.15)] relative overflow-hidden"
           >
             {/* Subtle green ambient inside */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(ellipse_at_top_right,rgba(134,188,37,0.14),transparent_70%)] pointer-events-none" />
 
-            <div className="space-y-8 relative z-10">
+            <div className="space-y-6 sm:space-y-8 relative z-10">
               
               <div className="space-y-3">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-[#86BC25] bg-[#202329] border border-[#86BC25]/30">
@@ -116,7 +116,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
                   <span>CAREER MILESTONE</span>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-[#F5F5F5] tracking-tight">
+                <h2 className="text-2xl xs:text-3xl sm:text-4xl font-semibold font-heading text-[#F5F5F5] tracking-tight">
                   MY NEXT CHAPTER
                 </h2>
 
@@ -347,7 +347,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
         {/* ========================================================= */}
         {/* CAREER OPPORTUNITIES & THE ANALYST ROLE */}
         {/* ========================================================= */}
-        <section className="p-6 sm:p-10 rounded-3xl bg-[#17191D] border border-[#35383F] space-y-6">
+        <section className="p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-[#17191D] border border-[#35383F] space-y-5 sm:space-y-6">
           <div className="space-y-2">
             <div className="text-xs font-mono font-medium text-[#86BC25] uppercase tracking-wider">
               CAREER TRACK
@@ -399,7 +399,7 @@ export const DeloitteUSIPage: React.FC<Props> = ({ onNavigateHome }) => {
         <section className="text-center pt-4 pb-8 space-y-4">
           <button
             onClick={onNavigateHome}
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold font-mono text-[#0D0F11] bg-[#86BC25] hover:bg-[#97D72B] shadow-[0_0_25px_rgba(134,188,37,0.35)] transition-all cursor-pointer group"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[46px] w-full sm:w-auto rounded-xl text-sm font-semibold font-mono text-[#0D0F11] bg-[#86BC25] hover:bg-[#97D72B] shadow-[0_0_25px_rgba(134,188,37,0.35)] transition-all cursor-pointer group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span>Return to Portfolio Home</span>
