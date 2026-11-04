@@ -32,7 +32,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
     { name: 'Experience', href: '#experience', id: 'experience' },
     { name: 'Leadership', href: '#leadership', id: 'leadership' },
     { name: 'Skills', href: '#skills', id: 'skills' },
-    { name: 'Recommendation Room', shortName: 'Room', href: '/recommendations', id: 'recommendations', isPage: true },
+    { name: 'Recommendation Room', shortName: 'Room', href: '#recommendations', id: 'recommendations' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 

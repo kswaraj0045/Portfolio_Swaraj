@@ -12,3 +12,4 @@ export interface RecommendationItem {
 }
 
 export type RecommendationTab = 'my-picks' | 'community-picks';
+

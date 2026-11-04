@@ -12,6 +12,7 @@ import { ExperienceSection } from './components/ExperienceSection';
 import { LeadershipSection } from './components/LeadershipSection';
 import { SkillsSection } from './components/SkillsSection';
 import { EducationAndCertifications } from './components/EducationAndCertifications';
+import { RecommendationRoomSection } from './components/RecommendationRoomSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { DesignSystemPreview } from './components/DesignSystemPreview';
@@ -146,6 +147,7 @@ export function App() {
           <LeadershipSection />
           <SkillsSection />
           <EducationAndCertifications />
+          <RecommendationRoomSection onNavigate={navigateTo} />
           <ContactSection />
         </main>
       )}

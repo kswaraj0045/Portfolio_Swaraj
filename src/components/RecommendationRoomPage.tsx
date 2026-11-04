@@ -807,3 +807,4 @@ export const RecommendationRoomPage: React.FC<Props> = ({ onNavigateHome }) => {
     </div>
   );
 };
+

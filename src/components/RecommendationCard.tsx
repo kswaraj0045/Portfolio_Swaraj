@@ -125,3 +125,4 @@ export const RecommendationCard: React.FC<Props> = ({
     </motion.div>
   );
 };
+
