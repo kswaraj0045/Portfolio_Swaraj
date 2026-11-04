@@ -31,6 +31,7 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
     { name: 'Experience', href: '#experience', id: 'experience' },
     { name: 'Leadership', href: '#leadership', id: 'leadership' },
     { name: 'Skills', href: '#skills', id: 'skills' },
+    { name: 'Resume Builder', href: '/resume-builder', id: 'resume-builder', isPage: true, badge: 'NEW' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -176,6 +177,17 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
               <span>Resume</span>
             </motion.a>
 
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => onNavigate ? onNavigate('/resume-builder') : (window.location.href = '/resume-builder')}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-accent-primary bg-accent-primary/10 border border-accent-primary/30 hover:bg-accent-primary/20 transition-all cursor-pointer shadow-sm"
+              title="Open Resume Builder tool"
+            >
+              <FileText className="w-3.5 h-3.5" />
+              <span>Build Resume</span>
+            </motion.button>
+
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -261,6 +273,20 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
               </div>
 
               <div className="pt-3 border-t border-border-subtle/60 flex flex-col gap-2.5">
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    if (onNavigate) {
+                      onNavigate('/resume-builder');
+                    } else {
+                      window.location.href = '/resume-builder';
+                    }
+                  }}
+                  className="w-full py-3 rounded-xl text-xs font-semibold text-center text-accent-primary bg-accent-primary/10 border border-accent-primary/30 flex items-center justify-center gap-2 min-h-[46px] transition-colors cursor-pointer"
+                >
+                  <FileText className="w-4 h-4 text-accent-primary" />
+                  <span>Open Resume Builder</span>
+                </button>
                 <a
                   href={personalInfo.resumeUrl}
                   download="Swaraj_Khadalkar_Resume.pdf"

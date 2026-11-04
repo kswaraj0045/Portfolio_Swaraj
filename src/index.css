@@ -130,3 +130,47 @@
   }
 }
 
+/* ========================================================================= */
+/* PRINT MEDIA STYLESHEET FOR RESUME BUILDER                                 */
+/* ========================================================================= */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #resume-print-area,
+  #resume-print-area * {
+    visibility: visible;
+  }
+
+  #resume-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  .resume-document section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+

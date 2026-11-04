@@ -17,6 +17,10 @@ import { Footer } from './components/Footer';
 import { DesignSystemPreview } from './components/DesignSystemPreview';
 import { DeloitteUSIPage } from './components/DeloitteUSIPage';
 
+const ResumeBuilderPage = React.lazy(() => 
+  import('./components/ResumeBuilderPage').then(m => ({ default: m.ResumeBuilderPage }))
+);
+
 export function App() {
   const [showDesignSystem, setShowDesignSystem] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -45,15 +49,35 @@ export function App() {
     window.location.hash.toLowerCase() === '#/deloitte' ||
     window.location.hash.toLowerCase() === '#deloitte-usi';
 
-  // If directly landing on /deloitte, dismiss the signature loading screen immediately
+  const isResumeBuilderPage = currentPath.toLowerCase().includes('resume-builder') ||
+    window.location.pathname.toLowerCase().includes('resume-builder') ||
+    window.location.hash.toLowerCase() === '#/resume-builder' ||
+    window.location.hash.toLowerCase() === '#resume-builder';
+
+  // If directly landing on standalone tool pages, dismiss the signature loading screen immediately
   useEffect(() => {
-    if (isDeloittePage) {
+    if (isDeloittePage || isResumeBuilderPage) {
       setIsLoading(false);
     }
-  }, [isDeloittePage]);
+  }, [isDeloittePage, isResumeBuilderPage]);
 
   if (isDeloittePage) {
     return <DeloitteUSIPage onNavigateHome={() => navigateTo('/')} />;
+  }
+
+  if (isResumeBuilderPage) {
+    return (
+      <React.Suspense fallback={
+        <div className="min-h-screen bg-bg-main flex items-center justify-center text-text-muted font-mono text-xs">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-accent-primary animate-pulse" />
+            <span>Loading Resume Builder Studio...</span>
+          </div>
+        </div>
+      }>
+        <ResumeBuilderPage onNavigateHome={() => navigateTo('/')} />
+      </React.Suspense>
+    );
   }
 
   return (
