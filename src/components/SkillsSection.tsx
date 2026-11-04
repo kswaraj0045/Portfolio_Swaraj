@@ -9,15 +9,15 @@ export const SkillsSection: React.FC = () => {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Product Thinking & Strategy':
-        return <Lightbulb className="w-5 h-5 text-[#527DAA]" />;
+        return <Lightbulb className="w-5 h-5 text-accent-primary" />;
       case 'Business & Analytics':
-        return <BarChart3 className="w-5 h-5 text-[#527DAA]" />;
+        return <BarChart3 className="w-5 h-5 text-accent-primary" />;
       case 'Collaboration & Leadership':
-        return <Users className="w-5 h-5 text-[#527DAA]" />;
+        return <Users className="w-5 h-5 text-accent-primary" />;
       case 'Technical Foundation':
-        return <Terminal className="w-5 h-5 text-[#527DAA]" />;
+        return <Terminal className="w-5 h-5 text-accent-primary" />;
       default:
-        return <Layers className="w-5 h-5 text-[#527DAA]" />;
+        return <Layers className="w-5 h-5 text-accent-primary" />;
     }
   };
 
@@ -46,7 +46,7 @@ export const SkillsSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-10 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-[#527DAA] bg-[#527DAA]/10 border border-[#527DAA]/30 mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20 mb-3">
             <Layers className="w-3.5 h-3.5" />
             <span>CORE CAPABILITIES & COMPETENCIES</span>
           </div>
@@ -71,11 +71,11 @@ export const SkillsSection: React.FC = () => {
               key={catGroup.category}
               variants={cardVariants}
               whileHover={{ y: -4 }}
-              className="glass-card p-5 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl border border-border-subtle bg-bg-card/70 flex flex-col justify-between hover:border-[#527DAA]/45 hover:shadow-steelblue-glow transition-all"
+              className="glass-card p-5 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl border border-border-subtle bg-bg-card/70 flex flex-col justify-between hover:border-accent-primary/45 hover:shadow-card-glow transition-all"
             >
               <div>
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-bg-main border border-border-subtle flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-bg-main border border-accent-primary/25 flex items-center justify-center text-accent-primary">
                     {getCategoryIcon(catGroup.category)}
                   </div>
                   <div>
@@ -95,9 +95,9 @@ export const SkillsSection: React.FC = () => {
                     <motion.div
                       key={skill}
                       whileHover={{ scale: 1.03 }}
-                      className="px-3 py-1.5 rounded-lg text-xs font-medium bg-bg-main/80 text-text-secondary border border-border-subtle hover:text-text-primary hover:border-[#527DAA]/50 transition-colors flex items-center gap-1.5 cursor-default"
+                      className="px-3 py-1.5 rounded-lg text-xs font-medium bg-bg-main/80 text-text-secondary border border-border-subtle hover:text-text-primary hover:border-accent-primary/40 transition-colors flex items-center gap-1.5 cursor-default"
                     >
-                      <CheckCircle2 className="w-3 h-3 text-[#527DAA] shrink-0" />
+                      <CheckCircle2 className="w-3 h-3 text-accent-primary shrink-0" />
                       <span>{skill}</span>
                     </motion.div>
                   ))}

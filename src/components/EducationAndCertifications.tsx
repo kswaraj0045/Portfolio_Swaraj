@@ -76,7 +76,7 @@ export const EducationAndCertifications: React.FC = () => {
           {/* Right Column: Certifications & Industry Achievements */}
           <div className="lg:col-span-6 space-y-8">
             <MotionReveal delay={0.15}>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-[#B99A6B] bg-[#B99A6B]/10 border border-[#B99A6B]/30 mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20 mb-3">
                 <Award className="w-3.5 h-3.5" />
                 <span>ACHIEVEMENTS & CREDENTIALS</span>
               </div>
@@ -97,14 +97,14 @@ export const EducationAndCertifications: React.FC = () => {
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.45, delay: i * 0.1 }}
                   whileHover={{ y: -3 }}
-                  className="glass-card p-5 rounded-2xl border border-border-subtle bg-bg-card/90 flex items-center justify-between gap-4 group transition-all hover:border-[#B99A6B]/50 hover:shadow-champagne-glow"
+                  className="glass-card p-5 rounded-2xl border border-border-subtle bg-bg-card/90 flex items-center justify-between gap-4 group transition-all hover:border-accent-primary/45 hover:shadow-card-glow"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-bg-main border border-border-subtle flex items-center justify-center text-[#B99A6B] group-hover:scale-105 transition-transform">
-                      <Award className="w-5 h-5 text-[#B99A6B]" />
+                    <div className="w-11 h-11 rounded-xl bg-bg-main border border-accent-primary/25 flex items-center justify-center text-accent-primary group-hover:scale-105 transition-transform">
+                      <Award className="w-5 h-5 text-accent-primary" />
                     </div>
                     <div>
-                      <h4 className="text-base font-semibold font-heading text-text-primary group-hover:text-[#B99A6B] transition-colors">
+                      <h4 className="text-base font-semibold font-heading text-text-primary group-hover:text-accent-primary transition-colors">
                         {cert.title}
                       </h4>
                       <div className="text-xs font-mono font-normal text-text-secondary mt-0.5">
@@ -114,7 +114,7 @@ export const EducationAndCertifications: React.FC = () => {
                   </div>
 
                   {cert.badge && (
-                    <span className="hidden sm:inline-flex px-3 py-1 rounded-full text-[11px] font-mono font-medium text-[#B99A6B] bg-[#B99A6B]/10 border border-[#B99A6B]/30">
+                    <span className="hidden sm:inline-flex px-3 py-1 rounded-full text-[11px] font-mono font-medium text-accent-primary bg-accent-primary/10 border border-accent-primary/20">
                       {cert.badge}
                     </span>
                   )}
