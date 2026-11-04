@@ -6,7 +6,7 @@ export const personalInfo = {
   role: 'Aspiring Product Manager',
   tagline: 'Building Products That Solve Real Problems.',
   subtitle: 'Aspiring Product Manager | Business Strategy | Data Analytics | Technology',
-  identity: 'An engineer by education, an Incoming Analyst selected at Deloitte USI, a technology and business enthusiast, and an aspiring Product Manager.',
+  identity: 'Technology Enthusiast, Product Thinker, and Data-Driven Problem Solver with an engineering foundation.',
   introduction: "I'm Swaraj Khadalkar, a Computer Engineering student passionate about building products that solve meaningful problems. My interests lie at the intersection of technology, business, data and product management. I enjoy understanding problems, exploring user needs, analyzing information, developing practical solutions and collaborating with people to turn ideas into meaningful products. My long-term goal is to grow into a Product Manager who can connect business objectives, user needs and technical execution.",
   email: 'kswaraj0045@gmail.com',
   github: 'https://github.com/kswaraj0045',
@@ -141,23 +141,6 @@ export const productThinkingFramework: FrameworkStage[] = [
 ];
 
 export const experienceData: ExperienceItem[] = [
-  {
-    id: 'deloitte-selection',
-    company: 'Deloitte USI',
-    role: 'Incoming Analyst',
-    badge: 'SELECTED AT DELOITTE USI – INCOMING ANALYST',
-    period: 'College Campus Placement',
-    location: 'India',
-    type: 'milestone',
-    description: 'Selected for the Incoming Analyst role at Deloitte USI through college campus placement. This milestone marks an important step in my professional journey, and I look forward to learning, growing and contributing.',
-    highlights: [
-      'Earned selection for the Incoming Analyst profile at Deloitte USI through competitive college campus placement.',
-      'Demonstrated structured problem-solving, analytical thinking, and business communication skills.',
-      'Positions foundation for bridging technology implementations with enterprise business value.'
-    ],
-    skills: ['Deloitte USI', 'Business Strategy', 'Data Analytics', 'Systems Thinking', 'Campus Placement'],
-    note: 'Selection milestone achieved through college campus placement; not a claim of employment commencement.'
-  },
   {
     id: 'street-up',
     company: 'Street-Up',

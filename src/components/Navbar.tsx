@@ -3,6 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight, FileText, Sparkles, Award } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
+interface NavLinkItem {
+  name: string;
+  href: string;
+  id: string;
+  badge?: string;
+  isPage?: boolean;
+}
+
 interface Props {
   onToggleDesignSystem?: () => void;
   showDesignSystem?: boolean;
@@ -14,10 +22,10 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('about');
 
-  const navLinks = [
+  const navLinks: NavLinkItem[] = [
     { name: 'About', href: '#about', id: 'about' },
     { name: 'Terminal', href: '#terminal', id: 'terminal', badge: 'CLI' },
-    { name: 'Deloitte USI', href: '/deloitte', id: 'deloitte', badge: 'USI', isPage: true },
+    { name: 'Milestone', href: '#deloitte', id: 'deloitte' },
     { name: 'Framework', href: '#framework', id: 'framework' },
     { name: 'Projects', href: '#projects', id: 'projects' },
     { name: 'Experience', href: '#experience', id: 'experience' },
@@ -135,25 +143,6 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
 
           {/* Right Action Buttons */}
           <div className="hidden lg:flex items-center gap-2.5">
-            {/* Deloitte USI Direct Button */}
-            <motion.a
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              href="/deloitte"
-              onClick={(e) => {
-                if (onNavigate) {
-                  e.preventDefault();
-                  onNavigate('/deloitte');
-                }
-              }}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-sans font-medium text-[#86BC25] bg-[#86BC25]/10 border border-[#86BC25]/40 hover:bg-[#86BC25]/20 hover:border-[#86BC25] hover:text-[#A3D94B] transition-all cursor-pointer shadow-[0_0_12px_rgba(134,188,37,0.12)]"
-              title="Discover Deloitte USI (Dedicated Page)"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#86BC25] animate-pulse" />
-              <span>Deloitte USI</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </motion.a>
-
             {onToggleDesignSystem && (
               <motion.button
                 whileHover={{ scale: 1.02 }}
@@ -215,25 +204,6 @@ export const Navbar: React.FC<Props> = ({ onToggleDesignSystem, showDesignSystem
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className="lg:hidden bg-bg-card/98 backdrop-blur-2xl border-b border-border-subtle px-4 pt-3 pb-6 space-y-3 overflow-hidden shadow-2xl max-h-[calc(100vh-4.5rem)] overflow-y-auto"
           >
-            {/* Dedicated Deloitte USI banner in mobile drawer */}
-            <a
-              href="/deloitte"
-              onClick={(e) => {
-                setMobileMenuOpen(false);
-                if (onNavigate) {
-                  e.preventDefault();
-                  onNavigate('/deloitte');
-                }
-              }}
-              className="w-full p-3 rounded-xl bg-[#86BC25]/10 border border-[#86BC25]/40 flex items-center justify-between text-xs font-mono font-semibold text-[#86BC25] hover:bg-[#86BC25]/20 transition-all cursor-pointer"
-            >
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#86BC25] animate-pulse" />
-                <span>DISCOVER DELOITTE USI PAGE</span>
-              </div>
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {navLinks.map((link) => (
                 <a

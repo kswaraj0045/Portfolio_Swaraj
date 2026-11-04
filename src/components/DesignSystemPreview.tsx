@@ -148,7 +148,7 @@ export const DesignSystemPreview: React.FC<Props> = ({ onDismissPreview }) => {
                 <div className="pt-4">
                   <div className="text-xs font-mono text-accent-secondary mb-1">Inter • Body, Descriptions &amp; Navigation (Regular 400 &amp; Medium 500)</div>
                   <p className="text-text-secondary text-base leading-relaxed font-normal font-sans">
-                    An engineer by education, an Incoming Analyst selected at Deloitte USI, a technology and business enthusiast, and an aspiring Product Manager. Connecting technology with business needs and user problems.
+                    Technology Enthusiast, Product Thinker, and Data-Driven Problem Solver. Building digital experiences connecting technology, data, and business strategy.
                   </p>
                 </div>
                 <div className="pt-4">

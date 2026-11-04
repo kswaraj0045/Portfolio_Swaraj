@@ -306,26 +306,19 @@ export const HeroSection: React.FC<Props> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              {/* Block 03 — CAREER */}
+              {/* Block 03 — MINDSET */}
               <div className="p-3 sm:p-4 flex flex-col justify-center">
-                <div className="text-[11px] sm:text-xs font-mono font-medium tracking-wider text-[#86BC25] uppercase flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#86BC25] animate-pulse" />
-                  <span>03 — CAREER</span>
+                <div className="text-[11px] sm:text-xs font-mono font-medium tracking-wider text-accent-primary uppercase flex items-center gap-2">
+                  <span>03 — MINDSET</span>
                 </div>
                 <div className="text-sm sm:text-base font-heading font-semibold text-text-primary mt-1 flex items-center justify-between">
-                  <span>Incoming Analyst at Deloitte USI</span>
+                  <span>Data-Driven Problem Solver</span>
                   <a 
-                    href="/deloitte" 
-                    onClick={(e) => {
-                      if (onNavigate) {
-                        e.preventDefault();
-                        onNavigate('/deloitte');
-                      }
-                    }}
-                    className="text-xs font-mono font-medium text-[#86BC25] hover:text-[#97D72B] transition-colors flex items-center gap-1 bg-[#86BC25]/10 px-2 py-1 rounded border border-[#86BC25]/30 hover:border-[#86BC25]"
+                    href="#framework" 
+                    className="text-xs font-mono font-medium text-silver-metallic hover:text-white transition-colors flex items-center gap-1 bg-white/5 px-2 py-1 rounded border border-border-subtle hover:border-border-silver"
                   >
-                    <span>Discover USI</span>
-                    <ArrowRight className="w-3 h-3" />
+                    <span>Framework</span>
+                    <ArrowRight className="w-3 h-3 text-accent-primary" />
                   </a>
                 </div>
               </div>

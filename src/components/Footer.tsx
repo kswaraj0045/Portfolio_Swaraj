@@ -86,7 +86,7 @@ export const Footer: React.FC = () => {
           </div>
           <div className="flex items-center gap-2 text-[11px]">
             <ShieldCheck className="w-3.5 h-3.5 text-accent-primary" />
-            <span>Privacy Compliant • Verified Repositories & Placement Milestone</span>
+            <span>Privacy Compliant • Verified Repositories &amp; Academic Credentials</span>
           </div>
         </div>
 

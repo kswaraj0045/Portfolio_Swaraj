@@ -241,22 +241,22 @@ export const executeTerminalCommand = (rawCommand: string): CommandResult => {
       return {
         output: (
           <div className="space-y-2 leading-relaxed">
-            <div className="text-accent-achievement font-bold tracking-wider">CAREER MILESTONE</div>
-            <div className="p-3 rounded-xl bg-accent-achievement/10 border border-accent-achievement/30 space-y-1">
-              <div className="text-accent-achievement font-bold flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-accent-achievement animate-pulse" />
-                <span>[UNLOCKED] DELOITTE USI ANALYST SELECTION</span>
+            <div className="text-[#86BC25] font-bold tracking-wider">CAREER MILESTONE</div>
+            <div className="p-3 rounded-xl bg-[#86BC25]/10 border border-[#86BC25]/30 space-y-1.5">
+              <div className="text-[#86BC25] font-bold flex items-center gap-1.5 text-xs">
+                <span className="w-2 h-2 rounded-full bg-[#86BC25] animate-pulse" />
+                <span>SELECTED AT DELOITTE USI — INCOMING ANALYST</span>
               </div>
               <p className="text-text-primary text-xs">
-                Selected for the Incoming Analyst role at Deloitte USI through campus placement.
+                Selected through college campus placement.
               </p>
-              <div className="text-xs font-mono font-medium text-accent-achievement">
-                STATUS: Incoming Analyst
+              <div className="text-xs font-mono text-[#858992]">
+                Institution: <span className="text-[#F5F5F5]">MIT Academy of Engineering, Pune</span>
+              </div>
+              <div className="text-xs font-mono font-medium text-[#86BC25]">
+                Status: Selected / Incoming
               </div>
             </div>
-            <p className="text-text-secondary text-xs italic pt-1">
-              A meaningful milestone in my professional journey.
-            </p>
           </div>
         ),
       };
